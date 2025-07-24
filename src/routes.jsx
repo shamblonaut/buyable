@@ -1,8 +1,10 @@
+import RootLayout from "./layouts/RootLayout";
 import ErrorPage from "./pages/ErrorPage";
 
 const routes = [
   {
     path: "/",
+    element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
       {
