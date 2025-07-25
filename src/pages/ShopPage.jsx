@@ -18,7 +18,7 @@ const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, 180px);
   gap: 16px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 `;
 
 const Info = styled.p`

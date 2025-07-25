@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import styled from "styled-components";
+import { ShoppingBag } from "lucide-react";
 
 import ProductCard from "../components/ProductCard";
+
+const Page = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const ProductList = styled.ul`
   list-style: none;
@@ -11,7 +18,7 @@ const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, 180px);
   gap: 16px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 `;
 
 const Heading = styled.h2`
@@ -27,6 +34,28 @@ const Price = styled.span`
   font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
+`;
+
+const ButtonLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+  margin: 16px;
+  width: max-content;
+`;
+
+const CheckoutButton = styled.button`
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+
+  & .lucide {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+  }
 `;
 
 const CartPage = () => {
@@ -48,9 +77,8 @@ const CartPage = () => {
   }, [productsData, cart]);
 
   return (
-    <main>
+    <Page>
       <Heading>Your Cart</Heading>
-
       {productsData && Object.keys(cart).length > 0 ? (
         <>
           <Info>
@@ -71,11 +99,16 @@ const CartPage = () => {
                 </li>
               ))}
           </ProductList>
+          <ButtonLink to="/checkout">
+            <CheckoutButton>
+              <ShoppingBag /> Order Checkout
+            </CheckoutButton>
+          </ButtonLink>
         </>
       ) : (
         <Info>Your cart is empty</Info>
       )}
-    </main>
+    </Page>
   );
 };
 

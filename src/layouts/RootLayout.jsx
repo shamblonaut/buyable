@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: Poppins, system-ui, sans-serif;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
+    margin-bottom: 64px;
   }
 `;
 
