@@ -2,6 +2,7 @@ import RootLayout from "./layouts/RootLayout";
 import ErrorPage from "./pages/ErrorPage";
 
 import HomePage from "./pages/HomePage";
+import ShopPage from "./pages/ShopPage";
 
 const routes = [
   {
@@ -12,6 +13,10 @@ const routes = [
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "shop",
+        element: <ShopPage />,
       },
     ],
   },

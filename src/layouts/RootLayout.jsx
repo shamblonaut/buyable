@@ -8,7 +8,7 @@ import useFetch from "../hooks/useFetch";
 
 const GlobalStyle = createGlobalStyle`
   #root {
-    min-height: 100svh;
+    min-height: calc(100svh - 64px);
     font-family: Poppins, system-ui, sans-serif;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
