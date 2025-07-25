@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Trash2, ShoppingCart } from "lucide-react";
+
+import Quantity from "../components/Quantity";
 
 const Card = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 16px;
   border: 2px solid black;
@@ -10,9 +15,9 @@ const Card = styled.div`
 const ProductLink = styled(Link)`
   text-decoration: none;
   color: inherit;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  flex: 1;
 `;
 
 const ImageContainer = styled.div`
@@ -42,7 +47,61 @@ const ProductTitle = styled.p`
   height: 4.5em; /* 3 lines */
 `;
 
-const ProductCard = ({ product }) => {
+const CartActions = styled.div`
+  padding-top: 16px;
+`;
+
+const CartButton = styled.button`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+
+  & .lucide {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+  }
+`;
+
+const ProductCard = ({ product, cart, setCart }) => {
+  const addToCart = () => {
+    setCart((cart) => {
+      const newCart = { ...cart };
+      newCart[product.id] = 1;
+      return newCart;
+    });
+  };
+
+  const removeFromCart = () => {
+    setCart((cart) => {
+      const newCart = { ...cart };
+      delete newCart[product.id];
+      return newCart;
+    });
+  };
+
+  const incrementCartQuantity = () => {
+    setCart((cart) => {
+      const newCart = { ...cart };
+      newCart[product.id] += 1;
+      return newCart;
+    });
+  };
+
+  const decrementCartQuantity = () => {
+    setCart((cart) => {
+      const newCart = { ...cart };
+      newCart[product.id] -= 1;
+
+      if (newCart[product.id] === 0) {
+        delete newCart[product.id];
+      }
+
+      return newCart;
+    });
+  };
+
   return (
     <Card>
       <ProductLink to={`/product/${product.id}`} title={product.title}>
@@ -52,6 +111,24 @@ const ProductCard = ({ product }) => {
         <ProductTitle>{product.title}</ProductTitle>
         <p>${product.price}</p>
       </ProductLink>
+      <CartActions>
+        {Object.keys(cart).includes(product.id.toString()) ? (
+          <>
+            <Quantity
+              quantity={cart[product.id]}
+              increment={incrementCartQuantity}
+              decrement={decrementCartQuantity}
+            />
+            <CartButton onClick={removeFromCart}>
+              <Trash2 /> Remove from cart
+            </CartButton>
+          </>
+        ) : (
+          <CartButton onClick={addToCart}>
+            <ShoppingCart /> Add to cart
+          </CartButton>
+        )}
+      </CartActions>
     </Card>
   );
 };

@@ -33,7 +33,8 @@ const ShopPage = () => {
   );
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-  const { productsData, productsError, productsLoading } = useOutletContext();
+  const { productsData, productsError, productsLoading, cart, setCart } =
+    useOutletContext();
 
   useEffect(() => {
     if (!searchQuery && productsData) {
@@ -72,7 +73,7 @@ const ShopPage = () => {
         <ProductList>
           {filteredProducts.map((product) => (
             <li key={product.id}>
-              <ProductCard product={product} />
+              <ProductCard product={product} cart={cart} setCart={setCart} />
             </li>
           ))}
         </ProductList>

@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
+import useFetch from "../hooks/useFetch";
+
 import Header from "../components/Header";
 import Navigator from "../components/Navigator";
-
-import useFetch from "../hooks/useFetch";
 
 const GlobalStyle = createGlobalStyle`
   #root {
@@ -20,6 +21,8 @@ const RootLayout = () => {
     "https://fakestoreapi.com/products",
   );
 
+  const [cart, setCart] = useState({});
+
   return (
     <>
       <GlobalStyle />
@@ -29,6 +32,8 @@ const RootLayout = () => {
           productsData: data,
           productsError: error,
           productsLoading: loading,
+          cart,
+          setCart,
         }}
       />
       <Navigator />
