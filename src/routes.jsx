@@ -1,6 +1,8 @@
 import RootLayout from "./layouts/RootLayout";
 import ErrorPage from "./pages/ErrorPage";
 
+import HomePage from "./pages/HomePage";
+
 const routes = [
   {
     path: "/",
@@ -9,7 +11,7 @@ const routes = [
     children: [
       {
         index: true,
-        element: "Hello, World!",
+        element: <HomePage />,
       },
     ],
   },

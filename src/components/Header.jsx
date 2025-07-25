@@ -5,6 +5,7 @@ const Logo = styled.header`
   justify-content: center;
   align-items: center;
   padding: 8px;
+  font-family: Montserrat, system-ui, sans-serif;
 `;
 
 const LogoMark = styled.img`
