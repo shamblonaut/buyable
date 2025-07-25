@@ -3,6 +3,7 @@ import ErrorPage from "./pages/ErrorPage";
 
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
+import ProductPage from "./pages/ProductPage";
 
 const routes = [
   {
@@ -17,6 +18,10 @@ const routes = [
       {
         path: "shop",
         element: <ShopPage />,
+      },
+      {
+        path: "product/:id",
+        element: <ProductPage />,
       },
     ],
   },

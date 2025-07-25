@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Carousel from "../components/Carousel";
 
-const PageContent = styled.main`
+const Page = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +44,7 @@ const HomePage = () => {
   const { productsData, productsLoading } = useOutletContext();
 
   return (
-    <PageContent>
+    <Page>
       <HeroSection>
         {productsLoading ? (
           <Loading>Loading Carousel...</Loading>
@@ -56,7 +56,7 @@ const HomePage = () => {
           <button>Explore Products</button>
         </CTAButton>
       </HeroSection>
-    </PageContent>
+    </Page>
   );
 };
 

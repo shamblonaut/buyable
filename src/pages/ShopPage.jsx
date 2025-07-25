@@ -61,12 +61,12 @@ const ShopPage = () => {
         setQuery={setSearchQuery}
       />
       {productsLoading ? (
-        <Info>Loading Products...</Info>
+        <Info>Loading products...</Info>
       ) : productsError ? (
         <Info>
           Error while fetching products:
           <br />
-          {productsError}
+          {productsError.message}
         </Info>
       ) : filteredProducts.length > 0 ? (
         <ProductList>
