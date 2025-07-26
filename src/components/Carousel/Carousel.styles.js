@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Container = styled.div`
+export const Container = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -10,7 +9,7 @@ const Container = styled.div`
   border: 2px solid black;
 `;
 
-const ItemList = styled.ul`
+export const ItemList = styled.ul`
   list-style: none;
   padding: 0;
   display: flex;
@@ -19,7 +18,7 @@ const ItemList = styled.ul`
   transition: all 500ms ease-in-out;
 `;
 
-const Item = styled.li`
+export const Item = styled.li`
   min-width: 100%;
   min-height: 160px;
   display: flex;
@@ -27,7 +26,7 @@ const Item = styled.li`
   align-items: center;
 `;
 
-const CarouselDots = styled.div`
+export const ContentNavigator = styled.div`
   list-style: none;
   padding: 0;
   display: flex;
@@ -43,7 +42,7 @@ const CarouselDots = styled.div`
   transform: translateX(-50%);
 `;
 
-const CarouselDot = styled.button`
+export const CarouselDot = styled.button`
   appearance: none;
   border: none;
   cursor: pointer;
@@ -61,7 +60,7 @@ const CarouselDot = styled.button`
   }
 `;
 
-const CarouselLink = styled(Link)`
+export const ProductLink = styled(Link)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -69,50 +68,9 @@ const CarouselLink = styled(Link)`
   align-items: center;
 `;
 
-const CarouselImage = styled.img`
+export const CarouselImage = styled.img`
   width: auto;
   height: auto;
   max-width: 80%;
   max-height: 250px;
 `;
-
-const Carousel = ({ items }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (activeIndex === items.length - 1) {
-        setActiveIndex(0);
-      } else {
-        setActiveIndex(activeIndex + 1);
-      }
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, [items, activeIndex]);
-
-  return (
-    <Container>
-      <ItemList $activeIndex={activeIndex}>
-        {items.map((item) => (
-          <Item key={item.id}>
-            <CarouselLink to={`/product/${item.id}`}>
-              <CarouselImage src={item.image} alt={item.title} />
-            </CarouselLink>
-          </Item>
-        ))}
-      </ItemList>
-      <CarouselDots>
-        {items.map((item, index) => (
-          <CarouselDot
-            $active={activeIndex === index}
-            key={item.id}
-            onClick={() => setActiveIndex(index)}
-          ></CarouselDot>
-        ))}
-      </CarouselDots>
-    </Container>
-  );
-};
-
-export default Carousel;

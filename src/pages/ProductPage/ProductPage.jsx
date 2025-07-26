@@ -1,22 +1,8 @@
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
 
-import useFetch from "../hooks/useFetch";
+import { useFetch } from "@/hooks";
 
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 16px;
-
-  & img {
-    width: auto;
-    max-height: 360px;
-  }
-`;
-
-const Info = styled.p`
-  text-align: center;
-`;
+import { ImageContainer, Info } from "./ProductPage.styles";
 
 const ProductPage = () => {
   const { id } = useParams();

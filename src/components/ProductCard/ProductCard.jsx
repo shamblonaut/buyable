@@ -1,68 +1,15 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { Trash2, ShoppingCart } from "lucide-react";
 
-import Quantity from "../components/Quantity";
+import { Quantity } from "@/components";
 
-const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 16px;
-  border: 2px solid black;
-`;
-
-const ProductLink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-`;
-
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 16px;
-  flex: 1;
-
-  & img {
-    width: 100%;
-    max-width: 160px;
-  }
-`;
-
-const ProductTitle = styled.p`
-  font-weight: 500;
-
-  display: -webkit-box;
-  line-clamp: 3;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  line-height: 1.5em;
-  height: 4.5em; /* 3 lines */
-`;
-
-const CartActions = styled.div`
-  padding-top: 16px;
-`;
-
-const CartButton = styled.button`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  cursor: pointer;
-
-  & .lucide {
-    width: 20px;
-    height: auto;
-    margin-right: 8px;
-  }
-`;
+import {
+  Card,
+  ProductLink,
+  ImageContainer,
+  ProductTitle,
+  CartActions,
+  CartButton,
+} from "./ProductCard.styles";
 
 const ProductCard = ({ product, cart, setCart }) => {
   const addToCart = () => {

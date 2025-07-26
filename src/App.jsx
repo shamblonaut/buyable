@@ -2,10 +2,9 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
-import useFetch from "../hooks/useFetch";
+import { useFetch } from "@/hooks";
 
-import Header from "../components/Header";
-import Navigator from "../components/Navigator";
+import { Header, Navigator } from "@/components";
 
 const GlobalStyle = createGlobalStyle`
   #root {
@@ -17,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const RootLayout = () => {
+const App = () => {
   const { data, error, loading } = useFetch(
     "https://fakestoreapi.com/products",
   );
@@ -42,4 +41,4 @@ const RootLayout = () => {
   );
 };
 
-export default RootLayout;
+export default App;

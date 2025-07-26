@@ -1,29 +1,9 @@
 import { useEffect, useState } from "react";
 import { useOutletContext, useSearchParams } from "react-router-dom";
-import styled from "styled-components";
 
-import SearchBar from "../components/SearchBar";
-import ProductCard from "../components/ProductCard.jsx";
+import { SearchBar, ProductCard } from "@/components";
 
-const Page = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const ProductList = styled.ul`
-  list-style: none;
-  padding: 16px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 180px);
-  gap: 16px;
-  margin-bottom: 32px;
-`;
-
-const Info = styled.p`
-  text-align: center;
-`;
+import { Page, ProductList, Info } from "./ShopPage.styles";
 
 const ShopPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();

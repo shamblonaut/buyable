@@ -1,62 +1,18 @@
 import { useEffect, useState } from "react";
-import { Link, useOutletContext } from "react-router-dom";
-import styled from "styled-components";
+import { useOutletContext } from "react-router-dom";
 import { ShoppingBag } from "lucide-react";
 
-import ProductCard from "../components/ProductCard";
+import { ProductCard } from "@/components";
 
-const Page = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const ProductList = styled.ul`
-  list-style: none;
-  padding: 16px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 180px);
-  gap: 16px;
-  margin-bottom: 32px;
-`;
-
-const Heading = styled.h2`
-  text-align: center;
-  margin-bottom: 16px;
-`;
-
-const Info = styled.p`
-  text-align: center;
-`;
-
-const Price = styled.span`
-  font-family: Montserrat, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-`;
-
-const ButtonLink = styled(Link)`
-  color: inherit;
-  text-decoration: none;
-  margin: 16px;
-  width: max-content;
-`;
-
-const CheckoutButton = styled.button`
-  cursor: pointer;
-  padding: 8px 16px;
-  font-size: 1.25rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-
-  & .lucide {
-    width: 20px;
-    height: auto;
-    margin-right: 8px;
-  }
-`;
+import {
+  Page,
+  ProductList,
+  Heading,
+  Info,
+  Price,
+  ButtonLink,
+  CheckoutButton,
+} from "./CartPage.styles";
 
 const CartPage = () => {
   const { productsData, cart, setCart } = useOutletContext();
@@ -73,7 +29,7 @@ const CartPage = () => {
       }
     });
 
-    setTotalPrice(sum);
+    setTotalPrice(sum.toFixed(2));
   }, [productsData, cart]);
 
   return (

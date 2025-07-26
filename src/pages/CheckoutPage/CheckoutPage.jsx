@@ -1,21 +1,4 @@
-import styled from "styled-components";
-
-const Page = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 16px;
-  flex: 1;
-`;
-
-const Heading = styled.h2`
-  text-align: center;
-  margin-bottom: 16px;
-`;
-
-const Disclaimer = styled.p`
-  font-size: 1.25rem;
-`;
+import { Page, Heading, Disclaimer } from "./CheckoutPage.styles";
 
 const CheckoutPage = () => (
   <Page>

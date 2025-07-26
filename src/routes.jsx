@@ -1,16 +1,18 @@
-import RootLayout from "./layouts/RootLayout";
-import ErrorPage from "./pages/ErrorPage";
+import App from "./App";
 
-import HomePage from "./pages/HomePage";
-import ShopPage from "./pages/ShopPage";
-import ProductPage from "./pages/ProductPage";
-import CartPage from "./pages/CartPage";
-import CheckoutPage from "./pages/CheckoutPage";
+import {
+  HomePage,
+  ShopPage,
+  ProductPage,
+  CartPage,
+  CheckoutPage,
+  ErrorPage,
+} from "./pages";
 
 const routes = [
   {
     path: "/",
-    element: <RootLayout />,
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
