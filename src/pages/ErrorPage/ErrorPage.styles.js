@@ -7,4 +7,5 @@ export const Page = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 `;

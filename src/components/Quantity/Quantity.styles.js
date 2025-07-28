@@ -1,25 +1,63 @@
 import styled from "styled-components";
 
 export const Selector = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 8px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  flex: 1;
+
+  border: 2px solid var(--color-dark);
+  border-radius: 4px;
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
   outline: none;
-  background: none;
   border: none;
   cursor: pointer;
 
-  & .lucide {
-    width: 20px;
-    height: auto;
+  width: 100%;
+  height: 100%;
+  color: var(--color-light);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 200ms ease;
+`;
+
+export const DecrementButton = styled(Button)`
+  background-color: var(--color-red);
+  border-right: 2px solid var(--color-dark);
+
+  &:hover {
+    background-color: var(--color-red-dark);
+  }
+`;
+
+export const IncrementButton = styled(Button)`
+  background-color: var(--color-green);
+  border-left: 2px solid var(--color-dark);
+
+  &:hover {
+    background-color: var(--color-green-dark);
   }
 `;
 
 export const CurrentQuantity = styled.p`
+  background-color: var(--color-light);
+  padding: 4px;
+  width: 48px;
+  height: 100%;
+
   font-weight: 500;
   font-size: 1.1rem;
+  text-align: center;
+  color: var(--color-dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

@@ -3,24 +3,30 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  width: 100%;
+  width: min(500px, 80%);
   overflow: hidden;
   padding: 16px;
-  border: 2px solid black;
+  margin: 32px 0;
+
+  background-color: white;
+  border: 3px solid var(--color-dark);
+  border-radius: 8px;
 `;
 
 export const ItemList = styled.ul`
-  list-style: none;
   padding: 0;
   display: flex;
+  list-style: none;
   min-width: min-content;
   transform: translateX(${(props) => props.$activeIndex * -100}%);
   transition: all 500ms ease-in-out;
 `;
 
 export const Item = styled.li`
-  min-width: 100%;
+  width: 100%;
   min-height: 160px;
+  flex-shrink: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,8 +35,13 @@ export const Item = styled.li`
 export const ContentNavigator = styled.div`
   list-style: none;
   padding: 0;
-  display: flex;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 16px;
   align-items: center;
+  justify-items: center;
+
   background-color: #00000080;
   height: 16px;
   padding: 0 4px;
@@ -46,15 +57,30 @@ export const CarouselDot = styled.button`
   appearance: none;
   border: none;
   cursor: pointer;
+  background: none;
   padding: 0;
-  background-color: ${(props) => (props.$active ? "#efefef" : "#efefef40")};
-  width: ${(props) => (props.$active ? "8px" : "4px")};
-  height: ${(props) => (props.$active ? "8px" : "4px")};
-  border-radius: 50%;
-  margin: 4px;
 
-  &:hover {
-    background-color: ${(props) => (props.$active ? "#efefef" : "#efefef80")};
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: ${(props) => (props.$active ? "8px" : "4px")};
+    height: ${(props) => (props.$active ? "8px" : "4px")};
+    background-color: ${(props) =>
+      props.$active ? "var(--color-light)" : "var(--color-light-dimmer)"};
+    border-radius: 50%;
+  }
+
+  &:hover::after {
+    background-color: ${(props) =>
+      props.$active ? "var(--color-light)" : "var(--color-light-dim)"};
+
     width: 8px;
     height: 8px;
   }
@@ -63,6 +89,7 @@ export const CarouselDot = styled.button`
 export const ProductLink = styled(Link)`
   width: 100%;
   height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;

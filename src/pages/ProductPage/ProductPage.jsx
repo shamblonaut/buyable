@@ -2,7 +2,17 @@ import { useParams } from "react-router-dom";
 
 import { useFetch } from "@/hooks";
 
-import { ImageContainer, Info } from "./ProductPage.styles";
+import {
+  GlobalStyle,
+  Page,
+  Info,
+  ImageContainer,
+  Content,
+  Notch,
+  Title,
+  Price,
+  Description,
+} from "./ProductPage.styles";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -14,7 +24,7 @@ const ProductPage = () => {
   } = useFetch(`https://fakestoreapi.com/products/${id}`);
 
   return (
-    <main>
+    <Page>
       {loading ? (
         <Info>Loading product...</Info>
       ) : error ? (
@@ -22,15 +32,20 @@ const ProductPage = () => {
       ) : (
         product && (
           <>
+            <GlobalStyle />
             <ImageContainer>
               <img src={product.image} alt={product.title} />
             </ImageContainer>
-            <h2>{product.title}</h2>
-            <p>${product.price}</p>
+            <Content>
+              <Notch />
+              <Title>{product.title}</Title>
+              <Price>${product.price}</Price>
+              <Description>{product.description}</Description>
+            </Content>
           </>
         )
       )}
-    </main>
+    </Page>
   );
 };
 

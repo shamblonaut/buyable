@@ -4,9 +4,14 @@ import styled from "styled-components";
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding: 16px;
-  border: 2px solid black;
+  overflow: hidden;
+  height: 480px;
+
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  border: 3px solid var(--color-dark);
+  border-radius: 8px;
+  padding-bottom: 8px;
 `;
 
 export const ProductLink = styled(Link)`
@@ -18,45 +23,91 @@ export const ProductLink = styled(Link)`
 `;
 
 export const ImageContainer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 16px;
+  padding: 16px;
   flex: 1;
 
+  background-color: white;
+  border-bottom: 3px solid var(--color-dark);
+
   & img {
-    width: 100%;
     max-width: 160px;
+    max-height: 200px;
   }
 `;
 
+export const ProductDetails = styled.div`
+  padding: 16px;
+  padding-bottom: 0;
+`;
+
 export const ProductTitle = styled.p`
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 700;
 
   display: -webkit-box;
-  line-clamp: 3;
-  -webkit-line-clamp: 3;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-
   line-height: 1.5em;
-  height: 4.5em; /* 3 lines */
+  height: 3em; /* 2 lines */
+`;
+
+export const ProductPrice = styled.p`
+  font-family: var(--font-highlight);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 8px 0;
 `;
 
 export const CartActions = styled.div`
-  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin: 0 auto;
 `;
 
-export const CartButton = styled.button`
-  display: flex;
-  justify-content: center;
-  width: 100%;
+const CartButton = styled.button`
   cursor: pointer;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+
+  color: var(--color-light);
+  border: 2px solid var(--color-dark);
+  border-radius: 4px;
+
+  transition: all 200ms ease;
+`;
+
+export const CartAddButton = styled(CartButton)`
+  background-color: var(--color-green);
+  width: 100%;
+  padding: 8px 32px;
+
+  &:hover {
+    background-color: var(--color-green-dark);
+    color: var(--color-light);
+  }
+
   & .lucide {
-    width: 20px;
-    height: auto;
     margin-right: 8px;
+  }
+`;
+
+export const CartRemoveButton = styled(CartButton)`
+  margin-left: 8px;
+  background-color: var(--color-red);
+
+  &:hover {
+    background-color: var(--color-red-dark);
+    color: var(--color-light);
   }
 `;

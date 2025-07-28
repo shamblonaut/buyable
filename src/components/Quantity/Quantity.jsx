@@ -1,16 +1,21 @@
 import { Minus, Plus } from "lucide-react";
 
-import { Selector, Button, CurrentQuantity } from "./Quantity.styles";
+import {
+  Selector,
+  DecrementButton,
+  IncrementButton,
+  CurrentQuantity,
+} from "./Quantity.styles";
 
 const Quantity = ({ quantity, decrement, increment }) => (
   <Selector>
-    <Button onClick={decrement}>
+    <DecrementButton onClick={decrement}>
       <Minus />
-    </Button>
+    </DecrementButton>
     <CurrentQuantity>{quantity}</CurrentQuantity>
-    <Button onClick={increment}>
+    <IncrementButton onClick={increment}>
       <Plus />
-    </Button>
+    </IncrementButton>
   </Selector>
 );
 

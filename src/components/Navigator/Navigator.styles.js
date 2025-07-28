@@ -7,12 +7,21 @@ export const Bar = styled.nav`
   height: 64px;
 
   display: flex;
+  justify-content: center;
+
+  background-color: var(--color-accent-dark);
+  border-top: 3px solid var(--color-dark);
+`;
+
+export const Tabs = styled.div`
+  height: 100%;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 2px solid black;
-  background-color: white;
 
   & .lucide {
-    color: black;
+    color: var(--color-light);
   }
 `;

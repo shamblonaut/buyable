@@ -5,14 +5,26 @@ export const Page = styled.main`
   flex-direction: column;
   align-items: center;
   padding: 16px;
-  flex: 1;
+  width: 100%;
 `;
 
-export const Heading = styled.h2`
+export const Heading = styled.p`
+  font-size: 2rem;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 16px;
+  margin: 16px 0;
 `;
 
 export const Disclaimer = styled.p`
+  flex: 1;
+  padding: 32px;
+  border: 3px solid var(--color-dark);
+  max-width: 600px;
+  border-radius: 8px;
+
+  color: var(--color-light);
+  background-color: var(--color-accent);
+
   font-size: 1.25rem;
+  font-weight: 500;
 `;

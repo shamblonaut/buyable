@@ -4,8 +4,15 @@ export const Brand = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: max-content;
   padding: 8px;
-  font-family: Montserrat, system-ui, sans-serif;
+  margin: 8px;
+
+  font-family: var(--font-highlight), system-ui, sans-serif;
+  color: var(--color-light);
+  background-color: var(--color-accent-dark);
+  border: 3px solid var(--color-dark);
+  border-radius: 4px;
 `;
 
 export const Logo = styled.img`
@@ -15,6 +22,7 @@ export const Logo = styled.img`
 `;
 
 export const Title = styled.p`
+  line-height: 1;
   font-size: 2.5rem;
   font-weight: 700;
 `;

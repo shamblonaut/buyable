@@ -9,9 +9,10 @@ import {
   ProductList,
   Heading,
   Info,
+  EmptyCart,
+  PriceLabel,
   Price,
-  ButtonLink,
-  CheckoutButton,
+  CheckoutLink,
 } from "./CartPage.styles";
 
 const CartPage = () => {
@@ -38,7 +39,8 @@ const CartPage = () => {
       {productsData && Object.keys(cart).length > 0 ? (
         <>
           <Info>
-            Total Price: <Price>${totalPrice}</Price>
+            <PriceLabel>Total Price: </PriceLabel>
+            <Price>${totalPrice}</Price>
           </Info>
           <ProductList>
             {productsData
@@ -55,14 +57,12 @@ const CartPage = () => {
                 </li>
               ))}
           </ProductList>
-          <ButtonLink to="/checkout">
-            <CheckoutButton>
-              <ShoppingBag /> Order Checkout
-            </CheckoutButton>
-          </ButtonLink>
+          <CheckoutLink to="/checkout">
+            <ShoppingBag /> Order Checkout
+          </CheckoutLink>
         </>
       ) : (
-        <Info>Your cart is empty</Info>
+        <EmptyCart>Your cart is empty</EmptyCart>
       )}
     </Page>
   );

@@ -7,7 +7,6 @@ import { Page, ProductList, Info } from "./ShopPage.styles";
 
 const ShopPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-
   const [searchQuery, setSearchQuery] = useState(
     searchParams.get("query") ?? "",
   );

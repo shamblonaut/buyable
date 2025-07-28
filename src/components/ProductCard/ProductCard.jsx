@@ -6,9 +6,12 @@ import {
   Card,
   ProductLink,
   ImageContainer,
+  ProductDetails,
   ProductTitle,
+  ProductPrice,
   CartActions,
-  CartButton,
+  CartAddButton,
+  CartRemoveButton,
 } from "./ProductCard.styles";
 
 const ProductCard = ({ product, cart, setCart }) => {
@@ -55,8 +58,10 @@ const ProductCard = ({ product, cart, setCart }) => {
         <ImageContainer>
           <img src={product.image} alt={product.title} />
         </ImageContainer>
-        <ProductTitle>{product.title}</ProductTitle>
-        <p>${product.price}</p>
+        <ProductDetails>
+          <ProductTitle>{product.title}</ProductTitle>
+          <ProductPrice>${product.price}</ProductPrice>
+        </ProductDetails>
       </ProductLink>
       <CartActions>
         {Object.keys(cart).includes(product.id.toString()) ? (
@@ -66,14 +71,14 @@ const ProductCard = ({ product, cart, setCart }) => {
               increment={incrementCartQuantity}
               decrement={decrementCartQuantity}
             />
-            <CartButton onClick={removeFromCart}>
-              <Trash2 /> Remove from cart
-            </CartButton>
+            <CartRemoveButton onClick={removeFromCart}>
+              <Trash2 />
+            </CartRemoveButton>
           </>
         ) : (
-          <CartButton onClick={addToCart}>
+          <CartAddButton onClick={addToCart}>
             <ShoppingCart /> Add to cart
-          </CartButton>
+          </CartAddButton>
         )}
       </CartActions>
     </Card>
