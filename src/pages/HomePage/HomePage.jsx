@@ -5,8 +5,9 @@ import { AppPosition } from "@/utils/constants";
 
 import { Carousel } from "@/components";
 
+import { Page } from "@/styles";
+
 import {
-  Page,
   HeroSection,
   HeroText,
   HeroHighlight,

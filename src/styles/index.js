@@ -1,3 +1,5 @@
+import { Page } from "./Page";
+import { Heading } from "./Heading";
 import { Info } from "./Info";
 
-export { Info };
+export { Page, Heading, Info };

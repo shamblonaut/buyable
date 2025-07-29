@@ -1,4 +1,6 @@
-import { Page, Heading, Disclaimer } from "./DisclaimerPage.styles";
+import { Page, Heading } from "@/styles";
+
+import { Disclaimer } from "./DisclaimerPage.styles";
 
 const DisclaimerPage = () => (
   <Page>

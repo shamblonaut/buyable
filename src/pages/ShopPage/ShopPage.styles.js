@@ -1,16 +1,5 @@
 import styled from "styled-components";
 
-export const Page = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 16px;
-  padding-top: 0;
-  width: 100%;
-  flex: 1;
-`;
-
 export const ProductList = styled.ul`
   list-style: none;
   padding: 16px;

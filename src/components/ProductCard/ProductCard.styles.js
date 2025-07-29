@@ -16,13 +16,11 @@ export const Card = styled.div`
 `;
 
 export const ProductLink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-
+  flex: 1;
   width: 100%;
+
   display: flex;
   flex-direction: column;
-  flex: 1;
 `;
 
 export const ImageContainer = styled.div`

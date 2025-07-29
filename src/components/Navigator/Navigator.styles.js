@@ -29,8 +29,6 @@ export const Tabs = styled.div`
 
 export const PageLink = styled(Link)`
   position: relative;
-  text-decoration: none;
-  color: inherit;
 
   & .lucide {
     color: ${(props) =>

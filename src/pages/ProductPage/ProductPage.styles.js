@@ -6,13 +6,6 @@ export const GlobalStyle = createGlobalStyle(css`
   }
 `);
 
-export const Page = styled.main`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
-
 export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;

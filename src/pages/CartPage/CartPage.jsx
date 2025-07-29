@@ -6,12 +6,10 @@ import { AppPosition } from "@/utils/constants";
 
 import { ProductCard } from "@/components";
 
-import { Info } from "@/styles";
+import { Page, Heading, Info } from "@/styles";
 
 import {
-  Page,
   ProductList,
-  Heading,
   InfoTitle,
   CheckoutInfo,
   CheckoutDetails,

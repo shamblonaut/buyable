@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Page = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  flex: 1;
-`;
-
 export const ProductList = styled.ul`
   list-style: none;
   padding: 16px;
@@ -18,13 +10,6 @@ export const ProductList = styled.ul`
   justify-content: center;
   gap: 16px;
   margin-bottom: 32px;
-`;
-
-export const Heading = styled.p`
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin: 16px 0;
 `;
 
 export const CheckoutDetails = styled.div`
@@ -69,10 +54,6 @@ export const CheckoutInfo = styled.span`
 `;
 
 export const CheckoutLink = styled(Link)`
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;

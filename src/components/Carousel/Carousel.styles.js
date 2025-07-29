@@ -59,9 +59,7 @@ export const ContentNavigator = styled.div`
 `;
 
 export const CarouselDot = styled.button`
-  appearance: none;
   border: none;
-  cursor: pointer;
   background: none;
   padding: 0;
 

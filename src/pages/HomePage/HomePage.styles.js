@@ -1,17 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { Info } from "@/styles";
-
-export const Page = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 16px;
-  flex: 1;
-  width: 100%;
-`;
-
 export const HeroSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -36,11 +25,7 @@ export const HeroHighlight = styled.strong`
 `;
 
 export const CTALink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-
   margin-top: 32px;
-  cursor: pointer;
 
   padding: 16px 32px;
   font-size: 1.5rem;

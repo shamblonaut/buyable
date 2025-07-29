@@ -15,7 +15,6 @@ export const Selector = styled.div`
 const Button = styled.button`
   outline: none;
   border: none;
-  cursor: pointer;
 
   width: 100%;
   height: 100%;

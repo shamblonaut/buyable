@@ -49,6 +49,15 @@ const GlobalStyle = createGlobalStyle(css`
 
     font-family: var(--font-normal), system-ui, sans-serif;
   }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `);
 
 const App = () => {

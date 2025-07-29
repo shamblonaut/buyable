@@ -5,9 +5,9 @@ import { AppPosition } from "@/utils/constants";
 
 import { SearchBar, ProductCard } from "@/components";
 
-import { Info } from "@/styles";
+import { Page, Info } from "@/styles";
 
-import { Page, ProductList } from "./ShopPage.styles";
+import { ProductList } from "./ShopPage.styles";
 
 const ShopPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
