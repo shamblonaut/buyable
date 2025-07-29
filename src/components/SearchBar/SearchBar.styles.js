@@ -6,9 +6,9 @@ export const Bar = styled.form`
   align-items: center;
   margin: 16px;
   border: 1px solid grey;
-  width: max-content;
+  width: 80%;
   height: min-content;
-  min-width: 80%;
+  min-width: 360px;
 
   background-color: var(--color-light);
   border: 3px solid var(--color-dark);
