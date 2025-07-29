@@ -4,6 +4,10 @@ export const GlobalStyle = createGlobalStyle(css`
   body {
     background-color: white;
   }
+
+  #root {
+    min-height: calc(100vh - 64px);
+  }
 `);
 
 export const ImageContainer = styled.div`
