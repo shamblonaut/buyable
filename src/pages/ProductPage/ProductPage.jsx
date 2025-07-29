@@ -2,6 +2,8 @@ import { useOutletContext, useParams } from "react-router-dom";
 
 import { useFetch } from "@/hooks";
 
+import { Rating } from "@/components";
+
 import {
   GlobalStyle,
   Page,
@@ -46,6 +48,10 @@ const ProductPage = () => {
               <Details>
                 <Title>{product.title}</Title>
                 <Price>${product.price}</Price>
+                <Rating
+                  rating={product.rating.rate}
+                  count={product.rating.count}
+                />
                 <Description>{product.description}</Description>
               </Details>
               <CartActionContainer>

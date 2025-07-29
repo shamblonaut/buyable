@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar/SearchBar";
 import ProductCard from "./ProductCard/ProductCard";
 import CartActions from "./CartActions/CartActions";
 import QuantitySelector from "./QuantitySelector/QuantitySelector";
+import Rating from "./Rating/Rating";
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   ProductCard,
   CartActions,
   QuantitySelector,
+  Rating,
 };
