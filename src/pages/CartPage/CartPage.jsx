@@ -23,6 +23,10 @@ const CartPage = () => {
 
   const products = productsData.data;
 
+  const clearCart = () => {
+    setCart({});
+  };
+
   useEffect(() => setAppPosition(AppPosition.CART), [setAppPosition]);
 
   useEffect(() => {
@@ -75,7 +79,7 @@ const CartPage = () => {
               <label>Total Price: </label>
               <p>${total.toFixed(2)}</p>
             </CheckoutInfo>
-            <CheckoutLink to="/disclaimer">
+            <CheckoutLink to="/disclaimer" onClick={clearCart}>
               <ShoppingBag /> Place Order
             </CheckoutLink>
           </CheckoutDetails>
