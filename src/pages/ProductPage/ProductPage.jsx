@@ -2,7 +2,7 @@ import { useOutletContext, useParams } from "react-router-dom";
 
 import { useFetch } from "@/hooks";
 
-import { Rating } from "@/components";
+import { BackButton, CartActions, Rating } from "@/components";
 
 import { Page, Info } from "@/styles";
 
@@ -17,7 +17,6 @@ import {
   Description,
   CartActionContainer,
 } from "./ProductPage.styles";
-import { CartActions } from "@/components";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -28,10 +27,11 @@ const ProductPage = () => {
     loading,
   } = useFetch(`https://fakestoreapi.com/products/${id}`);
 
-  const { cart, setCart } = useOutletContext();
+  const { cart, setCart, appPosition } = useOutletContext();
 
   return (
     <Page>
+      <BackButton appPosition={appPosition} />
       {loading ? (
         <Info>Loading product...</Info>
       ) : error ? (

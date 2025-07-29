@@ -38,7 +38,6 @@ const GlobalStyle = createGlobalStyle(css`
   }
 
   #root {
-    position: relative;
     min-height: calc(100svh - 64px);
     margin: 0 auto;
     margin-bottom: 64px;
@@ -75,6 +74,7 @@ const App = () => {
           productsData,
           cart,
           setCart,
+          appPosition,
           setAppPosition,
         }}
       />

@@ -1,3 +1,5 @@
+import { AppPosition } from "./constants";
+
 export const getRatingArray = (rating) => {
   if (rating > 5.0) {
     throw new Error("Invalid rating");
@@ -12,4 +14,15 @@ export const getRatingArray = (rating) => {
   }
 
   return ratingArray;
+};
+
+export const getPositionRoute = (appPosition) => {
+  switch (appPosition) {
+    case AppPosition.HOME:
+      return "/";
+    case AppPosition.SHOP:
+      return "/shop";
+    case AppPosition.CART:
+      return "/cart";
+  }
 };
