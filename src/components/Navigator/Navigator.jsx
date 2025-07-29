@@ -16,7 +16,9 @@ const Navigator = ({ appPosition, cartCount }) => (
       </PageLink>
       <PageLink to="/cart" $active={appPosition === AppPosition.CART}>
         <ShoppingCart />
-        <CartIndicator>{cartCount < 100 ? cartCount : "99+"}</CartIndicator>
+        {cartCount > 0 && (
+          <CartIndicator>{cartCount < 100 ? cartCount : "99+"}</CartIndicator>
+        )}
       </PageLink>
     </Tabs>
   </Bar>
