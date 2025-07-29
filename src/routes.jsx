@@ -5,7 +5,7 @@ import {
   ShopPage,
   ProductPage,
   CartPage,
-  CheckoutPage,
+  DisclaimerPage,
   ErrorPage,
 } from "./pages";
 
@@ -32,8 +32,8 @@ const routes = [
         element: <CartPage />,
       },
       {
-        path: "checkout",
-        element: <CheckoutPage />,
+        path: "disclaimer",
+        element: <DisclaimerPage />,
       },
     ],
   },

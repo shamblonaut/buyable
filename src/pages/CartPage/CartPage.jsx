@@ -9,16 +9,16 @@ import {
   ProductList,
   Heading,
   Info,
-  EmptyCart,
-  PriceLabel,
-  Price,
+  InfoTitle,
+  CheckoutInfo,
+  CheckoutDetails,
   CheckoutLink,
 } from "./CartPage.styles";
 
 const CartPage = () => {
   const { productsData, cart, setCart } = useOutletContext();
 
-  const [totalPrice, setTotalPrice] = useState(0.0);
+  const [subtotal, setSubtotal] = useState(0.0);
 
   useEffect(() => {
     if (!productsData) return;
@@ -30,18 +30,17 @@ const CartPage = () => {
       }
     });
 
-    setTotalPrice(sum.toFixed(2));
+    setSubtotal(sum);
   }, [productsData, cart]);
+
+  const tax = subtotal * 0.12;
+  const total = subtotal + tax;
 
   return (
     <Page>
       <Heading>Your Cart</Heading>
       {productsData && Object.keys(cart).length > 0 ? (
         <>
-          <Info>
-            <PriceLabel>Total Price: </PriceLabel>
-            <Price>${totalPrice}</Price>
-          </Info>
           <ProductList>
             {productsData
               .filter((product) =>
@@ -57,12 +56,27 @@ const CartPage = () => {
                 </li>
               ))}
           </ProductList>
-          <CheckoutLink to="/checkout">
-            <ShoppingBag /> Order Checkout
-          </CheckoutLink>
+          <CheckoutDetails>
+            <InfoTitle>Order Summary</InfoTitle>
+            <CheckoutInfo>
+              <label>Subtotal: </label>
+              <p>${subtotal}</p>
+            </CheckoutInfo>
+            <CheckoutInfo>
+              <label>Tax (12%): </label>
+              <p>${tax.toFixed(2)}</p>
+            </CheckoutInfo>
+            <CheckoutInfo>
+              <label>Total Price: </label>
+              <p>${total.toFixed(2)}</p>
+            </CheckoutInfo>
+            <CheckoutLink to="/disclaimer">
+              <ShoppingBag /> Place Order
+            </CheckoutLink>
+          </CheckoutDetails>
         </>
       ) : (
-        <EmptyCart>Your cart is empty</EmptyCart>
+        <Info>Your cart is empty</Info>
       )}
     </Page>
   );

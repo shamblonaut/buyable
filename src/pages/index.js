@@ -2,7 +2,7 @@ import HomePage from "./HomePage/HomePage";
 import ShopPage from "./ShopPage/ShopPage";
 import ProductPage from "./ProductPage/ProductPage";
 import CartPage from "./CartPage/CartPage";
-import CheckoutPage from "./CheckoutPage/CheckoutPage";
+import DisclaimerPage from "./DisclaimerPage/DisclaimerPage";
 import ErrorPage from "./ErrorPage/ErrorPage";
 
-export { HomePage, ShopPage, ProductPage, CartPage, CheckoutPage, ErrorPage };
+export { HomePage, ShopPage, ProductPage, CartPage, DisclaimerPage, ErrorPage };

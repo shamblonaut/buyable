@@ -1,8 +1,8 @@
-import { Page, Heading, Disclaimer } from "./CheckoutPage.styles";
+import { Page, Heading, Disclaimer } from "./DisclaimerPage.styles";
 
-const CheckoutPage = () => (
+const DisclaimerPage = () => (
   <Page>
-    <Heading>Checkout</Heading>
+    <Heading>Disclaimer</Heading>
     <Disclaimer>
       Sorry to disappoint you, but this was a fake online store that I built to
       practice React development. Good luck on your shopping endeavours!
@@ -13,4 +13,4 @@ const CheckoutPage = () => (
   </Page>
 );
 
-export default CheckoutPage;
+export default DisclaimerPage;

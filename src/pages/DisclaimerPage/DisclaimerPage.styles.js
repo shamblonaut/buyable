@@ -23,7 +23,7 @@ export const Disclaimer = styled.p`
   border-radius: 8px;
 
   color: var(--color-light);
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-dark);
 
   font-size: 1.25rem;
   font-weight: 500;
