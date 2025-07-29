@@ -8,26 +8,19 @@ import { Carousel } from "@/components";
 import {
   Page,
   HeroSection,
-  Info,
   HeroText,
   HeroHighlight,
   CTALink,
 } from "./HomePage.styles";
 
 const HomePage = () => {
-  const { productsData, productsLoading, setAppPosition } = useOutletContext();
+  const { productsData, setAppPosition } = useOutletContext();
 
   useEffect(() => setAppPosition(AppPosition.HOME), [setAppPosition]);
 
   return (
     <Page>
-      {productsLoading ? (
-        <Info>Loading Carousel...</Info>
-      ) : productsData ? (
-        <Carousel items={productsData.slice(0, 11)} />
-      ) : (
-        <Info>Could not load carousel :(</Info>
-      )}
+      <Carousel productsData={productsData} />
       <HeroSection>
         <HeroText>
           I can't believe it's not

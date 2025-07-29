@@ -27,18 +27,6 @@ export const Heading = styled.p`
   margin: 16px 0;
 `;
 
-export const Info = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex: 0.5;
-
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-style: italic;
-`;
-
 export const CheckoutDetails = styled.div`
   border: 3px solid var(--color-dark);
   border-radius: 8px;

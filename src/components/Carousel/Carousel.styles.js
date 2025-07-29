@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   position: relative;
   width: min(500px, 80%);
+  min-height: 200px;
   overflow: hidden;
   padding: 16px;
   margin: 32px 0;
@@ -11,6 +12,10 @@ export const Container = styled.div`
   background-color: white;
   border: 3px solid var(--color-dark);
   border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const ItemList = styled.ul`

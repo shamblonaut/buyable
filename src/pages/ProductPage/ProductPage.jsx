@@ -4,10 +4,11 @@ import { useFetch } from "@/hooks";
 
 import { Rating } from "@/components";
 
+import { Info } from "@/styles";
+
 import {
   GlobalStyle,
   Page,
-  Info,
   ImageContainer,
   Content,
   Notch,

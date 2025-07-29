@@ -13,18 +13,6 @@ export const Page = styled.main`
   width: 100%;
 `;
 
-export const Info = styled.p`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-style: italic;
-`;
-
 export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;

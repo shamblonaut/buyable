@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import { Info } from "@/styles";
+
 export const Page = styled.main`
   display: flex;
   flex-direction: column;
@@ -54,23 +56,4 @@ export const CTALink = styled(Link)`
   &:active {
     transform: scale(0.95);
   }
-`;
-
-export const Info = styled.p`
-  height: 250px;
-  padding: 48px;
-  margin: 32px;
-
-  border: 3px solid var(--color-dark);
-  border-radius: 8px;
-  background-color: white;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  font-size: 1.25rem;
-  font-weight: 300;
-  font-style: italic;
 `;

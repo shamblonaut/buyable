@@ -4,6 +4,9 @@ export const Page = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 16px;
+  padding-top: 0;
   width: 100%;
   flex: 1;
 `;

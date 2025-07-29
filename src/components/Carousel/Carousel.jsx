@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { Info } from "@/styles";
+
 import {
   Container,
   ItemList,
@@ -10,12 +12,16 @@ import {
   CarouselImage,
 } from "./Carousel.styles";
 
-const Carousel = ({ items }) => {
+const Carousel = ({ productsData }) => {
+  const products = productsData.data?.slice(0, 10);
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    if (!products) return;
+
     const timer = setTimeout(() => {
-      if (activeIndex === items.length - 1) {
+      if (activeIndex === products.length - 1) {
         setActiveIndex(0);
       } else {
         setActiveIndex(activeIndex + 1);
@@ -23,28 +29,39 @@ const Carousel = ({ items }) => {
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, [items, activeIndex]);
+  }, [products, activeIndex]);
 
   return (
     <Container>
-      <ItemList $activeIndex={activeIndex}>
-        {items.map((item) => (
-          <Item key={item.id}>
-            <ProductLink to={`/product/${item.id}`}>
-              <CarouselImage src={item.image} alt={item.title} />
-            </ProductLink>
-          </Item>
-        ))}
-      </ItemList>
-      <ContentNavigator>
-        {items.map((item, index) => (
-          <CarouselDot
-            $active={activeIndex === index}
-            key={item.id}
-            onClick={() => setActiveIndex(index)}
-          ></CarouselDot>
-        ))}
-      </ContentNavigator>
+      {productsData.loading ? (
+        <Info>Loading products...</Info>
+      ) : productsData.error ? (
+        <Info>
+          <p>Could not load carousel :(</p>
+          <p>Error: {productsData.error.message}</p>
+        </Info>
+      ) : (
+        <>
+          <ItemList $activeIndex={activeIndex}>
+            {products.map((item) => (
+              <Item key={item.id}>
+                <ProductLink to={`/product/${item.id}`}>
+                  <CarouselImage src={item.image} alt={item.title} />
+                </ProductLink>
+              </Item>
+            ))}
+          </ItemList>
+          <ContentNavigator>
+            {products.map((item, index) => (
+              <CarouselDot
+                $active={activeIndex === index}
+                key={item.id}
+                onClick={() => setActiveIndex(index)}
+              ></CarouselDot>
+            ))}
+          </ContentNavigator>
+        </>
+      )}
     </Container>
   );
 };

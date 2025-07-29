@@ -6,11 +6,12 @@ import { AppPosition } from "@/utils/constants";
 
 import { ProductCard } from "@/components";
 
+import { Info } from "@/styles";
+
 import {
   Page,
   ProductList,
   Heading,
-  Info,
   InfoTitle,
   CheckoutInfo,
   CheckoutDetails,
@@ -22,20 +23,22 @@ const CartPage = () => {
 
   const [subtotal, setSubtotal] = useState(0.0);
 
+  const products = productsData.data;
+
   useEffect(() => setAppPosition(AppPosition.CART), [setAppPosition]);
 
   useEffect(() => {
-    if (!productsData) return;
+    if (!products) return;
 
     let sum = 0.0;
-    productsData.forEach((product) => {
+    products.forEach((product) => {
       if (cart[product.id]) {
         sum += product.price * cart[product.id];
       }
     });
 
     setSubtotal(sum);
-  }, [productsData, cart]);
+  }, [products, cart]);
 
   const tax = subtotal * 0.12;
   const total = subtotal + tax;
@@ -43,10 +46,10 @@ const CartPage = () => {
   return (
     <Page>
       <Heading>Your Cart</Heading>
-      {productsData && Object.keys(cart).length > 0 ? (
+      {products && Object.keys(cart).length > 0 ? (
         <>
           <ProductList>
-            {productsData
+            {products
               .filter((product) =>
                 Object.keys(cart).includes(product.id.toString()),
               )

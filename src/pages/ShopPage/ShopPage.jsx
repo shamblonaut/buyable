@@ -5,7 +5,9 @@ import { AppPosition } from "@/utils/constants";
 
 import { SearchBar, ProductCard } from "@/components";
 
-import { Page, ProductList, Info } from "./ShopPage.styles";
+import { Info } from "@/styles";
+
+import { Page, ProductList } from "./ShopPage.styles";
 
 const ShopPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -14,25 +16,20 @@ const ShopPage = () => {
   );
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-  const {
-    productsData,
-    productsError,
-    productsLoading,
-    cart,
-    setCart,
-    setAppPosition,
-  } = useOutletContext();
+  const { productsData, cart, setCart, setAppPosition } = useOutletContext();
+
+  const products = productsData.data;
 
   useEffect(() => setAppPosition(AppPosition.SHOP), [setAppPosition]);
 
   useEffect(() => {
-    if (!searchQuery && productsData) {
-      setFilteredProducts(productsData);
+    if (!searchQuery && products) {
+      setFilteredProducts(products);
       setSearchParams({});
       return;
-    } else if (productsData) {
+    } else if (products) {
       setFilteredProducts(
-        productsData.filter(
+        products.filter(
           (product) =>
             searchQuery === "" ||
             product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -41,7 +38,7 @@ const ShopPage = () => {
       );
       setSearchParams({ query: searchQuery });
     }
-  }, [searchQuery, productsData, setSearchParams]);
+  }, [searchQuery, products, setSearchParams]);
 
   return (
     <Page>
@@ -50,13 +47,13 @@ const ShopPage = () => {
         query={searchQuery}
         setQuery={setSearchQuery}
       />
-      {productsLoading ? (
+      {productsData.loading ? (
         <Info>Loading products...</Info>
-      ) : productsError ? (
+      ) : productsData.error ? (
         <Info>
-          Error while fetching products:
+          Could not load products:
           <br />
-          {productsError.message}
+          {productsData.error.message}
         </Info>
       ) : filteredProducts.length > 0 ? (
         <ProductList>

@@ -52,9 +52,7 @@ const GlobalStyle = createGlobalStyle(css`
 `);
 
 const App = () => {
-  const { data, error, loading } = useFetch(
-    "https://fakestoreapi.com/products",
-  );
+  const productsData = useFetch("https://fakestoreapi.com/products");
 
   const [cart, setCart] = useState({});
   const [appPosition, setAppPosition] = useState(AppPosition.HOME);
@@ -65,9 +63,7 @@ const App = () => {
       <Header />
       <Outlet
         context={{
-          productsData: data,
-          productsError: error,
-          productsLoading: loading,
+          productsData,
           cart,
           setCart,
           setAppPosition,
