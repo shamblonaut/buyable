@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { createGlobalStyle, css } from "styled-components";
 
+import { AppPosition } from "@/utils/constants";
 import { useFetch } from "@/hooks";
 
 import { Header, Navigator } from "@/components";
@@ -56,6 +57,7 @@ const App = () => {
   );
 
   const [cart, setCart] = useState({});
+  const [appPosition, setAppPosition] = useState(AppPosition.HOME);
 
   return (
     <>
@@ -68,9 +70,10 @@ const App = () => {
           productsLoading: loading,
           cart,
           setCart,
+          setAppPosition,
         }}
       />
-      <Navigator />
+      <Navigator appPosition={appPosition} />
     </>
   );
 };

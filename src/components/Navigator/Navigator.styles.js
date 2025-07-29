@@ -25,3 +25,9 @@ export const Tabs = styled.div`
     color: var(--color-light);
   }
 `;
+
+export const Icon = styled.span`
+  & .lucide {
+    color: ${(props) => (props.$active ? "#f5f5dc" : "#f5f5dc40")};
+  }
+`;

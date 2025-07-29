@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { ShoppingBag } from "lucide-react";
 
+import { AppPosition } from "@/utils/constants";
+
 import { ProductCard } from "@/components";
 
 import {
@@ -16,9 +18,11 @@ import {
 } from "./CartPage.styles";
 
 const CartPage = () => {
-  const { productsData, cart, setCart } = useOutletContext();
+  const { productsData, cart, setCart, setAppPosition } = useOutletContext();
 
   const [subtotal, setSubtotal] = useState(0.0);
+
+  useEffect(() => setAppPosition(AppPosition.CART), [setAppPosition]);
 
   useEffect(() => {
     if (!productsData) return;

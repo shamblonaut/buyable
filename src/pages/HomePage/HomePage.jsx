@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
+
+import { AppPosition } from "@/utils/constants";
 
 import { Carousel } from "@/components";
 
@@ -12,7 +15,9 @@ import {
 } from "./HomePage.styles";
 
 const HomePage = () => {
-  const { productsData, productsLoading } = useOutletContext();
+  const { productsData, productsLoading, setAppPosition } = useOutletContext();
+
+  useEffect(() => setAppPosition(AppPosition.HOME), [setAppPosition]);
 
   return (
     <Page>

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useOutletContext, useSearchParams } from "react-router-dom";
 
+import { AppPosition } from "@/utils/constants";
+
 import { SearchBar, ProductCard } from "@/components";
 
 import { Page, ProductList, Info } from "./ShopPage.styles";
@@ -12,8 +14,16 @@ const ShopPage = () => {
   );
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-  const { productsData, productsError, productsLoading, cart, setCart } =
-    useOutletContext();
+  const {
+    productsData,
+    productsError,
+    productsLoading,
+    cart,
+    setCart,
+    setAppPosition,
+  } = useOutletContext();
+
+  useEffect(() => setAppPosition(AppPosition.SHOP), [setAppPosition]);
 
   useEffect(() => {
     if (!searchQuery && productsData) {

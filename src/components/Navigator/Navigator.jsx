@@ -1,19 +1,27 @@
 import { Link } from "react-router-dom";
 import { Home, ShoppingBag, ShoppingCart } from "lucide-react";
 
-import { Bar, Tabs } from "./Navigator.styles";
+import { AppPosition } from "@/utils/constants";
 
-const Navigator = () => (
+import { Bar, Tabs, Icon } from "./Navigator.styles";
+
+const Navigator = ({ appPosition }) => (
   <Bar>
     <Tabs>
       <Link to="/">
-        <Home />
+        <Icon $active={appPosition === AppPosition.HOME}>
+          <Home />
+        </Icon>
       </Link>
       <Link to="/shop">
-        <ShoppingBag />
+        <Icon $active={appPosition === AppPosition.SHOP}>
+          <ShoppingBag />
+        </Icon>
       </Link>
       <Link to="/cart">
-        <ShoppingCart />
+        <Icon $active={appPosition === AppPosition.CART}>
+          <ShoppingCart />
+        </Icon>
       </Link>
     </Tabs>
   </Bar>
