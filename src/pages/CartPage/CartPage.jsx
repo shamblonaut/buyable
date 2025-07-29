@@ -65,7 +65,7 @@ const CartPage = () => {
             <InfoTitle>Order Summary</InfoTitle>
             <CheckoutInfo>
               <label>Subtotal: </label>
-              <p>${subtotal}</p>
+              <p>${subtotal.toFixed(2)}</p>
             </CheckoutInfo>
             <CheckoutInfo>
               <label>Tax (12%): </label>
