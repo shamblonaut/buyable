@@ -73,7 +73,13 @@ const App = () => {
           setAppPosition,
         }}
       />
-      <Navigator appPosition={appPosition} />
+      <Navigator
+        appPosition={appPosition}
+        cartCount={Object.values(cart).reduce(
+          (sum, current) => sum + current,
+          0,
+        )}
+      />
     </>
   );
 };
