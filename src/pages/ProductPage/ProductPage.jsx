@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 
 import { useFetch } from "@/hooks";
 
@@ -9,10 +9,13 @@ import {
   ImageContainer,
   Content,
   Notch,
+  Details,
   Title,
   Price,
   Description,
+  CartActionContainer,
 } from "./ProductPage.styles";
+import { CartActions } from "@/components";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -22,6 +25,8 @@ const ProductPage = () => {
     error,
     loading,
   } = useFetch(`https://fakestoreapi.com/products/${id}`);
+
+  const { cart, setCart } = useOutletContext();
 
   return (
     <Page>
@@ -38,9 +43,14 @@ const ProductPage = () => {
             </ImageContainer>
             <Content>
               <Notch />
-              <Title>{product.title}</Title>
-              <Price>${product.price}</Price>
-              <Description>{product.description}</Description>
+              <Details>
+                <Title>{product.title}</Title>
+                <Price>${product.price}</Price>
+                <Description>{product.description}</Description>
+              </Details>
+              <CartActionContainer>
+                <CartActions product={product} cart={cart} setCart={setCart} />
+              </CartActionContainer>
             </Content>
           </>
         )

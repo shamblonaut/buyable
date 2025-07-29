@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
   height: 480px;
 
@@ -17,6 +18,8 @@ export const Card = styled.div`
 export const ProductLink = styled(Link)`
   text-decoration: none;
   color: inherit;
+
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -63,51 +66,4 @@ export const ProductPrice = styled.p`
   font-size: 1.25rem;
   font-weight: 500;
   margin: 8px 0;
-`;
-
-export const CartActions = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  margin: 0 auto;
-`;
-
-const CartButton = styled.button`
-  cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-
-  color: var(--color-light);
-  border: 2px solid var(--color-dark);
-  border-radius: 4px;
-
-  transition: all 200ms ease;
-`;
-
-export const CartAddButton = styled(CartButton)`
-  background-color: var(--color-green);
-  width: 100%;
-  padding: 8px 32px;
-
-  &:hover {
-    background-color: var(--color-green-dark);
-    color: var(--color-light);
-  }
-
-  & .lucide {
-    margin-right: 8px;
-  }
-`;
-
-export const CartRemoveButton = styled(CartButton)`
-  margin-left: 8px;
-  background-color: var(--color-red);
-
-  &:hover {
-    background-color: var(--color-red-dark);
-    color: var(--color-light);
-  }
 `;

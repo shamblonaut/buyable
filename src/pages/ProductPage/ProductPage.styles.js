@@ -47,6 +47,7 @@ export const Content = styled.div`
   border-bottom: none;
 
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 16px;
 `;
@@ -58,6 +59,11 @@ export const Notch = styled.div`
   border: 3px solid var(--color-dark);
   border-radius: 6px;
   background-color: var(--color-light);
+`;
+
+export const Details = styled.div`
+  flex: 1;
+  width: 100%;
 `;
 
 export const Title = styled.p`
@@ -73,4 +79,10 @@ export const Price = styled.p`
 
 export const Description = styled.p`
   font-size: 1.1rem;
+`;
+
+export const CartActionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: max(50%, 360px);
 `;
