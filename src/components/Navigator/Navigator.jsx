@@ -1,4 +1,5 @@
 import { Home, ShoppingBag, ShoppingCart } from "lucide-react";
+import PropTypes from "prop-types";
 
 import { AppPosition } from "@/utils/constants";
 
@@ -20,5 +21,10 @@ const Navigator = ({ appPosition, cartCount }) => (
     </Tabs>
   </Bar>
 );
+
+Navigator.propTypes = {
+  appPosition: PropTypes.oneOf(Object.values(AppPosition)),
+  cartCount: PropTypes.number.isRequired,
+};
 
 export default Navigator;

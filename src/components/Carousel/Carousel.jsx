@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
+import { ProductType } from "@/utils/types";
 
 import { Info } from "@/styles";
 
@@ -64,6 +67,14 @@ const Carousel = ({ productsData }) => {
       )}
     </Container>
   );
+};
+
+Carousel.propTypes = {
+  productsData: PropTypes.exact({
+    data: PropTypes.arrayOf(ProductType),
+    error: PropTypes.instanceOf(Error),
+    loading: PropTypes.bool.isRequired,
+  }).isRequired,
 };
 
 export default Carousel;

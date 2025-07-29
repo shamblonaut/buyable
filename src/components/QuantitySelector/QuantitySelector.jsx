@@ -1,4 +1,5 @@
 import { Minus, Plus } from "lucide-react";
+import PropTypes from "prop-types";
 
 import {
   Selector,
@@ -29,6 +30,13 @@ const QuantitySelector = ({ quantity, setQuantity, decrement, increment }) => {
       </IncrementButton>
     </Selector>
   );
+};
+
+QuantitySelector.propTypes = {
+  quantity: PropTypes.number.isRequired,
+  setQuantity: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired,
+  increment: PropTypes.func.isRequired,
 };
 
 export default QuantitySelector;

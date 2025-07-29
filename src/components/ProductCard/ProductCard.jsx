@@ -1,3 +1,7 @@
+import PropTypes from "prop-types";
+
+import { ProductType } from "@/utils/types";
+
 import {
   Card,
   ProductLink,
@@ -24,6 +28,12 @@ const ProductCard = ({ product, cart, setCart }) => {
       <CartActions product={product} cart={cart} setCart={setCart} />
     </Card>
   );
+};
+
+ProductCard.propTypes = {
+  product: ProductType.isRequired,
+  cart: PropTypes.object.isRequired,
+  setCart: PropTypes.func.isRequired,
 };
 
 export default ProductCard;

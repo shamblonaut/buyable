@@ -1,4 +1,7 @@
 import { Trash2, ShoppingCart } from "lucide-react";
+import PropTypes from "prop-types";
+
+import { ProductType } from "@/utils/types";
 
 import { QuantitySelector } from "@/components";
 
@@ -76,6 +79,12 @@ const CartActions = ({ product, cart, setCart }) => {
       )}
     </Container>
   );
+};
+
+CartActions.propTypes = {
+  product: ProductType.isRequired,
+  cart: PropTypes.object.isRequired,
+  setCart: PropTypes.func.isRequired,
 };
 
 export default CartActions;

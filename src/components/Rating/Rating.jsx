@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
+
 import { getRatingArray } from "@/utils/helpers";
+import { numberBetween } from "@/utils/types";
 
 import {
   Container,
@@ -31,6 +34,11 @@ const Rating = ({ rating, count }) => {
       </Details>
     </Container>
   );
+};
+
+Rating.propTypes = {
+  rating: numberBetween(0, 5),
+  count: PropTypes.number.isRequired,
 };
 
 export default Rating;
