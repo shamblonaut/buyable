@@ -2,16 +2,15 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import { AppPosition } from "@/utils/constants";
-import { useFetch } from "@/hooks";
+import { useFetch, useLocalStorage } from "@/hooks";
 
 import { Header, Navigator } from "@/components";
-
 import { RootStyle } from "@/styles";
 
 const App = () => {
   const productsData = useFetch("https://fakestoreapi.com/products");
+  const [cart, setCart] = useLocalStorage("cart", {});
 
-  const [cart, setCart] = useState({});
   const [appPosition, setAppPosition] = useState(AppPosition.HOME);
 
   return (
