@@ -17,7 +17,15 @@ const CartPage = () => {
   return (
     <Page>
       <Heading>Your Cart</Heading>
-      {products && Object.keys(cart).length > 0 ? (
+      {productsData.loading ? (
+        <Info>Loading products...</Info>
+      ) : productsData.error ? (
+        <Info>
+          Could not load products:
+          <br />
+          {productsData.error.message}
+        </Info>
+      ) : products && Object.keys(cart).length > 0 ? (
         <>
           <OrderInfo products={products} cart={cart} setCart={setCart} />
           <ProductList>
