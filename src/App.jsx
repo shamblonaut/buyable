@@ -14,6 +14,11 @@ const App = () => {
 
   const [appPosition, setAppPosition] = useState(AppPosition.HOME);
 
+  const cartCount = Object.values(cart).reduce(
+    (sum, current) => sum + current,
+    0,
+  );
+
   return (
     <>
       <RootStyle />
@@ -27,13 +32,7 @@ const App = () => {
           setAppPosition,
         }}
       />
-      <Navigator
-        appPosition={appPosition}
-        cartCount={Object.values(cart).reduce(
-          (sum, current) => sum + current,
-          0,
-        )}
-      />
+      <Navigator appPosition={appPosition} cartCount={cartCount} />
     </>
   );
 };

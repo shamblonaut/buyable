@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > renders correctly 1`] = `
+<div>
+  <header
+    data-testid="header"
+  >
+    BUYABLE
+  </header>
+  <div
+    data-testid="outlet-page"
+  >
+    Mocked Page
+  </div>
+  <nav
+    data-testid="navigator"
+  >
+    <a>
+      Home
+       [active]
+    </a>
+    <a>
+      Shop
+    </a>
+    <a>
+      Cart: 
+      10
+       items
+    </a>
+  </nav>
+</div>
+`;
