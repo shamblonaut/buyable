@@ -1,9 +1,11 @@
-import { Brand, Logo, Title } from "./Header.styles";
+import { Brand, HomeLink, Logo, Title } from "./Header.styles";
 
 const Header = () => (
   <Brand>
-    <Logo src="/logo.svg" alt="Buyable Logo" />
-    <Title>BUYABLE</Title>
+    <HomeLink to="/">
+      <Logo src="/logo.svg" alt="Buyable Logo" />
+      <Title>BUYABLE</Title>
+    </HomeLink>
   </Brand>
 );
 

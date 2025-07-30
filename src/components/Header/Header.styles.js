@@ -1,9 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Brand = styled.header`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: max-content;
   padding: 8px;
   margin: 8px;
@@ -13,6 +11,12 @@ export const Brand = styled.header`
   background-color: var(--color-accent-dark);
   border: 3px solid var(--color-dark);
   border-radius: 4px;
+`;
+
+export const HomeLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Logo = styled.img`
