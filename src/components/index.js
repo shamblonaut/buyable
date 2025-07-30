@@ -6,6 +6,7 @@ import ProductCard from "./ProductCard/ProductCard";
 import CartActions from "./CartActions/CartActions";
 import QuantitySelector from "./QuantitySelector/QuantitySelector";
 import Rating from "./Rating/Rating";
+import OrderInfo from "./OrderInfo/OrderInfo";
 import BackButton from "./BackButton/BackButton";
 
 export {
@@ -17,5 +18,6 @@ export {
   CartActions,
   QuantitySelector,
   Rating,
+  OrderInfo,
   BackButton,
 };
