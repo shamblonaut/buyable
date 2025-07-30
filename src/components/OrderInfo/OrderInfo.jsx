@@ -54,7 +54,7 @@ const OrderInfo = ({ products, cart, setCart }) => {
 
 OrderInfo.propTypes = {
   products: PropTypes.arrayOf(ProductType),
-  cart: PropTypes.object.isRequired,
+  cart: PropTypes.objectOf(PropTypes.number).isRequired,
   setCart: PropTypes.func.isRequired,
 };
 

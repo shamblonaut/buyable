@@ -31,7 +31,7 @@ const ProductCard = ({ product, cart, setCart }) => {
 
 ProductCard.propTypes = {
   product: ProductType.isRequired,
-  cart: PropTypes.object.isRequired,
+  cart: PropTypes.objectOf(PropTypes.number).isRequired,
   setCart: PropTypes.func.isRequired,
 };
 
