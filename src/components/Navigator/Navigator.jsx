@@ -2,7 +2,6 @@ import { Home, ShoppingBag, ShoppingCart } from "lucide-react";
 import PropTypes from "prop-types";
 
 import { AppPosition } from "@/utils/constants";
-
 import { Bar, Tabs, PageLink, CartIndicator } from "./Navigator.styles";
 
 const Navigator = ({ appPosition, cartCount }) => (

@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { ProductType } from "@/utils/types";
 
 import { Info } from "@/styles";
-
 import {
   Container,
   ItemList,

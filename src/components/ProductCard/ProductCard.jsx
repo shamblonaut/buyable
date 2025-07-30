@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 import { ProductType } from "@/utils/types";
 
+import { CartActions } from "@/components";
 import {
   Card,
   ProductLink,
@@ -10,8 +11,6 @@ import {
   ProductTitle,
   ProductPrice,
 } from "./ProductCard.styles";
-
-import { CartActions } from "@/components";
 
 const ProductCard = ({ product, cart, setCart }) => {
   return (

@@ -1,9 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 
 import { BackButton } from "@/components";
-
 import { Page, Heading } from "@/styles";
-
 import { Disclaimer } from "./DisclaimerPage.styles";
 
 const DisclaimerPage = () => {

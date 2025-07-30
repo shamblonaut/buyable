@@ -4,9 +4,7 @@ import { useOutletContext, useSearchParams } from "react-router-dom";
 import { AppPosition } from "@/utils/constants";
 
 import { SearchBar, ProductCard } from "@/components";
-
 import { Page, Info } from "@/styles";
-
 import {
   Controls,
   CategoryControl,

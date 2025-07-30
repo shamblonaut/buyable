@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { ProductType } from "@/utils/types";
 
 import { QuantitySelector } from "@/components";
-
 import { Container, AddButton, RemoveButton } from "./CartActions.styles";
 
 const CartActions = ({ product, cart, setCart }) => {

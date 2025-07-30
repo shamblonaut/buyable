@@ -4,9 +4,7 @@ import { useOutletContext } from "react-router-dom";
 import { AppPosition } from "@/utils/constants";
 
 import { OrderInfo, ProductCard } from "@/components";
-
 import { Page, Heading, Info } from "@/styles";
-
 import { ProductList } from "./CartPage.styles";
 
 const CartPage = () => {

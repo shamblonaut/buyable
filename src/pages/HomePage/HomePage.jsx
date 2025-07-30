@@ -4,9 +4,7 @@ import { useOutletContext } from "react-router-dom";
 import { AppPosition } from "@/utils/constants";
 
 import { Carousel } from "@/components";
-
 import { Page } from "@/styles";
-
 import {
   HeroSection,
   HeroText,

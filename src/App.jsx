@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import { AppPosition } from "@/utils/constants";
+
 import { useFetch, useLocalStorage } from "@/hooks";
 
 import { Header, Navigator } from "@/components";
