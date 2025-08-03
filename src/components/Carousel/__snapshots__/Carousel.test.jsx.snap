@@ -1,0 +1,253 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Carousel component > renders correctly when products data is available 1`] = `
+<div>
+  <div
+    class="sc-ggWZvA izFxBH"
+  >
+    <ul
+      aria-label="carousel-image-list"
+      class="sc-dTvVRJ fgeWkL"
+    >
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/1"
+        >
+          <img
+            alt="Product 1"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-1.jpg"
+          />
+        </a>
+      </li>
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/2"
+        >
+          <img
+            alt="Product 2"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-2.jpg"
+          />
+        </a>
+      </li>
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/3"
+        >
+          <img
+            alt="Product 3"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-3.jpg"
+          />
+        </a>
+      </li>
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/4"
+        >
+          <img
+            alt="Product 4"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-4.jpg"
+          />
+        </a>
+      </li>
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/5"
+        >
+          <img
+            alt="Product 5"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-5.jpg"
+          />
+        </a>
+      </li>
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/6"
+        >
+          <img
+            alt="Product 6"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-6.jpg"
+          />
+        </a>
+      </li>
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/7"
+        >
+          <img
+            alt="Product 7"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-7.jpg"
+          />
+        </a>
+      </li>
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/8"
+        >
+          <img
+            alt="Product 8"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-8.jpg"
+          />
+        </a>
+      </li>
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/9"
+        >
+          <img
+            alt="Product 9"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-9.jpg"
+          />
+        </a>
+      </li>
+      <li
+        class="sc-jwTyAe bxByPe"
+      >
+        <a
+          aria-label="product-link"
+          class="sc-hwkwBN dkiQOl"
+          data-discover="true"
+          href="/product/10"
+        >
+          <img
+            alt="Product 10"
+            class="sc-kNOymR ecHJWZ"
+            src="http://example.com/image-10.jpg"
+          />
+        </a>
+      </li>
+    </ul>
+    <div
+      class="sc-hjsuWn cpqXwW"
+    >
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE hwBhFv"
+      />
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE dfxHNp"
+      />
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE dfxHNp"
+      />
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE dfxHNp"
+      />
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE dfxHNp"
+      />
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE dfxHNp"
+      />
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE dfxHNp"
+      />
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE dfxHNp"
+      />
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE dfxHNp"
+      />
+      <button
+        aria-label="carousel-navigation-button"
+        class="sc-jJLAfE dfxHNp"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Carousel component > shows error status when products data is not available 1`] = `
+<div>
+  <div
+    class="sc-ggWZvA izFxBH"
+  >
+    <div
+      class="sc-fhHczv ewGzxY"
+    >
+      <p>
+        Could not load carousel :(
+      </p>
+      <p>
+        Error: 
+        Could not fetch products
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Carousel component > shows loading status 1`] = `
+<div>
+  <div
+    class="sc-ggWZvA izFxBH"
+  >
+    <div
+      class="sc-fhHczv ewGzxY"
+    >
+      Loading products...
+    </div>
+  </div>
+</div>
+`;

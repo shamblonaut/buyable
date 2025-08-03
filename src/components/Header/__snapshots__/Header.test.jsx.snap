@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header component > renders correctly 1`] = `
+<div>
+  <header
+    class="sc-bRKDuR decPCC"
+  >
+    <a
+      class="sc-hvigdm cvYFI"
+      data-discover="true"
+      href="/"
+    >
+      <img
+        alt="Buyable Logo"
+        class="sc-fhHczv dhZxPy"
+        src="/logo.svg"
+      />
+      <p
+        class="sc-ggWZvA bowmnC"
+      >
+        BUYABLE
+      </p>
+    </a>
+  </header>
+</div>
+`;

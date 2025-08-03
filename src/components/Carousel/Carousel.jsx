@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-import { ProductType } from "@/utils/types";
-
 import { Info } from "@/styles";
 import {
   Container,
@@ -14,8 +12,13 @@ import {
   CarouselImage,
 } from "./Carousel.styles";
 
-const Carousel = ({ productsData }) => {
-  const products = productsData.data?.slice(0, 10);
+const Carousel = ({ productsData, itemCount }) => {
+  const products = productsData.data?.slice(
+    0,
+    itemCount
+      ? Math.min(itemCount, productsData.data?.length)
+      : productsData.data?.length,
+  );
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -23,15 +26,13 @@ const Carousel = ({ productsData }) => {
     if (!products) return;
 
     const timer = setTimeout(() => {
-      if (activeIndex === products.length - 1) {
-        setActiveIndex(0);
-      } else {
-        setActiveIndex(activeIndex + 1);
-      }
+      setActiveIndex((previousIndex) =>
+        previousIndex === products.length - 1 ? 0 : previousIndex + 1,
+      );
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, [products, activeIndex]);
+  });
 
   return (
     <Container>
@@ -44,10 +45,13 @@ const Carousel = ({ productsData }) => {
         </Info>
       ) : (
         <>
-          <ItemList $activeIndex={activeIndex}>
+          <ItemList $activeIndex={activeIndex} aria-label="carousel-image-list">
             {products.map((item) => (
               <Item key={item.id}>
-                <ProductLink to={`/product/${item.id}`}>
+                <ProductLink
+                  to={`/product/${item.id}`}
+                  aria-label="product-link"
+                >
                   <CarouselImage src={item.image} alt={item.title} />
                 </ProductLink>
               </Item>
@@ -58,6 +62,7 @@ const Carousel = ({ productsData }) => {
               <CarouselDot
                 $active={activeIndex === index}
                 key={item.id}
+                aria-label="carousel-navigation-button"
                 onClick={() => setActiveIndex(index)}
               ></CarouselDot>
             ))}
@@ -70,10 +75,17 @@ const Carousel = ({ productsData }) => {
 
 Carousel.propTypes = {
   productsData: PropTypes.exact({
-    data: PropTypes.arrayOf(ProductType),
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+      }),
+    ),
     error: PropTypes.instanceOf(Error),
     loading: PropTypes.bool.isRequired,
   }).isRequired,
+  itemCount: PropTypes.number,
 };
 
 export default Carousel;

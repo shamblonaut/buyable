@@ -1,0 +1,150 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CartActions component > renders correctly when cart is empty 1`] = `
+<div>
+  <div
+    class="sc-bjMIFn iUmaXL"
+  >
+    <button
+      aria-label="cart-add-button"
+      class="sc-dClGHI sc-fhfEft eEFmxf jwigen"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-shopping-cart"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="8"
+          cy="21"
+          r="1"
+        />
+        <circle
+          cx="19"
+          cy="21"
+          r="1"
+        />
+        <path
+          d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+        />
+      </svg>
+       Add to cart
+    </button>
+  </div>
+</div>
+`;
+
+exports[`CartActions component > renders correctly when cart is not empty 1`] = `
+<div>
+  <div
+    class="sc-bjMIFn iUmaXL"
+  >
+    <div
+      aria-label="cart-quantity-selector"
+      class="sc-eQwNpu czpjZa"
+    >
+      <button
+        aria-label="quantity-decrement-button"
+        class="sc-gvqKNf sc-cOpnSz iwcSHy bQiQpy"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-minus"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5 12h14"
+          />
+        </svg>
+      </button>
+      <input
+        aria-label="custom-quantity-input"
+        class="sc-eVqvcJ fQmksd"
+        type="text"
+        value="13"
+      />
+      <button
+        aria-label="quantity-increment-button"
+        class="sc-gvqKNf sc-kjwdDK iwcSHy chzemP"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-plus"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5 12h14"
+          />
+          <path
+            d="M12 5v14"
+          />
+        </svg>
+      </button>
+    </div>
+    <button
+      aria-label="cart-remove-button"
+      class="sc-dClGHI sc-bAehkN eEFmxf bdzNYM"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-trash2 lucide-trash-2"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 6h18"
+        />
+        <path
+          d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"
+        />
+        <path
+          d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

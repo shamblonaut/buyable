@@ -1,0 +1,64 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`QuantitySelector component > renders correctly when cart is empty 1`] = `
+<div>
+  <div
+    aria-label="cart-quantity-selector"
+    class="sc-bRKDuR eFzYWC"
+  >
+    <button
+      aria-label="quantity-decrement-button"
+      class="sc-hvigdm sc-fhHczv cSvOhk eYhuUE"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-minus"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 12h14"
+        />
+      </svg>
+    </button>
+    <input
+      aria-label="custom-quantity-input"
+      class="sc-dTvVRJ hypWRI"
+      type="text"
+      value="4"
+    />
+    <button
+      aria-label="quantity-increment-button"
+      class="sc-hvigdm sc-ggWZvA cSvOhk bgUnbA"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-plus"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 12h14"
+        />
+        <path
+          d="M12 5v14"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

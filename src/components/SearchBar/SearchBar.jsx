@@ -10,6 +10,7 @@ const SearchBar = ({ prompt, query, setQuery }) => {
       <SearchIcon />
       <Input
         type="text"
+        aria-label="product-search-input"
         placeholder={prompt ?? ""}
         value={query}
         onChange={handleSearchInput}

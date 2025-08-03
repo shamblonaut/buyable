@@ -1,8 +1,6 @@
 import { Trash2, ShoppingCart } from "lucide-react";
 import PropTypes from "prop-types";
 
-import { ProductType } from "@/utils/types";
-
 import { QuantitySelector } from "@/components";
 import { Container, AddButton, RemoveButton } from "./CartActions.styles";
 
@@ -67,12 +65,15 @@ const CartActions = ({ product, cart, setCart }) => {
             increment={incrementCartQuantity}
             decrement={decrementCartQuantity}
           />
-          <RemoveButton onClick={removeFromCart}>
+          <RemoveButton
+            onClick={removeFromCart}
+            aria-label="cart-remove-button"
+          >
             <Trash2 />
           </RemoveButton>
         </>
       ) : (
-        <AddButton onClick={addToCart}>
+        <AddButton onClick={addToCart} aria-label="cart-add-button">
           <ShoppingCart /> Add to cart
         </AddButton>
       )}
@@ -81,7 +82,9 @@ const CartActions = ({ product, cart, setCart }) => {
 };
 
 CartActions.propTypes = {
-  product: ProductType.isRequired,
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+  }).isRequired,
   cart: PropTypes.objectOf(PropTypes.number).isRequired,
   setCart: PropTypes.func.isRequired,
 };

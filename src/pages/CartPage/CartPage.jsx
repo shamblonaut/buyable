@@ -27,7 +27,12 @@ const CartPage = () => {
         </Info>
       ) : products && Object.keys(cart).length > 0 ? (
         <>
-          <OrderInfo products={products} cart={cart} setCart={setCart} />
+          <OrderInfo
+            products={products}
+            cart={cart}
+            setCart={setCart}
+            taxPercent={12}
+          />
           <ProductList>
             {products
               .filter((product) =>

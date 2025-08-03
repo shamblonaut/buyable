@@ -1,47 +1,37 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { ShoppingBag } from "lucide-react";
 import PropTypes from "prop-types";
 
-import { ProductType } from "@/utils/types";
-
 import { Container, Title, Field, CheckoutLink } from "./OrderInfo.styles";
 
-const OrderInfo = ({ products, cart, setCart }) => {
-  const [subtotal, setSubtotal] = useState(0.0);
+const OrderInfo = ({ products, cart, setCart, taxPercent }) => {
+  const getSubtotal = () =>
+    products.reduce(
+      (sum, product) =>
+        cart[product.id] ? sum + product.price * cart[product.id] : 0,
+      0,
+    );
 
-  const tax = subtotal * 0.12;
+  const subtotal = useMemo(getSubtotal, [products, cart]);
+  const tax = subtotal * (taxPercent / 100);
   const total = subtotal + tax;
 
   const clearCart = () => {
     setCart({});
   };
 
-  useEffect(() => {
-    if (!products) return;
-
-    let sum = 0.0;
-    products.forEach((product) => {
-      if (cart[product.id]) {
-        sum += product.price * cart[product.id];
-      }
-    });
-
-    setSubtotal(sum);
-  }, [products, cart]);
-
-  if (!products) return;
   return (
     <Container>
       <Title>Order Summary</Title>
-      <Field>
+      <Field aria-label="subtotal-field">
         <label>Subtotal: </label>
         <p>${subtotal.toFixed(2)}</p>
       </Field>
-      <Field>
+      <Field aria-label="tax-field">
         <label>Tax (12%): </label>
         <p>${tax.toFixed(2)}</p>
       </Field>
-      <Field>
+      <Field aria-label="total-price-field">
         <label>Total Price: </label>
         <p>${total.toFixed(2)}</p>
       </Field>
@@ -53,9 +43,15 @@ const OrderInfo = ({ products, cart, setCart }) => {
 };
 
 OrderInfo.propTypes = {
-  products: PropTypes.arrayOf(ProductType),
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      price: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
   cart: PropTypes.objectOf(PropTypes.number).isRequired,
   setCart: PropTypes.func.isRequired,
+  taxPercent: PropTypes.number.isRequired,
 };
 
 export default OrderInfo;

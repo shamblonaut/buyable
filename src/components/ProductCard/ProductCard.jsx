@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 
-import { ProductType } from "@/utils/types";
-
 import { CartActions } from "@/components";
 import {
   Card,
@@ -15,7 +13,11 @@ import {
 const ProductCard = ({ product, cart, setCart }) => {
   return (
     <Card>
-      <ProductLink to={`/product/${product.id}`} title={product.title}>
+      <ProductLink
+        to={`/product/${product.id}`}
+        aria-label="product-link"
+        title={product.title}
+      >
         <ImageContainer>
           <img src={product.image} alt={product.title} />
         </ImageContainer>
@@ -30,7 +32,12 @@ const ProductCard = ({ product, cart, setCart }) => {
 };
 
 ProductCard.propTypes = {
-  product: ProductType.isRequired,
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+  }).isRequired,
   cart: PropTypes.objectOf(PropTypes.number).isRequired,
   setCart: PropTypes.func.isRequired,
 };

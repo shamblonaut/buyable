@@ -19,7 +19,7 @@ const HomePage = () => {
 
   return (
     <Page>
-      <Carousel productsData={productsData} />
+      <Carousel productsData={productsData} itemCount={10} />
       <HeroSection>
         <HeroText>
           I can't believe it's not
