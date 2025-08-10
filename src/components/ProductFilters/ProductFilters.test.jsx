@@ -4,90 +4,9 @@ import userEvent from "@testing-library/user-event";
 
 import { BrowserRouter } from "react-router-dom";
 
-import ProductFilters from "./ProductFilters";
+import { mockProductList } from "@tests/data";
 
-const mockProducts = [
-  {
-    id: 1,
-    price: 1023,
-    title: "Proton Laptop 16GB RAM 512GB SSD",
-    image: "http://example.com/image-1.jpg",
-    category: "Electronics",
-    rating: { rate: 3.5, count: 128 },
-  },
-  {
-    id: 2,
-    price: 511,
-    title: "Tungstenite Graphics Card 6GB VRAM",
-    image: "http://example.com/image-2.jpg",
-    category: "Electronics",
-    rating: { rate: 4.0, count: 64 },
-  },
-  {
-    id: 3,
-    price: 255,
-    title: "Element X25 Smartphone",
-    image: "http://example.com/image-3.jpg",
-    category: "Electronics",
-    rating: { rate: 2.3, count: 32 },
-  },
-  {
-    id: 4,
-    price: 127,
-    title: "Electron Processor 2.4GHz",
-    image: "http://example.com/image-4.jpg",
-    category: "Electronics",
-    rating: { rate: 4.8, count: 256 },
-  },
-  {
-    id: 5,
-    price: 63.49,
-    title: "Nucleon Motherboard",
-    image: "http://example.com/image-5.jpg",
-    category: "Electronics",
-    rating: { rate: 3.2, count: 16 },
-  },
-  {
-    id: 6,
-    price: 31.49,
-    title: "Newton Sports Sneakers",
-    image: "http://example.com/image-6.jpg",
-    category: "Accessories",
-    rating: { rate: 3.8, count: 96 },
-  },
-  {
-    id: 7,
-    price: 15.49,
-    title: "Graviton Travel Bag",
-    image: "http://example.com/image-7.jpg",
-    category: "Accessories",
-    rating: { rate: 2.7, count: 12 },
-  },
-  {
-    id: 8,
-    price: 7.99,
-    title: "Torqus Chronometer Wristwatch",
-    image: "http://example.com/image-8.jpg",
-    category: "Accessories",
-    rating: { rate: 2.1, count: 18 },
-  },
-  {
-    id: 9,
-    price: 3.99,
-    title: "Pendulus Necklace",
-    image: "http://example.com/image-9.jpg",
-    category: "Accessories",
-    rating: { rate: 1.8, count: 13 },
-  },
-  {
-    id: 10,
-    price: 1.99,
-    title: "Centrifume Ring",
-    image: "http://example.com/image-10.jpg",
-    category: "Accessories",
-    rating: { rate: 3.9, count: 84 },
-  },
-];
+import ProductFilters from "./ProductFilters";
 
 const mockSetFilteredProducts = vi.spyOn(
   {
@@ -108,7 +27,7 @@ describe("ProductFilters component", () => {
     const { container } = render(
       <BrowserRouter>
         <ProductFilters
-          products={mockProducts}
+          products={mockProductList}
           setFilteredProducts={mockSetFilteredProducts}
         />
       </BrowserRouter>,
@@ -121,7 +40,7 @@ describe("ProductFilters component", () => {
     render(
       <BrowserRouter>
         <ProductFilters
-          products={mockProducts}
+          products={mockProductList}
           setFilteredProducts={mockSetFilteredProducts}
         />
       </BrowserRouter>,
@@ -142,7 +61,7 @@ describe("ProductFilters component", () => {
     render(
       <BrowserRouter>
         <ProductFilters
-          products={mockProducts}
+          products={mockProductList}
           setFilteredProducts={mockSetFilteredProducts}
         />
       </BrowserRouter>,
@@ -162,7 +81,7 @@ describe("ProductFilters component", () => {
     render(
       <BrowserRouter>
         <ProductFilters
-          products={mockProducts}
+          products={mockProductList}
           setFilteredProducts={mockSetFilteredProducts}
         />
       </BrowserRouter>,
@@ -174,8 +93,9 @@ describe("ProductFilters component", () => {
     );
 
     expect(mockSetFilteredProducts).toHaveBeenCalledWith([
-      mockProducts[0],
-      mockProducts[1],
+      mockProductList[0],
+      mockProductList[1],
+      mockProductList[2],
     ]);
   });
 
@@ -185,7 +105,7 @@ describe("ProductFilters component", () => {
     render(
       <BrowserRouter>
         <ProductFilters
-          products={mockProducts}
+          products={mockProductList}
           setFilteredProducts={mockSetFilteredProducts}
         />
       </BrowserRouter>,
@@ -197,7 +117,7 @@ describe("ProductFilters component", () => {
     );
 
     expect(mockSetFilteredProducts).toHaveBeenCalledWith(
-      mockProducts.slice(0, 5),
+      mockProductList.slice(0, 5),
     );
   });
 
@@ -207,7 +127,7 @@ describe("ProductFilters component", () => {
     render(
       <BrowserRouter>
         <ProductFilters
-          products={mockProducts}
+          products={mockProductList}
           setFilteredProducts={mockSetFilteredProducts}
         />
       </BrowserRouter>,
@@ -218,7 +138,7 @@ describe("ProductFilters component", () => {
       "all",
     );
 
-    expect(mockSetFilteredProducts).toHaveBeenLastCalledWith(mockProducts);
+    expect(mockSetFilteredProducts).toHaveBeenLastCalledWith(mockProductList);
 
     await user.selectOptions(
       screen.getByRole("combobox", { name: "category-selector" }),
@@ -226,7 +146,7 @@ describe("ProductFilters component", () => {
     );
 
     expect(mockSetFilteredProducts).toHaveBeenLastCalledWith(
-      mockProducts.slice(0, 5),
+      mockProductList.slice(0, 5),
     );
 
     await user.selectOptions(
@@ -235,14 +155,14 @@ describe("ProductFilters component", () => {
     );
 
     expect(mockSetFilteredProducts).toHaveBeenLastCalledWith(
-      mockProducts.slice(5, 10),
+      mockProductList.slice(5, 10),
     );
   });
 
   it("filters by respective sorting methods", async () => {
     const user = userEvent.setup();
 
-    const products = mockProducts.slice(0, 5);
+    const products = mockProductList.slice(0, 5);
 
     render(
       <BrowserRouter>
@@ -267,8 +187,8 @@ describe("ProductFilters component", () => {
 
     expect(mockSetFilteredProducts).toHaveBeenLastCalledWith([
       products[4],
-      products[3],
       products[2],
+      products[3],
       products[1],
       products[0],
     ]);
@@ -281,8 +201,8 @@ describe("ProductFilters component", () => {
     expect(mockSetFilteredProducts).toHaveBeenLastCalledWith([
       products[0],
       products[1],
-      products[2],
       products[3],
+      products[2],
       products[4],
     ]);
 
@@ -306,7 +226,7 @@ describe("ProductFilters component", () => {
     render(
       <BrowserRouter>
         <ProductFilters
-          products={mockProducts}
+          products={mockProductList}
           setFilteredProducts={mockSetFilteredProducts}
         />
       </BrowserRouter>,
@@ -330,8 +250,9 @@ describe("ProductFilters component", () => {
     );
 
     expect(mockSetFilteredProducts).toHaveBeenLastCalledWith([
-      mockProducts[1],
-      mockProducts[0],
+      mockProductList[2],
+      mockProductList[1],
+      mockProductList[0],
     ]);
 
     await user.selectOptions(
@@ -340,8 +261,9 @@ describe("ProductFilters component", () => {
     );
 
     expect(mockSetFilteredProducts).toHaveBeenLastCalledWith([
-      mockProducts[0],
-      mockProducts[1],
+      mockProductList[0],
+      mockProductList[1],
+      mockProductList[2],
     ]);
 
     await user.selectOptions(
@@ -350,8 +272,9 @@ describe("ProductFilters component", () => {
     );
 
     expect(mockSetFilteredProducts).toHaveBeenLastCalledWith([
-      mockProducts[1],
-      mockProducts[0],
+      mockProductList[1],
+      mockProductList[0],
+      mockProductList[2],
     ]);
   });
 });

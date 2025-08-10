@@ -19,7 +19,7 @@ exports[`OrderInfo component > renders correctly 1`] = `
       </label>
       <p>
         $
-        3608.64
+        3743.03
       </p>
     </span>
     <span
@@ -31,7 +31,7 @@ exports[`OrderInfo component > renders correctly 1`] = `
       </label>
       <p>
         $
-        433.04
+        449.16
       </p>
     </span>
     <span
@@ -43,7 +43,7 @@ exports[`OrderInfo component > renders correctly 1`] = `
       </label>
       <p>
         $
-        4041.68
+        4192.19
       </p>
     </span>
     <a
