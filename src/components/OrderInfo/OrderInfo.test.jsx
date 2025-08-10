@@ -1,8 +1,9 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, waitFor, within } from "@testing-library/react";
 
-import OrderInfo from "./OrderInfo";
 import { BrowserRouter } from "react-router-dom";
+
+import OrderInfo from "./OrderInfo";
 
 const mockProductList = [
   { id: 1, price: 1023 },

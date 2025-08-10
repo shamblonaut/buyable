@@ -3,17 +3,21 @@ import { useOutletContext } from "react-router-dom";
 
 import { AppPosition } from "@/utils/constants";
 
-import { OrderInfo, ProductCard } from "@/components";
+import { OrderInfo, ProductList } from "@/components";
 import { Page, Heading, Info } from "@/styles";
-import { ProductList } from "./CartPage.styles";
 
 const CartPage = () => {
   const { productsData, cart, setCart, setAppPosition } = useOutletContext();
 
-  const products = productsData.data;
-
   useEffect(() => setAppPosition(AppPosition.CART), [setAppPosition]);
 
+  const getCartProductList = () => {
+    return products.filter((product) =>
+      Object.keys(cart).includes(product.id.toString()),
+    );
+  };
+
+  const products = productsData.data;
   return (
     <Page>
       <Heading>Your Cart</Heading>
@@ -33,21 +37,12 @@ const CartPage = () => {
             setCart={setCart}
             taxPercent={12}
           />
-          <ProductList>
-            {products
-              .filter((product) =>
-                Object.keys(cart).includes(product.id.toString()),
-              )
-              .map((product) => (
-                <li key={product.id}>
-                  <ProductCard
-                    product={product}
-                    cart={cart}
-                    setCart={setCart}
-                  />
-                </li>
-              ))}
-          </ProductList>
+          <ProductList
+            products={getCartProductList()}
+            cart={cart}
+            setCart={setCart}
+            filterable={false}
+          />
         </>
       ) : (
         <Info>Your cart is empty</Info>

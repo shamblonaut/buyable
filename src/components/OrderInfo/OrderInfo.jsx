@@ -1,18 +1,14 @@
-import { useMemo } from "react";
 import { ShoppingBag } from "lucide-react";
 import PropTypes from "prop-types";
 
 import { Container, Title, Field, CheckoutLink } from "./OrderInfo.styles";
 
 const OrderInfo = ({ products, cart, setCart, taxPercent }) => {
-  const getSubtotal = () =>
-    products.reduce(
-      (sum, product) =>
-        cart[product.id] ? sum + product.price * cart[product.id] : 0,
-      0,
-    );
-
-  const subtotal = useMemo(getSubtotal, [products, cart]);
+  const subtotal = products.reduce(
+    (sum, product) =>
+      cart[product.id] ? sum + product.price * cart[product.id] : sum,
+    0,
+  );
   const tax = subtotal * (taxPercent / 100);
   const total = subtotal + tax;
 

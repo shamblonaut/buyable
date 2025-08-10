@@ -1,7 +1,8 @@
 import Header from "./Header/Header";
 import Navigator from "./Navigator/Navigator";
 import Carousel from "./Carousel/Carousel";
-import SearchBar from "./SearchBar/SearchBar";
+import ProductList from "./ProductList/ProductList";
+import ProductFilters from "./ProductFilters/ProductFilters";
 import ProductCard from "./ProductCard/ProductCard";
 import CartActions from "./CartActions/CartActions";
 import QuantitySelector from "./QuantitySelector/QuantitySelector";
@@ -13,7 +14,8 @@ export {
   Header,
   Navigator,
   Carousel,
-  SearchBar,
+  ProductList,
+  ProductFilters,
   ProductCard,
   CartActions,
   QuantitySelector,

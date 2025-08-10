@@ -1,0 +1,114 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProductFilters component > renders correctly 1`] = `
+<div>
+  <div
+    class="sc-bRKDuR bvLqoC"
+  >
+    <form
+      class="sc-ggWZvA ebiOIG"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-search sc-dTvVRJ gtrvVu"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m21 21-4.34-4.34"
+        />
+        <circle
+          cx="11"
+          cy="11"
+          r="8"
+        />
+      </svg>
+      <input
+        aria-label="product-search-input"
+        class="sc-jwTyAe blmavy"
+        placeholder="Search Product"
+        type="text"
+        value=""
+      />
+    </form>
+    <div
+      class="sc-hvigdm dIyhsz"
+    >
+      <div
+        class="sc-fhHczv dkZgVC"
+      >
+        <label
+          class="sc-jJLAfE iFSvBN"
+          for="category-selector"
+        >
+          Category: 
+        </label>
+        <select
+          aria-label="category-selector"
+          class="sc-hwkwBN bcSjSd"
+          id="category-selector"
+        >
+          <option
+            value="all"
+          >
+            All
+          </option>
+          <option
+            value="Electronics"
+          >
+            Electronics
+          </option>
+          <option
+            value="Accessories"
+          >
+            Accessories
+          </option>
+        </select>
+      </div>
+      <div
+        class="sc-fhHczv sc-hjsuWn dkZgVC ddRyja"
+      >
+        <label
+          class="sc-jJLAfE iFSvBN"
+          for="sort-selector"
+        >
+          Sort By: 
+        </label>
+        <select
+          aria-label="sort-selector"
+          class="sc-hwkwBN bcSjSd"
+          id="sort-selector"
+        >
+          <option
+            value="relevance"
+          >
+            Relevance
+          </option>
+          <option
+            value="cheap"
+          >
+            Price: Low to High
+          </option>
+          <option
+            value="expensive"
+          >
+            Price: High to Low
+          </option>
+          <option
+            value="best"
+          >
+            Best Rating
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+`;

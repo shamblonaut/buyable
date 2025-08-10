@@ -1,0 +1,1187 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProductList component > renders correctly 1`] = `
+<div>
+  <div
+    class="sc-boKDdR cMDUGu"
+  >
+    <div
+      class="sc-fbQrwq WDCYf"
+    >
+      <form
+        class="sc-jaXbil cCFyzs"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-search sc-eqNDNG cpTcEx"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m21 21-4.34-4.34"
+          />
+          <circle
+            cx="11"
+            cy="11"
+            r="8"
+          />
+        </svg>
+        <input
+          aria-label="product-search-input"
+          class="sc-fVHBlr khUhwK"
+          placeholder="Search Product"
+          type="text"
+          value=""
+        />
+      </form>
+      <div
+        class="sc-gGKoUb dVANvN"
+      >
+        <div
+          class="sc-hwddKA hYPwIm"
+        >
+          <label
+            class="sc-ipUnzB lamBSh"
+            for="category-selector"
+          >
+            Category: 
+          </label>
+          <select
+            aria-label="category-selector"
+            class="sc-eQwNpu bJoagm"
+            id="category-selector"
+          >
+            <option
+              value="all"
+            >
+              All
+            </option>
+            <option
+              value="Category 1"
+            >
+              Category 1
+            </option>
+            <option
+              value="Category 2"
+            >
+              Category 2
+            </option>
+          </select>
+        </div>
+        <div
+          class="sc-hwddKA sc-gLaqbQ hYPwIm PEvpf"
+        >
+          <label
+            class="sc-ipUnzB lamBSh"
+            for="sort-selector"
+          >
+            Sort By: 
+          </label>
+          <select
+            aria-label="sort-selector"
+            class="sc-eQwNpu bJoagm"
+            id="sort-selector"
+          >
+            <option
+              value="relevance"
+            >
+              Relevance
+            </option>
+            <option
+              value="cheap"
+            >
+              Price: Low to High
+            </option>
+            <option
+              value="expensive"
+            >
+              Price: High to Low
+            </option>
+            <option
+              value="best"
+            >
+              Best Rating
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <ul
+      class="sc-fOOuSg jKNNkU"
+    >
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/1"
+            title="Product 1"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 1"
+                src="http://example.com/image-1.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 1
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                1023
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <div
+              aria-label="cart-quantity-selector"
+              class="sc-jYczwO fUtGVQ"
+            >
+              <button
+                aria-label="quantity-decrement-button"
+                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-minus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                </svg>
+              </button>
+              <input
+                aria-label="custom-quantity-input"
+                class="sc-fYmhhH dRLYby"
+                type="text"
+                value="1"
+              />
+              <button
+                aria-label="quantity-increment-button"
+                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button
+              aria-label="cart-remove-button"
+              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-trash2 lucide-trash-2"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 6h18"
+                />
+                <path
+                  d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"
+                />
+                <path
+                  d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+                />
+                <line
+                  x1="10"
+                  x2="10"
+                  y1="11"
+                  y2="17"
+                />
+                <line
+                  x1="14"
+                  x2="14"
+                  y1="11"
+                  y2="17"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/2"
+            title="Product 2"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 2"
+                src="http://example.com/image-2.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 2
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                511
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <button
+              aria-label="cart-add-button"
+              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-shopping-cart"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="8"
+                  cy="21"
+                  r="1"
+                />
+                <circle
+                  cx="19"
+                  cy="21"
+                  r="1"
+                />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+               Add to cart
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/3"
+            title="Product 3"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 3"
+                src="http://example.com/image-3.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 3
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                255
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <div
+              aria-label="cart-quantity-selector"
+              class="sc-jYczwO fUtGVQ"
+            >
+              <button
+                aria-label="quantity-decrement-button"
+                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-minus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                </svg>
+              </button>
+              <input
+                aria-label="custom-quantity-input"
+                class="sc-fYmhhH dRLYby"
+                type="text"
+                value="2"
+              />
+              <button
+                aria-label="quantity-increment-button"
+                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button
+              aria-label="cart-remove-button"
+              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-trash2 lucide-trash-2"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 6h18"
+                />
+                <path
+                  d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"
+                />
+                <path
+                  d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+                />
+                <line
+                  x1="10"
+                  x2="10"
+                  y1="11"
+                  y2="17"
+                />
+                <line
+                  x1="14"
+                  x2="14"
+                  y1="11"
+                  y2="17"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/4"
+            title="Product 4"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 4"
+                src="http://example.com/image-4.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 4
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                127
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <button
+              aria-label="cart-add-button"
+              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-shopping-cart"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="8"
+                  cy="21"
+                  r="1"
+                />
+                <circle
+                  cx="19"
+                  cy="21"
+                  r="1"
+                />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+               Add to cart
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/5"
+            title="Product 5"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 5"
+                src="http://example.com/image-5.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 5
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                63.49
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <div
+              aria-label="cart-quantity-selector"
+              class="sc-jYczwO fUtGVQ"
+            >
+              <button
+                aria-label="quantity-decrement-button"
+                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-minus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                </svg>
+              </button>
+              <input
+                aria-label="custom-quantity-input"
+                class="sc-fYmhhH dRLYby"
+                type="text"
+                value="5"
+              />
+              <button
+                aria-label="quantity-increment-button"
+                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button
+              aria-label="cart-remove-button"
+              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-trash2 lucide-trash-2"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 6h18"
+                />
+                <path
+                  d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"
+                />
+                <path
+                  d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+                />
+                <line
+                  x1="10"
+                  x2="10"
+                  y1="11"
+                  y2="17"
+                />
+                <line
+                  x1="14"
+                  x2="14"
+                  y1="11"
+                  y2="17"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/6"
+            title="Product 6"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 6"
+                src="http://example.com/image-6.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 6
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                31.49
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <button
+              aria-label="cart-add-button"
+              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-shopping-cart"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="8"
+                  cy="21"
+                  r="1"
+                />
+                <circle
+                  cx="19"
+                  cy="21"
+                  r="1"
+                />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+               Add to cart
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/7"
+            title="Product 7"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 7"
+                src="http://example.com/image-7.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 7
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                15.49
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <div
+              aria-label="cart-quantity-selector"
+              class="sc-jYczwO fUtGVQ"
+            >
+              <button
+                aria-label="quantity-decrement-button"
+                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-minus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                </svg>
+              </button>
+              <input
+                aria-label="custom-quantity-input"
+                class="sc-fYmhhH dRLYby"
+                type="text"
+                value="13"
+              />
+              <button
+                aria-label="quantity-increment-button"
+                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button
+              aria-label="cart-remove-button"
+              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-trash2 lucide-trash-2"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 6h18"
+                />
+                <path
+                  d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"
+                />
+                <path
+                  d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+                />
+                <line
+                  x1="10"
+                  x2="10"
+                  y1="11"
+                  y2="17"
+                />
+                <line
+                  x1="14"
+                  x2="14"
+                  y1="11"
+                  y2="17"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/8"
+            title="Product 8"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 8"
+                src="http://example.com/image-8.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 8
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                7.99
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <button
+              aria-label="cart-add-button"
+              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-shopping-cart"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="8"
+                  cy="21"
+                  r="1"
+                />
+                <circle
+                  cx="19"
+                  cy="21"
+                  r="1"
+                />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+               Add to cart
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/9"
+            title="Product 9"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 9"
+                src="http://example.com/image-9.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 9
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                3.99
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <div
+              aria-label="cart-quantity-selector"
+              class="sc-jYczwO fUtGVQ"
+            >
+              <button
+                aria-label="quantity-decrement-button"
+                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-minus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                </svg>
+              </button>
+              <input
+                aria-label="custom-quantity-input"
+                class="sc-fYmhhH dRLYby"
+                type="text"
+                value="34"
+              />
+              <button
+                aria-label="quantity-increment-button"
+                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-plus"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14"
+                  />
+                  <path
+                    d="M12 5v14"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button
+              aria-label="cart-remove-button"
+              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-trash2 lucide-trash-2"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 6h18"
+                />
+                <path
+                  d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"
+                />
+                <path
+                  d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+                />
+                <line
+                  x1="10"
+                  x2="10"
+                  y1="11"
+                  y2="17"
+                />
+                <line
+                  x1="14"
+                  x2="14"
+                  y1="11"
+                  y2="17"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-gvqKNf gDcNMd"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-cOpnSz dpVQfy"
+            data-discover="true"
+            href="/product/10"
+            title="Product 10"
+          >
+            <div
+              class="sc-kjwdDK clwOtX"
+            >
+              <img
+                alt="Product 10"
+                src="http://example.com/image-10.jpg"
+              />
+            </div>
+            <div
+              class="sc-eVqvcJ fmDqYv"
+            >
+              <p
+                class="sc-bbbBoY eenUzV"
+              >
+                Product 10
+              </p>
+              <p
+                class="sc-cdmAjP ibIulg"
+              >
+                $
+                1.99
+              </p>
+            </div>
+          </a>
+          <div
+            class="sc-jytpVa joyyFX"
+          >
+            <button
+              aria-label="cart-add-button"
+              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-shopping-cart"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="8"
+                  cy="21"
+                  r="1"
+                />
+                <circle
+                  cx="19"
+                  cy="21"
+                  r="1"
+                />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+               Add to cart
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

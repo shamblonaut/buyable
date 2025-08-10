@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import { Info as CommonInfo } from "@/styles";
+
+export const Info = styled(CommonInfo)`
+  flex: 1;
+`;
+
 export const Container = styled.div`
   position: relative;
   width: min(500px, 80%);

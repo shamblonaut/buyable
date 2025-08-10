@@ -3,215 +3,215 @@
 exports[`Carousel component > renders correctly when products data is available 1`] = `
 <div>
   <div
-    class="sc-ggWZvA izFxBH"
+    class="sc-dTvVRJ eNhWSp"
   >
     <ul
       aria-label="carousel-image-list"
-      class="sc-dTvVRJ fgeWkL"
+      class="sc-jwTyAe aTNKr"
     >
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/1"
         >
           <img
             alt="Product 1"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-1.jpg"
           />
         </a>
       </li>
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/2"
         >
           <img
             alt="Product 2"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-2.jpg"
           />
         </a>
       </li>
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/3"
         >
           <img
             alt="Product 3"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-3.jpg"
           />
         </a>
       </li>
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/4"
         >
           <img
             alt="Product 4"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-4.jpg"
           />
         </a>
       </li>
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/5"
         >
           <img
             alt="Product 5"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-5.jpg"
           />
         </a>
       </li>
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/6"
         >
           <img
             alt="Product 6"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-6.jpg"
           />
         </a>
       </li>
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/7"
         >
           <img
             alt="Product 7"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-7.jpg"
           />
         </a>
       </li>
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/8"
         >
           <img
             alt="Product 8"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-8.jpg"
           />
         </a>
       </li>
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/9"
         >
           <img
             alt="Product 9"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-9.jpg"
           />
         </a>
       </li>
       <li
-        class="sc-jwTyAe bxByPe"
+        class="sc-hjsuWn ibuNrn"
       >
         <a
           aria-label="product-link"
-          class="sc-hwkwBN dkiQOl"
+          class="sc-kNOymR iPKZwa"
           data-discover="true"
           href="/product/10"
         >
           <img
             alt="Product 10"
-            class="sc-kNOymR ecHJWZ"
+            class="sc-dYwGCk egucfg"
             src="http://example.com/image-10.jpg"
           />
         </a>
       </li>
     </ul>
     <div
-      class="sc-hjsuWn cpqXwW"
+      class="sc-jJLAfE iVeXVV"
     >
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE hwBhFv"
+        class="sc-hwkwBN dBNaqW"
       />
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE dfxHNp"
+        class="sc-hwkwBN hXdCdU"
       />
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE dfxHNp"
+        class="sc-hwkwBN hXdCdU"
       />
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE dfxHNp"
+        class="sc-hwkwBN hXdCdU"
       />
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE dfxHNp"
+        class="sc-hwkwBN hXdCdU"
       />
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE dfxHNp"
+        class="sc-hwkwBN hXdCdU"
       />
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE dfxHNp"
+        class="sc-hwkwBN hXdCdU"
       />
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE dfxHNp"
+        class="sc-hwkwBN hXdCdU"
       />
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE dfxHNp"
+        class="sc-hwkwBN hXdCdU"
       />
       <button
         aria-label="carousel-navigation-button"
-        class="sc-jJLAfE dfxHNp"
+        class="sc-hwkwBN hXdCdU"
       />
     </div>
   </div>
@@ -221,7 +221,7 @@ exports[`Carousel component > renders correctly when products data is available 
 exports[`Carousel component > shows error status when products data is not available 1`] = `
 <div>
   <div
-    class="sc-ggWZvA izFxBH"
+    class="sc-dTvVRJ eNhWSp"
   >
     <div
       class="sc-fhHczv ewGzxY"
@@ -241,7 +241,7 @@ exports[`Carousel component > shows error status when products data is not avail
 exports[`Carousel component > shows loading status 1`] = `
 <div>
   <div
-    class="sc-ggWZvA izFxBH"
+    class="sc-dTvVRJ eNhWSp"
   >
     <div
       class="sc-fhHczv ewGzxY"
