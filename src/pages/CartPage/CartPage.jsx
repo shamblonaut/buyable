@@ -23,13 +23,18 @@ const CartPage = () => {
       <Heading>Your Cart</Heading>
       {productsData.loading ? (
         <Info>Loading products...</Info>
-      ) : productsData.error ? (
+      ) : !products || productsData.error ? (
         <Info>
-          Could not load products:
-          <br />
-          {productsData.error.message}
+          Could not load products
+          {productsData.error?.message && (
+            <>
+              :
+              <br />
+              {productsData.error.message}
+            </>
+          )}
         </Info>
-      ) : products && Object.keys(cart).length > 0 ? (
+      ) : Object.keys(cart).length > 0 ? (
         <>
           <OrderInfo
             products={products}

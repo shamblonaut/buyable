@@ -32,32 +32,38 @@ const ProductPage = () => {
       <BackButton appPosition={appPosition} />
       {loading ? (
         <Info>Loading product...</Info>
-      ) : error ? (
-        <Info>Product not found!</Info>
+      ) : error || !product ? (
+        <Info>
+          Product not found!
+          {error?.message && (
+            <>
+              <br />
+              Error: {error.message}
+            </>
+          )}
+        </Info>
       ) : (
-        product && (
-          <>
-            <GlobalStyle />
-            <ImageContainer>
-              <img src={product.image} alt={product.title} />
-            </ImageContainer>
-            <Content>
-              <Notch />
-              <Details>
-                <Title>{product.title}</Title>
-                <Price>${product.price}</Price>
-                <Rating
-                  rating={product.rating.rate}
-                  count={product.rating.count}
-                />
-                <Description>{product.description}</Description>
-              </Details>
-              <CartActionContainer>
-                <CartActions product={product} cart={cart} setCart={setCart} />
-              </CartActionContainer>
-            </Content>
-          </>
-        )
+        <>
+          <GlobalStyle />
+          <ImageContainer>
+            <img src={product.image} alt={product.title} />
+          </ImageContainer>
+          <Content>
+            <Notch />
+            <Details>
+              <Title>{product.title}</Title>
+              <Price>${product.price}</Price>
+              <Rating
+                rating={product.rating.rate}
+                count={product.rating.count}
+              />
+              <Description>{product.description}</Description>
+            </Details>
+            <CartActionContainer>
+              <CartActions product={product} cart={cart} setCart={setCart} />
+            </CartActionContainer>
+          </Content>
+        </>
       )}
     </Page>
   );

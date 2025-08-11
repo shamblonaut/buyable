@@ -26,7 +26,9 @@ const HomePage = () => {
           <br />
           <HeroHighlight>BUYABLE</HeroHighlight>
         </HeroText>
-        <CTALink to="/shop">Explore Products</CTALink>
+        <CTALink to="/shop" aria-label="shop-page-link">
+          Explore Products
+        </CTALink>
       </HeroSection>
     </Page>
   );

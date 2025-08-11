@@ -1,0 +1,246 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home Page > renders correctly 1`] = `
+<div>
+  <main
+    class="sc-hwkwBN kikxJF"
+  >
+    <div
+      class="sc-eqYatC gWvDHi"
+    >
+      <ul
+        aria-label="carousel-image-list"
+        class="sc-kcLKEh kPiXrd"
+      >
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/1"
+          >
+            <img
+              alt="Proton L20 32GB RAM 2TB SSD Laptop"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-1.jpg"
+            />
+          </a>
+        </li>
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/2"
+          >
+            <img
+              alt="Tungstenite G8 16GB VRAM Graphics Card"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-2.jpg"
+            />
+          </a>
+        </li>
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/3"
+          >
+            <img
+              alt="Element S12 8GB RAM 256GB ROM Smartphone"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-3.jpg"
+            />
+          </a>
+        </li>
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/4"
+          >
+            <img
+              alt="Electron P11 16-Core Processor"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-4.jpg"
+            />
+          </a>
+        </li>
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/5"
+          >
+            <img
+              alt="Nucleon LGA 1700 Motherboard"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-5.jpg"
+            />
+          </a>
+        </li>
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/6"
+          >
+            <img
+              alt="Newton Sports Sneakers"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-6.jpg"
+            />
+          </a>
+        </li>
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/7"
+          >
+            <img
+              alt="Graviton Travel Bag"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-7.jpg"
+            />
+          </a>
+        </li>
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/8"
+          >
+            <img
+              alt="Torqus Chronograph Wristwatch"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-8.jpg"
+            />
+          </a>
+        </li>
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/9"
+          >
+            <img
+              alt="Pendulus Silver Necklace"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-9.jpg"
+            />
+          </a>
+        </li>
+        <li
+          class="sc-dntSTA kRvAoC"
+        >
+          <a
+            aria-label="product-link"
+            class="sc-kCuUfV dSbdKC"
+            data-discover="true"
+            href="/product/10"
+          >
+            <img
+              alt="Centrifume Titanium Ring"
+              class="sc-dNdcvo kkaztV"
+              src="http://example.com/image-10.jpg"
+            />
+          </a>
+        </li>
+      </ul>
+      <div
+        class="sc-kvnevz eEMYVt"
+      >
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bUEPuE"
+        />
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bBFnAS"
+        />
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bBFnAS"
+        />
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bBFnAS"
+        />
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bBFnAS"
+        />
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bBFnAS"
+        />
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bBFnAS"
+        />
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bBFnAS"
+        />
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bBFnAS"
+        />
+        <button
+          aria-label="carousel-navigation-button"
+          class="sc-dFVmKS bBFnAS"
+        />
+      </div>
+    </div>
+    <section
+      class="sc-hdBJTi hOisCb"
+    >
+      <p
+        class="sc-iIvHqT fwOnxF"
+      >
+        I can't believe it's not
+        <br />
+        <strong
+          class="sc-jxOwhs jDXtxT"
+        >
+          BUYABLE
+        </strong>
+      </p>
+      <a
+        aria-label="shop-page-link"
+        class="sc-lcItFd dCPsRW"
+        data-discover="true"
+        href="/shop"
+      >
+        Explore Products
+      </a>
+    </section>
+  </main>
+</div>
+`;

@@ -16,11 +16,16 @@ const ShopPage = () => {
     <Page>
       {productsData.loading ? (
         <Info>Loading products...</Info>
-      ) : productsData.error ? (
+      ) : productsData.error || !productsData.data ? (
         <Info>
-          Could not load products:
-          <br />
-          {productsData.error.message}
+          Could not load products
+          {productsData.error?.message && (
+            <>
+              :
+              <br />
+              {productsData.error.message}
+            </>
+          )}
         </Info>
       ) : (
         productsData.data && (

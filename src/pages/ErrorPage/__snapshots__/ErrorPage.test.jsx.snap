@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Error Page > renders correctly 1`] = `
+<div>
+  <main
+    class="sc-bRKDuR dSkNew"
+  >
+    <h2>
+      Error 
+      404
+      : 
+      Not Found
+    </h2>
+    <p>
+      No route matches URL
+    </p>
+    <a
+      data-discover="true"
+      href="/"
+    >
+      Return to Home
+    </a>
+  </main>
+</div>
+`;
