@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle, css } from "styled-components";
 
+import { Page as CommonPage } from "@/styles";
+
 export const GlobalStyle = createGlobalStyle(css`
   body {
     background-color: white;
@@ -9,6 +11,10 @@ export const GlobalStyle = createGlobalStyle(css`
     min-height: calc(100vh - 64px);
   }
 `);
+
+export const Page = styled(CommonPage)`
+  padding: 0;
+`;
 
 export const ImageContainer = styled.div`
   display: flex;

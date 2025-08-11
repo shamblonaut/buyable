@@ -3,9 +3,10 @@ import { useOutletContext, useParams } from "react-router-dom";
 import { useFetch } from "@/hooks";
 
 import { BackButton, CartActions, Rating } from "@/components";
-import { Page, Info } from "@/styles";
+import { Info } from "@/styles";
 import {
   GlobalStyle,
+  Page,
   ImageContainer,
   Content,
   Notch,

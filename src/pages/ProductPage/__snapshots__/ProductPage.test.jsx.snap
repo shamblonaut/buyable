@@ -3,7 +3,7 @@
 exports[`Product Page > renders correctly 1`] = `
 <div>
   <main
-    class="sc-hwkwBN kikxJF"
+    class="sc-hwkwBN sc-hdBJTi kikxJF dmdgAM"
   >
     <a
       class="sc-fOOuSg jCktvc"
@@ -29,7 +29,7 @@ exports[`Product Page > renders correctly 1`] = `
       </svg>
     </a>
     <div
-      class="sc-hdBJTi cKLtJD"
+      class="sc-iIvHqT hBTsgt"
     >
       <img
         alt="Element S12 8GB RAM 256GB ROM Smartphone"
@@ -37,21 +37,21 @@ exports[`Product Page > renders correctly 1`] = `
       />
     </div>
     <div
-      class="sc-iIvHqT gwDfwX"
+      class="sc-jxOwhs bpRfeZ"
     >
       <div
-        class="sc-jxOwhs kePfMy"
+        class="sc-lcItFd kyUSGH"
       />
       <div
-        class="sc-lcItFd jQULNE"
+        class="sc-cpclqO guKLFm"
       >
         <p
-          class="sc-cpclqO gigynM"
+          class="sc-dTWiOz bdkWnV"
         >
           Element S12 8GB RAM 256GB ROM Smartphone
         </p>
         <p
-          class="sc-dTWiOz ehDgos"
+          class="sc-eJoXEY elKgFP"
         >
           $
           249
@@ -291,13 +291,13 @@ exports[`Product Page > renders correctly 1`] = `
           </span>
         </div>
         <p
-          class="sc-eJoXEY gsvTbz"
+          class="sc-goiVcJ fHgtSN"
         >
           Take stunning pictures, play high-end games without a hitch, and be your best buddy wherever you go. The Element S12 can do it all!
         </p>
       </div>
       <div
-        class="sc-goiVcJ jKFwdk"
+        class="sc-gSifMm jDniEl"
       >
         <div
           class="sc-pYNGo dYWfzU"
