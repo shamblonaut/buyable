@@ -6,7 +6,7 @@ exports[`Disclaimer Page > renders correctly 1`] = `
     class="sc-hwkwBN kikxJF"
   >
     <a
-      class="sc-jxOwhs gMWpaq"
+      class="sc-cpclqO bGNFfF"
       data-discover="true"
       href="/cart"
     >
@@ -34,7 +34,7 @@ exports[`Disclaimer Page > renders correctly 1`] = `
       Disclaimer
     </p>
     <p
-      class="sc-lcItFd fjyLVJ"
+      class="sc-dTWiOz iEbiba"
     >
       Sorry to disappoint you, but this was a fake online store that I built to practice React development. Good luck on your shopping endeavours!
       <br />

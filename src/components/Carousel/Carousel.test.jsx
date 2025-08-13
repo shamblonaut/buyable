@@ -171,7 +171,7 @@ describe("Carousel component", () => {
     ).toBe(mockData.data.length);
   });
 
-  it("shows corresponding product when navigation button is clicked", async () => {
+  it("shows corresponding product when navigation dot is clicked", async () => {
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     const mockData = {
       data: mockProductList,
@@ -329,13 +329,237 @@ describe("Carousel component", () => {
     });
 
     act(() => {
-      vi.advanceTimersByTime(5000);
+      vi.advanceTimersByTime(3000);
     });
 
     expect(
       screen.getByRole("list", { name: "carousel-image-list" }),
     ).toHaveStyle({
       transform: `translateX(-400%)`,
+    });
+
+    vi.clearAllTimers();
+  });
+
+  it("goes to respective slides when previous and next buttons are clicked", async () => {
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    const mockData = {
+      data: mockProductList,
+      error: null,
+      loading: false,
+    };
+
+    render(
+      <BrowserRouter>
+        <Carousel productsData={mockData} />
+      </BrowserRouter>,
+    );
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(0%)`,
+    });
+
+    await act(async () => {
+      user.click(
+        screen.getByRole("button", {
+          name: "next-slide-button",
+        }),
+      );
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(-100%)`,
+    });
+
+    await act(async () => {
+      user.click(
+        screen.getByRole("button", {
+          name: "previous-slide-button",
+        }),
+      );
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(0%)`,
+    });
+
+    vi.clearAllTimers();
+  });
+
+  it("wraps around when previous and next buttons are clicked on boundary slides", async () => {
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    const mockData = {
+      data: mockProductList,
+      error: null,
+      loading: false,
+    };
+
+    render(
+      <BrowserRouter>
+        <Carousel productsData={mockData} />
+      </BrowserRouter>,
+    );
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(0%)`,
+    });
+
+    await act(async () => {
+      user.click(
+        screen.getByRole("button", {
+          name: "previous-slide-button",
+        }),
+      );
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(-900%)`,
+    });
+
+    await act(async () => {
+      user.click(
+        screen.getByRole("button", {
+          name: "next-slide-button",
+        }),
+      );
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(0%)`,
+    });
+
+    vi.clearAllTimers();
+  });
+
+  it("waits another 5s after clicking previous slide button before auto-scroll", async () => {
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    const mockData = {
+      data: mockProductList,
+      error: null,
+      loading: false,
+    };
+
+    render(
+      <BrowserRouter>
+        <Carousel productsData={mockData} />
+      </BrowserRouter>,
+    );
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(0%)`,
+    });
+
+    act(() => {
+      vi.advanceTimersByTime(3000);
+    });
+
+    await act(async () => {
+      user.click(
+        screen.getByRole("button", {
+          name: "previous-slide-button",
+        }),
+      );
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(-900%)`,
+    });
+
+    act(() => {
+      vi.advanceTimersByTime(2000);
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(-900%)`,
+    });
+
+    act(() => {
+      vi.advanceTimersByTime(3000);
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(0%)`,
+    });
+
+    vi.clearAllTimers();
+  });
+
+  it("waits another 5s after clicking next slide button before auto-scroll", async () => {
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    const mockData = {
+      data: mockProductList,
+      error: null,
+      loading: false,
+    };
+
+    render(
+      <BrowserRouter>
+        <Carousel productsData={mockData} />
+      </BrowserRouter>,
+    );
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(0%)`,
+    });
+
+    act(() => {
+      vi.advanceTimersByTime(3000);
+    });
+
+    await act(async () => {
+      user.click(
+        screen.getByRole("button", {
+          name: "next-slide-button",
+        }),
+      );
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(-100%)`,
+    });
+
+    act(() => {
+      vi.advanceTimersByTime(2000);
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(-100%)`,
+    });
+
+    act(() => {
+      vi.advanceTimersByTime(3000);
+    });
+
+    expect(
+      screen.getByRole("list", { name: "carousel-image-list" }),
+    ).toHaveStyle({
+      transform: `translateX(-200%)`,
     });
 
     vi.clearAllTimers();

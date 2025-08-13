@@ -78,7 +78,7 @@ export const ProductDetails = styled.div`
   justify-content: center;
   width: 100%;
   padding-top: 8px;
-  padding-bottom: 32px;
+  padding-bottom: 48px;
 `;
 
 export const ProductTitle = styled.p`
@@ -99,7 +99,41 @@ export const ProductTitle = styled.p`
   height: 3em; /* 2 lines */
 `;
 
-export const ContentNavigator = styled.div`
+export const CarouselControl = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+`;
+
+export const CarouselArrow = styled.button`
+  border: none;
+  background: none;
+  padding: 0;
+
+  border-radius: 50%;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-accent-dark);
+  color: var(--color-light);
+
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .lucide {
+    padding: 3px;
+  }
+`;
+
+export const CarouselNavigator = styled.div`
   list-style: none;
   padding: 0;
 
@@ -109,15 +143,12 @@ export const ContentNavigator = styled.div`
   align-items: center;
   justify-items: center;
 
-  background-color: #00000080;
-  height: 16px;
+  height: 24px;
   padding: 0 4px;
   border-radius: 8px;
 
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-accent-dark);
 `;
 
 export const CarouselDot = styled.button`

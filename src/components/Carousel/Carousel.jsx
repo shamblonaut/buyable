@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import PropTypes from "prop-types";
 
 import {
@@ -6,13 +7,15 @@ import {
   Container,
   ItemList,
   Item,
-  ContentNavigator,
-  CarouselDot,
   ProductLink,
   ImageContainer,
   CarouselImage,
   ProductDetails,
   ProductTitle,
+  CarouselControl,
+  CarouselNavigator,
+  CarouselDot,
+  CarouselArrow,
 } from "./Carousel.styles";
 
 const Carousel = ({ productsData, itemCount }) => {
@@ -25,14 +28,21 @@ const Carousel = ({ productsData, itemCount }) => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const activatePreviousSlide = () => {
+    setActiveIndex((currentIndex) =>
+      currentIndex === 0 ? products.length - 1 : currentIndex - 1,
+    );
+  };
+  const activateNextSlide = () => {
+    setActiveIndex((currentIndex) =>
+      currentIndex === products.length - 1 ? 0 : currentIndex + 1,
+    );
+  };
+
   useEffect(() => {
     if (!products) return;
 
-    const timer = setTimeout(() => {
-      setActiveIndex((previousIndex) =>
-        previousIndex === products.length - 1 ? 0 : previousIndex + 1,
-      );
-    }, 5000);
+    const timer = setTimeout(activateNextSlide, 5000);
 
     return () => clearTimeout(timer);
   });
@@ -65,16 +75,30 @@ const Carousel = ({ productsData, itemCount }) => {
               </Item>
             ))}
           </ItemList>
-          <ContentNavigator>
-            {products.map((item, index) => (
-              <CarouselDot
-                $active={activeIndex === index}
-                key={item.id}
-                aria-label="carousel-navigation-button"
-                onClick={() => setActiveIndex(index)}
-              ></CarouselDot>
-            ))}
-          </ContentNavigator>
+          <CarouselControl>
+            <CarouselArrow
+              aria-label="previous-slide-button"
+              onClick={activatePreviousSlide}
+            >
+              <ChevronLeft />
+            </CarouselArrow>
+            <CarouselNavigator>
+              {products.map((item, index) => (
+                <CarouselDot
+                  $active={activeIndex === index}
+                  key={item.id}
+                  aria-label="carousel-navigation-button"
+                  onClick={() => setActiveIndex(index)}
+                ></CarouselDot>
+              ))}
+            </CarouselNavigator>
+            <CarouselArrow
+              aria-label="next-slide-button"
+              onClick={activateNextSlide}
+            >
+              <ChevronRight />
+            </CarouselArrow>
+          </CarouselControl>
         </>
       )}
     </Container>

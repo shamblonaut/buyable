@@ -3,10 +3,10 @@
 exports[`Product Page > renders correctly 1`] = `
 <div>
   <main
-    class="sc-hwkwBN sc-lcItFd kikxJF hGxVoF"
+    class="sc-hwkwBN sc-dTWiOz kikxJF hImdCS"
   >
     <a
-      class="sc-jxOwhs gMWpaq"
+      class="sc-cpclqO bGNFfF"
       data-discover="true"
       href="/shop"
     >
@@ -29,7 +29,7 @@ exports[`Product Page > renders correctly 1`] = `
       </svg>
     </a>
     <div
-      class="sc-cpclqO fAqMOY"
+      class="sc-eJoXEY hRJqCK"
     >
       <img
         alt="Element S12 8GB RAM 256GB ROM Smartphone"
@@ -37,37 +37,37 @@ exports[`Product Page > renders correctly 1`] = `
       />
     </div>
     <div
-      class="sc-dTWiOz fUgFHv"
+      class="sc-goiVcJ kapjam"
     >
       <div
-        class="sc-eJoXEY bRZJzX"
+        class="sc-gSifMm iiajZE"
       />
       <div
-        class="sc-goiVcJ bxvdFy"
+        class="sc-ixcdjX hMuNHQ"
       >
         <p
-          class="sc-gSifMm cDRoNh"
+          class="sc-eQaGpr gLtFkG"
         >
           Element S12 8GB RAM 256GB ROM Smartphone
         </p>
         <p
-          class="sc-ixcdjX gujRpz"
+          class="sc-VLMBG jgMLsR"
         >
           $
           249
         </p>
         <div
-          class="sc-fhfEft hidacW"
+          class="sc-gahYZc hnMRQX"
         >
           <div
-            class="sc-bAehkN foaKUA"
+            class="sc-bSFBcf kKclkr"
           >
             <div
-              class="sc-gahYZc CnGL"
+              class="sc-gsJsQu kRzqpM"
             >
               <svg
                 aria-hidden="true"
-                class="lucide lucide-star sc-bSFBcf gYNFqZ"
+                class="lucide lucide-star sc-ibashp jUYxjU"
                 fill="none"
                 height="24"
                 stroke="currentColor"
@@ -83,11 +83,11 @@ exports[`Product Page > renders correctly 1`] = `
                 />
               </svg>
               <div
-                class="sc-gsJsQu fCKTYC"
+                class="sc-blIAwI jcoGEn"
               >
                 <svg
                   aria-hidden="true"
-                  class="lucide lucide-star sc-ibashp foxEPS"
+                  class="lucide lucide-star sc-itBLYH hBkIGd"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -105,11 +105,11 @@ exports[`Product Page > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="sc-gahYZc CnGL"
+              class="sc-gsJsQu kRzqpM"
             >
               <svg
                 aria-hidden="true"
-                class="lucide lucide-star sc-bSFBcf gYNFqZ"
+                class="lucide lucide-star sc-ibashp jUYxjU"
                 fill="none"
                 height="24"
                 stroke="currentColor"
@@ -125,11 +125,11 @@ exports[`Product Page > renders correctly 1`] = `
                 />
               </svg>
               <div
-                class="sc-gsJsQu fCKTYC"
+                class="sc-blIAwI jcoGEn"
               >
                 <svg
                   aria-hidden="true"
-                  class="lucide lucide-star sc-ibashp foxEPS"
+                  class="lucide lucide-star sc-itBLYH hBkIGd"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -147,11 +147,11 @@ exports[`Product Page > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="sc-gahYZc CnGL"
+              class="sc-gsJsQu kRzqpM"
             >
               <svg
                 aria-hidden="true"
-                class="lucide lucide-star sc-bSFBcf gYNFqZ"
+                class="lucide lucide-star sc-ibashp jUYxjU"
                 fill="none"
                 height="24"
                 stroke="currentColor"
@@ -167,11 +167,11 @@ exports[`Product Page > renders correctly 1`] = `
                 />
               </svg>
               <div
-                class="sc-gsJsQu kODBSM"
+                class="sc-blIAwI hydHUV"
               >
                 <svg
                   aria-hidden="true"
-                  class="lucide lucide-star sc-ibashp foxEPS"
+                  class="lucide lucide-star sc-itBLYH hBkIGd"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -189,11 +189,11 @@ exports[`Product Page > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="sc-gahYZc CnGL"
+              class="sc-gsJsQu kRzqpM"
             >
               <svg
                 aria-hidden="true"
-                class="lucide lucide-star sc-bSFBcf gYNFqZ"
+                class="lucide lucide-star sc-ibashp jUYxjU"
                 fill="none"
                 height="24"
                 stroke="currentColor"
@@ -209,11 +209,11 @@ exports[`Product Page > renders correctly 1`] = `
                 />
               </svg>
               <div
-                class="sc-gsJsQu ikuwfr"
+                class="sc-blIAwI faYJSK"
               >
                 <svg
                   aria-hidden="true"
-                  class="lucide lucide-star sc-ibashp foxEPS"
+                  class="lucide lucide-star sc-itBLYH hBkIGd"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -231,11 +231,11 @@ exports[`Product Page > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="sc-gahYZc CnGL"
+              class="sc-gsJsQu kRzqpM"
             >
               <svg
                 aria-hidden="true"
-                class="lucide lucide-star sc-bSFBcf gYNFqZ"
+                class="lucide lucide-star sc-ibashp jUYxjU"
                 fill="none"
                 height="24"
                 stroke="currentColor"
@@ -251,11 +251,11 @@ exports[`Product Page > renders correctly 1`] = `
                 />
               </svg>
               <div
-                class="sc-gsJsQu ikuwfr"
+                class="sc-blIAwI faYJSK"
               >
                 <svg
                   aria-hidden="true"
-                  class="lucide lucide-star sc-ibashp foxEPS"
+                  class="lucide lucide-star sc-itBLYH hBkIGd"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -274,15 +274,15 @@ exports[`Product Page > renders correctly 1`] = `
             </div>
           </div>
           <span
-            class="sc-blIAwI bqZyYv"
+            class="sc-bEjUoa iDEzGJ"
           >
             <p
-              class="sc-itBLYH dnhVgx"
+              class="sc-boKDdR hXXtkX"
             >
               2.3
             </p>
             <p
-              class="sc-bEjUoa jaGGkf"
+              class="sc-fOOuSg dWMSsu"
             >
               (
               32
@@ -291,24 +291,24 @@ exports[`Product Page > renders correctly 1`] = `
           </span>
         </div>
         <p
-          class="sc-eQaGpr itbwOP"
+          class="sc-gXbNzB flnIlw"
         >
           Take stunning pictures, play high-end games without a hitch, and be your best buddy wherever you go. The Element S12 can do it all!
         </p>
       </div>
       <div
-        class="sc-VLMBG kWjKgY"
+        class="sc-dcMTLQ jnAXJp"
       >
         <div
-          class="sc-dNFkOE hpOAiq"
+          class="sc-etsjJW eKirvu"
         >
           <div
             aria-label="cart-quantity-selector"
-            class="sc-koBvLg kooQAx"
+            class="sc-kUouGy kcFQSo"
           >
             <button
               aria-label="quantity-decrement-button"
-              class="sc-DZJJV sc-kUouGy hZvgJl cWJZIn"
+              class="sc-bjMIFn sc-dClGHI gycoPx jTKwYk"
             >
               <svg
                 aria-hidden="true"
@@ -330,13 +330,13 @@ exports[`Product Page > renders correctly 1`] = `
             </button>
             <input
               aria-label="custom-quantity-input"
-              class="sc-dClGHI kGxuXh"
+              class="sc-bAehkN kpqawf"
               type="text"
               value="2"
             />
             <button
               aria-label="quantity-increment-button"
-              class="sc-DZJJV sc-bjMIFn hZvgJl hLIuia"
+              class="sc-bjMIFn sc-fhfEft gycoPx ejGQKl"
             >
               <svg
                 aria-hidden="true"
@@ -362,7 +362,7 @@ exports[`Product Page > renders correctly 1`] = `
           </div>
           <button
             aria-label="cart-remove-button"
-            class="sc-fszimp sc-fYmhhH infyxB dZmBRJ"
+            class="sc-fYmhhH sc-DZJJV bDLkig gLaRVb"
           >
             <svg
               aria-hidden="true"

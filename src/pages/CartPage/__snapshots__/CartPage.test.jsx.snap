@@ -11,16 +11,16 @@ exports[`Cart Page > renders correctly 1`] = `
       Your Cart
     </p>
     <div
-      class="sc-boKDdR jJCqFM"
+      class="sc-hdBJTi mLuup"
     >
       <p
-        class="sc-fOOuSg drRydN"
+        class="sc-iIvHqT hZMqep"
       >
         Order Summary
       </p>
       <span
         aria-label="subtotal-field"
-        class="sc-hdBJTi GNrbe"
+        class="sc-jxOwhs hqKnvm"
       >
         <label>
           Subtotal: 
@@ -32,7 +32,7 @@ exports[`Cart Page > renders correctly 1`] = `
       </span>
       <span
         aria-label="tax-field"
-        class="sc-hdBJTi GNrbe"
+        class="sc-jxOwhs hqKnvm"
       >
         <label>
           Tax (12%): 
@@ -44,7 +44,7 @@ exports[`Cart Page > renders correctly 1`] = `
       </span>
       <span
         aria-label="total-price-field"
-        class="sc-hdBJTi GNrbe"
+        class="sc-jxOwhs hqKnvm"
       >
         <label>
           Total Price: 
@@ -55,7 +55,7 @@ exports[`Cart Page > renders correctly 1`] = `
         </p>
       </span>
       <a
-        class="sc-iIvHqT cnQhJW"
+        class="sc-lcItFd inqAEF"
         data-discover="true"
         href="/disclaimer"
       >

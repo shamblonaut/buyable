@@ -3,17 +3,17 @@
 exports[`ProductCard component > renders correctly 1`] = `
 <div>
   <div
-    class="sc-bEjUoa hXdtTQ"
+    class="sc-fOOuSg dmpFzl"
   >
     <a
       aria-label="product-link"
-      class="sc-boKDdR loJSyZ"
+      class="sc-hdBJTi ffQxlY"
       data-discover="true"
       href="/product/1"
       title="Mock Product"
     >
       <div
-        class="sc-fOOuSg kjzkcV"
+        class="sc-iIvHqT hyPohF"
       >
         <img
           alt="Mock Product"
@@ -21,15 +21,15 @@ exports[`ProductCard component > renders correctly 1`] = `
         />
       </div>
       <div
-        class="sc-hdBJTi bgsCIr"
+        class="sc-jxOwhs jTxoVL"
       >
         <p
-          class="sc-iIvHqT hkQTmU"
+          class="sc-lcItFd fdgsqf"
         >
           Mock Product
         </p>
         <p
-          class="sc-jxOwhs geuDxg"
+          class="sc-cpclqO clLTEP"
         >
           $
           15.99
@@ -37,15 +37,15 @@ exports[`ProductCard component > renders correctly 1`] = `
       </div>
     </a>
     <div
-      class="sc-cdmAjP jDlUNG"
+      class="sc-eknHtZ jAwbQJ"
     >
       <div
         aria-label="cart-quantity-selector"
-        class="sc-cCVJLD iJyTya"
+        class="sc-dNFkOE gMVRhn"
       >
         <button
           aria-label="quantity-decrement-button"
-          class="sc-jYczwO sc-dNFkOE bdRQlb juhyDo"
+          class="sc-fszimp sc-etsjJW fMHzgS jIFiTM"
         >
           <svg
             aria-hidden="true"
@@ -67,13 +67,13 @@ exports[`ProductCard component > renders correctly 1`] = `
         </button>
         <input
           aria-label="custom-quantity-input"
-          class="sc-etsjJW gGRAmt"
+          class="sc-koBvLg jRYRwL"
           type="text"
           value="16"
         />
         <button
           aria-label="quantity-increment-button"
-          class="sc-jYczwO sc-fszimp bdRQlb kMAHR"
+          class="sc-fszimp sc-fYmhhH fMHzgS fnhZGU"
         >
           <svg
             aria-hidden="true"
@@ -99,7 +99,7 @@ exports[`ProductCard component > renders correctly 1`] = `
       </div>
       <button
         aria-label="cart-remove-button"
-        class="sc-jytpVa sc-pYNGo dSFPlq jzorrw"
+        class="sc-pYNGo sc-jYczwO djqBEl fCjyEp"
       >
         <svg
           aria-hidden="true"
