@@ -2,7 +2,7 @@ import { AppPosition } from "./constants";
 
 export const getRatingArray = (rating) => {
   if (rating > 5.0) {
-    throw new Error("Invalid rating");
+    throw new Error("Invalid Rating");
   }
 
   let ratingArray = [];
