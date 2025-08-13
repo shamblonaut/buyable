@@ -6,26 +6,39 @@ exports[`Home Page > renders correctly 1`] = `
     class="sc-hwkwBN kikxJF"
   >
     <div
-      class="sc-eqYatC gWvDHi"
+      class="sc-eqYatC efa-DaQ"
     >
       <ul
         aria-label="carousel-image-list"
-        class="sc-kcLKEh kPiXrd"
+        class="sc-kcLKEh TfpBU"
       >
         <li
           class="sc-dntSTA kRvAoC"
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/1"
           >
-            <img
-              alt="Proton L20 32GB RAM 2TB SSD Laptop"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-1.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Proton L20 32GB RAM 2TB SSD Laptop"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-1.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Proton L20 32GB RAM 2TB SSD Laptop
+              </p>
+            </div>
           </a>
         </li>
         <li
@@ -33,15 +46,28 @@ exports[`Home Page > renders correctly 1`] = `
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/2"
           >
-            <img
-              alt="Tungstenite G8 16GB VRAM Graphics Card"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-2.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Tungstenite G8 16GB VRAM Graphics Card"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-2.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Tungstenite G8 16GB VRAM Graphics Card
+              </p>
+            </div>
           </a>
         </li>
         <li
@@ -49,15 +75,28 @@ exports[`Home Page > renders correctly 1`] = `
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/3"
           >
-            <img
-              alt="Element S12 8GB RAM 256GB ROM Smartphone"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-3.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Element S12 8GB RAM 256GB ROM Smartphone"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-3.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Element S12 8GB RAM 256GB ROM Smartphone
+              </p>
+            </div>
           </a>
         </li>
         <li
@@ -65,15 +104,28 @@ exports[`Home Page > renders correctly 1`] = `
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/4"
           >
-            <img
-              alt="Electron P11 16-Core Processor"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-4.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Electron P11 16-Core Processor"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-4.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Electron P11 16-Core Processor
+              </p>
+            </div>
           </a>
         </li>
         <li
@@ -81,15 +133,28 @@ exports[`Home Page > renders correctly 1`] = `
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/5"
           >
-            <img
-              alt="Nucleon LGA 1700 Motherboard"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-5.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Nucleon LGA 1700 Motherboard"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-5.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Nucleon LGA 1700 Motherboard
+              </p>
+            </div>
           </a>
         </li>
         <li
@@ -97,15 +162,28 @@ exports[`Home Page > renders correctly 1`] = `
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/6"
           >
-            <img
-              alt="Newton Sports Sneakers"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-6.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Newton Sports Sneakers"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-6.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Newton Sports Sneakers
+              </p>
+            </div>
           </a>
         </li>
         <li
@@ -113,15 +191,28 @@ exports[`Home Page > renders correctly 1`] = `
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/7"
           >
-            <img
-              alt="Graviton Travel Bag"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-7.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Graviton Travel Bag"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-7.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Graviton Travel Bag
+              </p>
+            </div>
           </a>
         </li>
         <li
@@ -129,15 +220,28 @@ exports[`Home Page > renders correctly 1`] = `
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/8"
           >
-            <img
-              alt="Torqus Chronograph Wristwatch"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-8.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Torqus Chronograph Wristwatch"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-8.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Torqus Chronograph Wristwatch
+              </p>
+            </div>
           </a>
         </li>
         <li
@@ -145,15 +249,28 @@ exports[`Home Page > renders correctly 1`] = `
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/9"
           >
-            <img
-              alt="Pendulus Silver Necklace"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-9.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Pendulus Silver Necklace"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-9.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Pendulus Silver Necklace
+              </p>
+            </div>
           </a>
         </li>
         <li
@@ -161,80 +278,93 @@ exports[`Home Page > renders correctly 1`] = `
         >
           <a
             aria-label="product-link"
-            class="sc-kCuUfV dSbdKC"
+            class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/10"
           >
-            <img
-              alt="Centrifume Titanium Ring"
-              class="sc-dNdcvo kkaztV"
-              src="http://example.com/image-10.jpg"
-            />
+            <div
+              class="sc-dFVmKS dqiEje"
+            >
+              <img
+                alt="Centrifume Titanium Ring"
+                class="sc-kCuUfV gugvby"
+                src="http://example.com/image-10.jpg"
+              />
+            </div>
+            <div
+              class="sc-dNdcvo hoYZiu"
+            >
+              <p
+                class="sc-fbQrwq gdDAeo"
+              >
+                Centrifume Titanium Ring
+              </p>
+            </div>
           </a>
         </li>
       </ul>
       <div
-        class="sc-kvnevz eEMYVt"
+        class="sc-gGKoUb gdyXJQ"
       >
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bUEPuE"
+          class="sc-hwddKA gycjwI"
         />
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bBFnAS"
+          class="sc-hwddKA bnlHYy"
         />
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bBFnAS"
+          class="sc-hwddKA bnlHYy"
         />
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bBFnAS"
+          class="sc-hwddKA bnlHYy"
         />
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bBFnAS"
+          class="sc-hwddKA bnlHYy"
         />
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bBFnAS"
+          class="sc-hwddKA bnlHYy"
         />
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bBFnAS"
+          class="sc-hwddKA bnlHYy"
         />
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bBFnAS"
+          class="sc-hwddKA bnlHYy"
         />
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bBFnAS"
+          class="sc-hwddKA bnlHYy"
         />
         <button
           aria-label="carousel-navigation-button"
-          class="sc-dFVmKS bBFnAS"
+          class="sc-hwddKA bnlHYy"
         />
       </div>
     </div>
     <section
-      class="sc-hdBJTi hOisCb"
+      class="sc-lcItFd huGyNm"
     >
       <p
-        class="sc-iIvHqT fwOnxF"
+        class="sc-cpclqO gWjjas"
       >
         I can't believe it's not
         <br />
         <strong
-          class="sc-jxOwhs jDXtxT"
+          class="sc-dTWiOz hdeZTp"
         >
           BUYABLE
         </strong>
       </p>
       <a
         aria-label="shop-page-link"
-        class="sc-lcItFd dCPsRW"
+        class="sc-eJoXEY jUbXRm"
         data-discover="true"
         href="/shop"
       >

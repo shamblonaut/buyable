@@ -3,11 +3,11 @@
 exports[`CartActions component > renders correctly when cart is empty 1`] = `
 <div>
   <div
-    class="sc-itBLYH hZgUmp"
+    class="sc-fOOuSg kkDHII"
   >
     <button
       aria-label="cart-add-button"
-      class="sc-bEjUoa sc-boKDdR bqQXSk kAvGgE"
+      class="sc-hdBJTi sc-iIvHqT cKOesD bNKhUX"
     >
       <svg
         aria-hidden="true"
@@ -45,15 +45,15 @@ exports[`CartActions component > renders correctly when cart is empty 1`] = `
 exports[`CartActions component > renders correctly when cart is not empty 1`] = `
 <div>
   <div
-    class="sc-itBLYH hZgUmp"
+    class="sc-fOOuSg kkDHII"
   >
     <div
       aria-label="cart-quantity-selector"
-      class="sc-pYNGo keWugZ"
+      class="sc-dNFkOE gMVRhn"
     >
       <button
         aria-label="quantity-decrement-button"
-        class="sc-cCVJLD sc-jYczwO hCWevx dCystr"
+        class="sc-fszimp sc-etsjJW fMHzgS jIFiTM"
       >
         <svg
           aria-hidden="true"
@@ -75,13 +75,13 @@ exports[`CartActions component > renders correctly when cart is not empty 1`] = 
       </button>
       <input
         aria-label="custom-quantity-input"
-        class="sc-fszimp canpun"
+        class="sc-koBvLg jRYRwL"
         type="text"
         value="13"
       />
       <button
         aria-label="quantity-increment-button"
-        class="sc-cCVJLD sc-dNFkOE hCWevx lkTXcX"
+        class="sc-fszimp sc-fYmhhH fMHzgS fnhZGU"
       >
         <svg
           aria-hidden="true"
@@ -107,7 +107,7 @@ exports[`CartActions component > renders correctly when cart is not empty 1`] = 
     </div>
     <button
       aria-label="cart-remove-button"
-      class="sc-bEjUoa sc-fOOuSg bqQXSk dQaEKI"
+      class="sc-hdBJTi sc-jxOwhs cKOesD jNXIBi"
     >
       <svg
         aria-hidden="true"

@@ -3,17 +3,17 @@
 exports[`ProductList component > renders correctly 1`] = `
 <div>
   <div
-    class="sc-boKDdR cMDUGu"
+    class="sc-iIvHqT iRLXnh"
   >
     <div
-      class="sc-fbQrwq WDCYf"
+      class="sc-jaXbil dCfsje"
     >
       <form
-        class="sc-jaXbil cCFyzs"
+        class="sc-gLaqbQ cyMkYY"
       >
         <svg
           aria-hidden="true"
-          class="lucide lucide-search sc-eqNDNG cpTcEx"
+          class="lucide lucide-search sc-ipUnzB eqeLE"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -35,27 +35,27 @@ exports[`ProductList component > renders correctly 1`] = `
         </svg>
         <input
           aria-label="product-search-input"
-          class="sc-fVHBlr khUhwK"
+          class="sc-eQwNpu leZVnm"
           placeholder="Search Product"
           type="text"
           value=""
         />
       </form>
       <div
-        class="sc-gGKoUb dVANvN"
+        class="sc-eqNDNG fQPfRZ"
       >
         <div
-          class="sc-hwddKA hYPwIm"
+          class="sc-fVHBlr dXkiUT"
         >
           <label
-            class="sc-ipUnzB lamBSh"
+            class="sc-cOpnSz euyVPc"
             for="category-selector"
           >
             Category: 
           </label>
           <select
             aria-label="category-selector"
-            class="sc-eQwNpu bJoagm"
+            class="sc-kjwdDK ka-DCaX"
             id="category-selector"
           >
             <option
@@ -76,17 +76,17 @@ exports[`ProductList component > renders correctly 1`] = `
           </select>
         </div>
         <div
-          class="sc-hwddKA sc-gLaqbQ hYPwIm PEvpf"
+          class="sc-fVHBlr sc-gvqKNf dXkiUT bdBtbg"
         >
           <label
-            class="sc-ipUnzB lamBSh"
+            class="sc-cOpnSz euyVPc"
             for="sort-selector"
           >
             Sort By: 
           </label>
           <select
             aria-label="sort-selector"
-            class="sc-eQwNpu bJoagm"
+            class="sc-kjwdDK ka-DCaX"
             id="sort-selector"
           >
             <option
@@ -114,21 +114,21 @@ exports[`ProductList component > renders correctly 1`] = `
       </div>
     </div>
     <ul
-      class="sc-fOOuSg jKNNkU"
+      class="sc-jxOwhs dcwtMO"
     >
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/1"
             title="Proton L20 32GB RAM 2TB SSD Laptop"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Proton L20 32GB RAM 2TB SSD Laptop"
@@ -136,15 +136,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Proton L20 32GB RAM 2TB SSD Laptop
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 1599
@@ -152,15 +152,15 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <div
               aria-label="cart-quantity-selector"
-              class="sc-jYczwO fUtGVQ"
+              class="sc-etsjJW fLdKFf"
             >
               <button
                 aria-label="quantity-decrement-button"
-                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+                class="sc-fYmhhH sc-koBvLg fcPUbH jQiuGK"
               >
                 <svg
                   aria-hidden="true"
@@ -182,13 +182,13 @@ exports[`ProductList component > renders correctly 1`] = `
               </button>
               <input
                 aria-label="custom-quantity-input"
-                class="sc-fYmhhH dRLYby"
+                class="sc-kUouGy hgimou"
                 type="text"
                 value="1"
               />
               <button
                 aria-label="quantity-increment-button"
-                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+                class="sc-fYmhhH sc-DZJJV fcPUbH gbGTLy"
               >
                 <svg
                   aria-hidden="true"
@@ -214,7 +214,7 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
             <button
               aria-label="cart-remove-button"
-              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+              class="sc-jYczwO sc-fszimp bhIeZs fvTTVY"
             >
               <svg
                 aria-hidden="true"
@@ -257,17 +257,17 @@ exports[`ProductList component > renders correctly 1`] = `
       </li>
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/2"
             title="Tungstenite G8 16GB VRAM Graphics Card"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Tungstenite G8 16GB VRAM Graphics Card"
@@ -275,15 +275,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Tungstenite G8 16GB VRAM Graphics Card
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 699
@@ -291,11 +291,11 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <button
               aria-label="cart-add-button"
-              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+              class="sc-jYczwO sc-dNFkOE bhIeZs jFefEh"
             >
               <svg
                 aria-hidden="true"
@@ -331,17 +331,17 @@ exports[`ProductList component > renders correctly 1`] = `
       </li>
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/3"
             title="Element S12 8GB RAM 256GB ROM Smartphone"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Element S12 8GB RAM 256GB ROM Smartphone"
@@ -349,15 +349,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Element S12 8GB RAM 256GB ROM Smartphone
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 249
@@ -365,15 +365,15 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <div
               aria-label="cart-quantity-selector"
-              class="sc-jYczwO fUtGVQ"
+              class="sc-etsjJW fLdKFf"
             >
               <button
                 aria-label="quantity-decrement-button"
-                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+                class="sc-fYmhhH sc-koBvLg fcPUbH jQiuGK"
               >
                 <svg
                   aria-hidden="true"
@@ -395,13 +395,13 @@ exports[`ProductList component > renders correctly 1`] = `
               </button>
               <input
                 aria-label="custom-quantity-input"
-                class="sc-fYmhhH dRLYby"
+                class="sc-kUouGy hgimou"
                 type="text"
                 value="2"
               />
               <button
                 aria-label="quantity-increment-button"
-                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+                class="sc-fYmhhH sc-DZJJV fcPUbH gbGTLy"
               >
                 <svg
                   aria-hidden="true"
@@ -427,7 +427,7 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
             <button
               aria-label="cart-remove-button"
-              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+              class="sc-jYczwO sc-fszimp bhIeZs fvTTVY"
             >
               <svg
                 aria-hidden="true"
@@ -470,17 +470,17 @@ exports[`ProductList component > renders correctly 1`] = `
       </li>
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/4"
             title="Electron P11 16-Core Processor"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Electron P11 16-Core Processor"
@@ -488,15 +488,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Electron P11 16-Core Processor
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 549
@@ -504,11 +504,11 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <button
               aria-label="cart-add-button"
-              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+              class="sc-jYczwO sc-dNFkOE bhIeZs jFefEh"
             >
               <svg
                 aria-hidden="true"
@@ -544,17 +544,17 @@ exports[`ProductList component > renders correctly 1`] = `
       </li>
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/5"
             title="Nucleon LGA 1700 Motherboard"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Nucleon LGA 1700 Motherboard"
@@ -562,15 +562,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Nucleon LGA 1700 Motherboard
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 179
@@ -578,15 +578,15 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <div
               aria-label="cart-quantity-selector"
-              class="sc-jYczwO fUtGVQ"
+              class="sc-etsjJW fLdKFf"
             >
               <button
                 aria-label="quantity-decrement-button"
-                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+                class="sc-fYmhhH sc-koBvLg fcPUbH jQiuGK"
               >
                 <svg
                   aria-hidden="true"
@@ -608,13 +608,13 @@ exports[`ProductList component > renders correctly 1`] = `
               </button>
               <input
                 aria-label="custom-quantity-input"
-                class="sc-fYmhhH dRLYby"
+                class="sc-kUouGy hgimou"
                 type="text"
                 value="5"
               />
               <button
                 aria-label="quantity-increment-button"
-                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+                class="sc-fYmhhH sc-DZJJV fcPUbH gbGTLy"
               >
                 <svg
                   aria-hidden="true"
@@ -640,7 +640,7 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
             <button
               aria-label="cart-remove-button"
-              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+              class="sc-jYczwO sc-fszimp bhIeZs fvTTVY"
             >
               <svg
                 aria-hidden="true"
@@ -683,17 +683,17 @@ exports[`ProductList component > renders correctly 1`] = `
       </li>
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/6"
             title="Newton Sports Sneakers"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Newton Sports Sneakers"
@@ -701,15 +701,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Newton Sports Sneakers
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 49.99
@@ -717,11 +717,11 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <button
               aria-label="cart-add-button"
-              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+              class="sc-jYczwO sc-dNFkOE bhIeZs jFefEh"
             >
               <svg
                 aria-hidden="true"
@@ -757,17 +757,17 @@ exports[`ProductList component > renders correctly 1`] = `
       </li>
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/7"
             title="Graviton Travel Bag"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Graviton Travel Bag"
@@ -775,15 +775,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Graviton Travel Bag
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 22.49
@@ -791,15 +791,15 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <div
               aria-label="cart-quantity-selector"
-              class="sc-jYczwO fUtGVQ"
+              class="sc-etsjJW fLdKFf"
             >
               <button
                 aria-label="quantity-decrement-button"
-                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+                class="sc-fYmhhH sc-koBvLg fcPUbH jQiuGK"
               >
                 <svg
                   aria-hidden="true"
@@ -821,13 +821,13 @@ exports[`ProductList component > renders correctly 1`] = `
               </button>
               <input
                 aria-label="custom-quantity-input"
-                class="sc-fYmhhH dRLYby"
+                class="sc-kUouGy hgimou"
                 type="text"
                 value="13"
               />
               <button
                 aria-label="quantity-increment-button"
-                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+                class="sc-fYmhhH sc-DZJJV fcPUbH gbGTLy"
               >
                 <svg
                   aria-hidden="true"
@@ -853,7 +853,7 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
             <button
               aria-label="cart-remove-button"
-              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+              class="sc-jYczwO sc-fszimp bhIeZs fvTTVY"
             >
               <svg
                 aria-hidden="true"
@@ -896,17 +896,17 @@ exports[`ProductList component > renders correctly 1`] = `
       </li>
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/8"
             title="Torqus Chronograph Wristwatch"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Torqus Chronograph Wristwatch"
@@ -914,15 +914,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Torqus Chronograph Wristwatch
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 79.99
@@ -930,11 +930,11 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <button
               aria-label="cart-add-button"
-              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+              class="sc-jYczwO sc-dNFkOE bhIeZs jFefEh"
             >
               <svg
                 aria-hidden="true"
@@ -970,17 +970,17 @@ exports[`ProductList component > renders correctly 1`] = `
       </li>
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/9"
             title="Pendulus Silver Necklace"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Pendulus Silver Necklace"
@@ -988,15 +988,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Pendulus Silver Necklace
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 13.49
@@ -1004,15 +1004,15 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <div
               aria-label="cart-quantity-selector"
-              class="sc-jYczwO fUtGVQ"
+              class="sc-etsjJW fLdKFf"
             >
               <button
                 aria-label="quantity-decrement-button"
-                class="sc-dNFkOE sc-fszimp eRuIdM jevfAm"
+                class="sc-fYmhhH sc-koBvLg fcPUbH jQiuGK"
               >
                 <svg
                   aria-hidden="true"
@@ -1034,13 +1034,13 @@ exports[`ProductList component > renders correctly 1`] = `
               </button>
               <input
                 aria-label="custom-quantity-input"
-                class="sc-fYmhhH dRLYby"
+                class="sc-kUouGy hgimou"
                 type="text"
                 value="34"
               />
               <button
                 aria-label="quantity-increment-button"
-                class="sc-dNFkOE sc-etsjJW eRuIdM gQSCnT"
+                class="sc-fYmhhH sc-DZJJV fcPUbH gbGTLy"
               >
                 <svg
                   aria-hidden="true"
@@ -1066,7 +1066,7 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
             <button
               aria-label="cart-remove-button"
-              class="sc-eknHtZ sc-cCVJLD ewQnRo daqibT"
+              class="sc-jYczwO sc-fszimp bhIeZs fvTTVY"
             >
               <svg
                 aria-hidden="true"
@@ -1109,17 +1109,17 @@ exports[`ProductList component > renders correctly 1`] = `
       </li>
       <li>
         <div
-          class="sc-gvqKNf gDcNMd"
+          class="sc-eVqvcJ OmFqL"
         >
           <a
             aria-label="product-link"
-            class="sc-cOpnSz dpVQfy"
+            class="sc-bbbBoY kaFTmX"
             data-discover="true"
             href="/product/10"
             title="Centrifume Titanium Ring"
           >
             <div
-              class="sc-kjwdDK clwOtX"
+              class="sc-cdmAjP kxojuH"
             >
               <img
                 alt="Centrifume Titanium Ring"
@@ -1127,15 +1127,15 @@ exports[`ProductList component > renders correctly 1`] = `
               />
             </div>
             <div
-              class="sc-eVqvcJ fmDqYv"
+              class="sc-jytpVa gpNucy"
             >
               <p
-                class="sc-bbbBoY eenUzV"
+                class="sc-eknHtZ jjmWJx"
               >
                 Centrifume Titanium Ring
               </p>
               <p
-                class="sc-cdmAjP ibIulg"
+                class="sc-pYNGo jkBVsK"
               >
                 $
                 9.99
@@ -1143,11 +1143,11 @@ exports[`ProductList component > renders correctly 1`] = `
             </div>
           </a>
           <div
-            class="sc-jytpVa joyyFX"
+            class="sc-cCVJLD cFLicH"
           >
             <button
               aria-label="cart-add-button"
-              class="sc-eknHtZ sc-pYNGo ewQnRo brYfNX"
+              class="sc-jYczwO sc-dNFkOE bhIeZs jFefEh"
             >
               <svg
                 aria-hidden="true"

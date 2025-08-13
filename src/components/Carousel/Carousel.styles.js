@@ -5,15 +5,17 @@ import { Info as CommonInfo } from "@/styles";
 
 export const Info = styled(CommonInfo)`
   flex: 1;
+  font-weight: 500;
+  color: var(--color-light);
 `;
 
 export const Container = styled.div`
+  margin-top: 16px;
+
   position: relative;
   width: min(500px, 80%);
-  min-height: 200px;
+  height: 36vh;
   overflow: hidden;
-  padding: 16px;
-  margin: 32px 0;
 
   background-color: white;
   border: 3px solid var(--color-dark);
@@ -22,13 +24,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--color-accent);
 `;
 
 export const ItemList = styled.ul`
   padding: 0;
   display: flex;
   list-style: none;
-  min-width: min-content;
+  width: 100%;
+  height: 100%;
   transform: translateX(${(props) => props.$activeIndex * -100}%);
   transition: all 500ms ease-in-out;
 `;
@@ -41,6 +45,58 @@ export const Item = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const ProductLink = styled(Link)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ImageContainer = styled.div`
+  flex: 1;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+`;
+
+export const CarouselImage = styled.img`
+  width: auto;
+  height: auto;
+  max-height: 80%;
+`;
+
+export const ProductDetails = styled.div`
+  border-top: 3px solid var(--color-dark);
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 32px;
+`;
+
+export const ProductTitle = styled.p`
+  width: 90%;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-light);
+
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  height: 3em; /* 2 lines */
 `;
 
 export const ContentNavigator = styled.div`
@@ -93,20 +149,4 @@ export const CarouselDot = styled.button`
     width: 8px;
     height: 8px;
   }
-`;
-
-export const ProductLink = styled(Link)`
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const CarouselImage = styled.img`
-  width: auto;
-  height: auto;
-  max-width: 80%;
-  max-height: 250px;
 `;

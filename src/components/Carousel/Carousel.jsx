@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-import { Info } from "@/styles";
 import {
+  Info,
   Container,
   ItemList,
   Item,
   ContentNavigator,
   CarouselDot,
   ProductLink,
+  ImageContainer,
   CarouselImage,
+  ProductDetails,
+  ProductTitle,
 } from "./Carousel.styles";
 
 const Carousel = ({ productsData, itemCount }) => {
@@ -46,13 +49,18 @@ const Carousel = ({ productsData, itemCount }) => {
       ) : (
         <>
           <ItemList $activeIndex={activeIndex} aria-label="carousel-image-list">
-            {products.map((item) => (
-              <Item key={item.id}>
+            {products.map((product) => (
+              <Item key={product.id}>
                 <ProductLink
-                  to={`/product/${item.id}`}
+                  to={`/product/${product.id}`}
                   aria-label="product-link"
                 >
-                  <CarouselImage src={item.image} alt={item.title} />
+                  <ImageContainer>
+                    <CarouselImage src={product.image} alt={product.title} />
+                  </ImageContainer>
+                  <ProductDetails>
+                    <ProductTitle>{product.title}</ProductTitle>
+                  </ProductDetails>
                 </ProductLink>
               </Item>
             ))}
