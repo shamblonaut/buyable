@@ -37,6 +37,7 @@ export const Content = styled.div`
   border-radius: 16px 16px 0 0;
   border-bottom: none;
 
+  width: min(1000px, 100%);
   display: flex;
   align-items: center;
   flex-direction: column;
