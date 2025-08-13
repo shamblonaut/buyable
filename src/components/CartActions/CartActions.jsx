@@ -65,15 +65,12 @@ const CartActions = ({ product, cart, setCart }) => {
             increment={incrementCartQuantity}
             decrement={decrementCartQuantity}
           />
-          <RemoveButton
-            onClick={removeFromCart}
-            aria-label="cart-remove-button"
-          >
+          <RemoveButton onClick={removeFromCart} aria-label="Remove from cart">
             <Trash2 />
           </RemoveButton>
         </>
       ) : (
-        <AddButton onClick={addToCart} aria-label="cart-add-button">
+        <AddButton onClick={addToCart} aria-label="Add to cart">
           <ShoppingCart /> Add to cart
         </AddButton>
       )}

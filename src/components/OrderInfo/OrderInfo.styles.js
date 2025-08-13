@@ -24,7 +24,7 @@ export const Title = styled.p`
   margin: 16px 0;
 `;
 
-export const Field = styled.span`
+const Field = styled.span`
   display: flex;
   justify-content: space-between;
   margin: 8px 0;
@@ -38,6 +38,10 @@ export const Field = styled.span`
     margin-right: 8px;
   }
 `;
+
+export const SubtotalField = Field;
+export const TaxField = Field;
+export const TotalPriceField = Field;
 
 export const CheckoutLink = styled(Link)`
   display: flex;

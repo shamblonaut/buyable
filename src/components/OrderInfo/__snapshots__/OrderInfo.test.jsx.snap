@@ -11,8 +11,8 @@ exports[`OrderInfo component > renders correctly 1`] = `
       Order Summary
     </p>
     <span
-      aria-label="subtotal-field"
       class="sc-fhHczv irEvAa"
+      data-testid="subtotal-field"
     >
       <label>
         Subtotal: 
@@ -23,8 +23,8 @@ exports[`OrderInfo component > renders correctly 1`] = `
       </p>
     </span>
     <span
-      aria-label="tax-field"
       class="sc-fhHczv irEvAa"
+      data-testid="tax-field"
     >
       <label>
         Tax (12%): 
@@ -35,8 +35,8 @@ exports[`OrderInfo component > renders correctly 1`] = `
       </p>
     </span>
     <span
-      aria-label="total-price-field"
       class="sc-fhHczv irEvAa"
+      data-testid="total-price-field"
     >
       <label>
         Total Price: 

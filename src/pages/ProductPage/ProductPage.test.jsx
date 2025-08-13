@@ -110,9 +110,11 @@ describe("Product Page", () => {
       </OutletWrapper>,
     );
 
-    expect(screen.getByLabelText("cart-quantity-selector")).toBeInTheDocument();
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }).value,
+      screen.getByRole("region", { name: "Edit cart quantity" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }).value,
     ).toBe("2");
   });
 });

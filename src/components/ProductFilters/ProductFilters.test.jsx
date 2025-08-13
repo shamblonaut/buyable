@@ -47,7 +47,7 @@ describe("ProductFilters component", () => {
     );
 
     const selectorOptions = within(
-      screen.getByRole("combobox", { name: "category-selector" }),
+      screen.getByRole("combobox", { name: "Select product category" }),
     ).getAllByRole("option");
 
     expect(selectorOptions[0].value).toBe("all");
@@ -68,7 +68,7 @@ describe("ProductFilters component", () => {
     );
 
     await user.type(
-      screen.getByRole("textbox", { name: "product-search-input" }),
+      screen.getByRole("textbox", { name: "Search for product" }),
       "product",
     );
 
@@ -88,7 +88,7 @@ describe("ProductFilters component", () => {
     );
 
     await user.type(
-      screen.getByRole("textbox", { name: "product-search-input" }),
+      screen.getByRole("textbox", { name: "Search for product" }),
       "gb",
     );
 
@@ -112,7 +112,7 @@ describe("ProductFilters component", () => {
     );
 
     await user.type(
-      screen.getByRole("textbox", { name: "product-search-input" }),
+      screen.getByRole("textbox", { name: "Search for product" }),
       "electronics",
     );
 
@@ -134,14 +134,14 @@ describe("ProductFilters component", () => {
     );
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "category-selector" }),
+      screen.getByRole("combobox", { name: "Select product category" }),
       "all",
     );
 
     expect(mockSetFilteredProducts).toHaveBeenLastCalledWith(mockProductList);
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "category-selector" }),
+      screen.getByRole("combobox", { name: "Select product category" }),
       "Electronics",
     );
 
@@ -150,7 +150,7 @@ describe("ProductFilters component", () => {
     );
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "category-selector" }),
+      screen.getByRole("combobox", { name: "Select product category" }),
       "Accessories",
     );
 
@@ -174,14 +174,14 @@ describe("ProductFilters component", () => {
     );
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "sort-selector" }),
+      screen.getByRole("combobox", { name: "Select sorting method" }),
       "relevance",
     );
 
     expect(mockSetFilteredProducts).toHaveBeenLastCalledWith(products);
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "sort-selector" }),
+      screen.getByRole("combobox", { name: "Select sorting method" }),
       "cheap",
     );
 
@@ -194,7 +194,7 @@ describe("ProductFilters component", () => {
     ]);
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "sort-selector" }),
+      screen.getByRole("combobox", { name: "Select sorting method" }),
       "expensive",
     );
 
@@ -207,7 +207,7 @@ describe("ProductFilters component", () => {
     ]);
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "sort-selector" }),
+      screen.getByRole("combobox", { name: "Select sorting method" }),
       "best",
     );
 
@@ -234,18 +234,18 @@ describe("ProductFilters component", () => {
 
     // Select electronics category
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "category-selector" }),
+      screen.getByRole("combobox", { name: "Select product category" }),
       "Electronics",
     );
 
     // Search for titles with "gb"
     await user.type(
-      screen.getByRole("textbox", { name: "product-search-input" }),
+      screen.getByRole("textbox", { name: "Search for product" }),
       "gb",
     );
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "sort-selector" }),
+      screen.getByRole("combobox", { name: "Select sorting method" }),
       "cheap",
     );
 
@@ -256,7 +256,7 @@ describe("ProductFilters component", () => {
     ]);
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "sort-selector" }),
+      screen.getByRole("combobox", { name: "Select sorting method" }),
       "expensive",
     );
 
@@ -267,7 +267,7 @@ describe("ProductFilters component", () => {
     ]);
 
     await user.selectOptions(
-      screen.getByRole("combobox", { name: "sort-selector" }),
+      screen.getByRole("combobox", { name: "Select sorting method" }),
       "best",
     );
 

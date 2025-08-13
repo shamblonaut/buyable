@@ -10,6 +10,23 @@ import ProductList from "./ProductList";
 const mockCart = { 1: 1, 3: 2, 5: 5, 7: 13, 9: 34 };
 const mockSetCart = vi.fn();
 
+vi.mock(
+  "@/components/ProductCard/ProductCard.styles",
+  async (importOriginal) => {
+    const actual = await importOriginal();
+
+    const { ProductLink } = actual;
+    return {
+      ...actual,
+      ProductLink: ({ children, ...props }) => (
+        <ProductLink data-testid="product-link" {...props}>
+          {children}
+        </ProductLink>
+      ),
+    };
+  },
+);
+
 describe("ProductList component", () => {
   beforeEach(() => {
     vi.clearAllMocks();
@@ -43,7 +60,7 @@ describe("ProductList component", () => {
       </BrowserRouter>,
     );
 
-    expect(screen.queryByLabelText("product-search-input")).toBeInTheDocument();
+    expect(screen.queryByLabelText("Search for product")).toBeInTheDocument();
 
     rerender(
       <BrowserRouter>
@@ -57,7 +74,7 @@ describe("ProductList component", () => {
     );
 
     expect(
-      screen.queryByLabelText("product-search-input"),
+      screen.queryByLabelText("Search for product"),
     ).not.toBeInTheDocument();
   });
 
@@ -110,9 +127,7 @@ describe("ProductList component", () => {
     );
 
     expect(
-      within(screen.getByRole("list")).getAllByRole("link", {
-        name: "product-link",
-      }).length,
+      within(screen.getByRole("list")).getAllByTestId("product-link").length,
     ).toBe(mockProductList.length);
   });
 
@@ -135,9 +150,7 @@ describe("ProductList component", () => {
     );
 
     expect(
-      within(screen.getByRole("list")).getAllByRole("link", {
-        name: "product-link",
-      }).length,
+      within(screen.getByRole("list")).getAllByTestId("product-link").length,
     ).toBe(5);
   });
 });

@@ -1,7 +1,14 @@
 import { ShoppingBag } from "lucide-react";
 import PropTypes from "prop-types";
 
-import { Container, Title, Field, CheckoutLink } from "./OrderInfo.styles";
+import {
+  Container,
+  Title,
+  SubtotalField,
+  TaxField,
+  TotalPriceField,
+  CheckoutLink,
+} from "./OrderInfo.styles";
 
 const OrderInfo = ({ products, cart, setCart, taxPercent }) => {
   const subtotal = products.reduce(
@@ -19,18 +26,18 @@ const OrderInfo = ({ products, cart, setCart, taxPercent }) => {
   return (
     <Container>
       <Title>Order Summary</Title>
-      <Field aria-label="subtotal-field">
+      <SubtotalField>
         <label>Subtotal: </label>
         <p>${subtotal.toFixed(2)}</p>
-      </Field>
-      <Field aria-label="tax-field">
+      </SubtotalField>
+      <TaxField>
         <label>Tax (12%): </label>
         <p>${tax.toFixed(2)}</p>
-      </Field>
-      <Field aria-label="total-price-field">
+      </TaxField>
+      <TotalPriceField>
         <label>Total Price: </label>
         <p>${total.toFixed(2)}</p>
-      </Field>
+      </TotalPriceField>
       <CheckoutLink to="/disclaimer" onClick={clearCart}>
         <ShoppingBag /> Place Order
       </CheckoutLink>

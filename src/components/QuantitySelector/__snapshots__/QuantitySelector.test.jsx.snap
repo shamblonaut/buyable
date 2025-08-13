@@ -3,11 +3,12 @@
 exports[`QuantitySelector component > renders correctly when cart is empty 1`] = `
 <div>
   <div
-    aria-label="cart-quantity-selector"
+    aria-label="Edit cart quantity"
     class="sc-bRKDuR eFzYWC"
+    role="region"
   >
     <button
-      aria-label="quantity-decrement-button"
+      aria-label="Decrement cart quantity"
       class="sc-hvigdm sc-fhHczv cSvOhk eYhuUE"
     >
       <svg
@@ -29,13 +30,13 @@ exports[`QuantitySelector component > renders correctly when cart is empty 1`] =
       </svg>
     </button>
     <input
-      aria-label="custom-quantity-input"
+      aria-label="Enter custom cart quantity"
       class="sc-dTvVRJ hypWRI"
       type="text"
       value="4"
     />
     <button
-      aria-label="quantity-increment-button"
+      aria-label="Increment cart quantity"
       class="sc-hvigdm sc-ggWZvA cSvOhk bgUnbA"
     >
       <svg

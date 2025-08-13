@@ -9,14 +9,12 @@ exports[`Home Page > renders correctly 1`] = `
       class="sc-eqYatC efa-DaQ"
     >
       <ul
-        aria-label="carousel-image-list"
         class="sc-kcLKEh TfpBU"
       >
         <li
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/1"
@@ -45,7 +43,6 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/2"
@@ -74,7 +71,6 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/3"
@@ -103,7 +99,6 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/4"
@@ -132,7 +127,6 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/5"
@@ -161,7 +155,6 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/6"
@@ -190,7 +183,6 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/7"
@@ -219,7 +211,6 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/8"
@@ -248,7 +239,6 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/9"
@@ -277,7 +267,6 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-dntSTA kRvAoC"
         >
           <a
-            aria-label="product-link"
             class="sc-kvnevz bveyYu"
             data-discover="true"
             href="/product/10"
@@ -307,7 +296,7 @@ exports[`Home Page > renders correctly 1`] = `
         class="sc-gGKoUb iAljzT"
       >
         <button
-          aria-label="previous-slide-button"
+          aria-label="Go to previous slide"
           class="sc-hwddKA eMxoFa"
         >
           <svg
@@ -332,48 +321,38 @@ exports[`Home Page > renders correctly 1`] = `
           class="sc-jaXbil egleQu"
         >
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG fFGCQG"
           />
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG bsYoCc"
           />
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG bsYoCc"
           />
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG bsYoCc"
           />
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG bsYoCc"
           />
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG bsYoCc"
           />
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG bsYoCc"
           />
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG bsYoCc"
           />
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG bsYoCc"
           />
           <button
-            aria-label="carousel-navigation-button"
             class="sc-eqNDNG bsYoCc"
           />
         </div>
         <button
-          aria-label="next-slide-button"
+          aria-label="Go to next slide"
           class="sc-hwddKA eMxoFa"
         >
           <svg
@@ -411,7 +390,7 @@ exports[`Home Page > renders correctly 1`] = `
         </strong>
       </p>
       <a
-        aria-label="shop-page-link"
+        aria-label="Go to Shop page"
         class="sc-gSifMm ikjrtB"
         data-discover="true"
         href="/shop"

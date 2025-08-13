@@ -31,7 +31,7 @@ exports[`ProductFilters component > renders correctly 1`] = `
         />
       </svg>
       <input
-        aria-label="product-search-input"
+        aria-label="Search for product"
         class="sc-jwTyAe blmavy"
         placeholder="Search Product"
         type="text"
@@ -51,7 +51,7 @@ exports[`ProductFilters component > renders correctly 1`] = `
           Category: 
         </label>
         <select
-          aria-label="category-selector"
+          aria-label="Select product category"
           class="sc-hwkwBN bcSjSd"
           id="category-selector"
         >
@@ -82,7 +82,7 @@ exports[`ProductFilters component > renders correctly 1`] = `
           Sort By: 
         </label>
         <select
-          aria-label="sort-selector"
+          aria-label="Select sorting method"
           class="sc-hwkwBN bcSjSd"
           id="sort-selector"
         >

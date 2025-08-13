@@ -27,17 +27,17 @@ describe("Navigator component", () => {
     );
 
     expect(
-      screen.getByRole("link", { name: "home-page-link" }).firstChild,
+      screen.getByRole("link", { name: "Go to Home page" }).firstChild,
     ).not.toHaveStyle({
       color: "var(--color-light)",
     });
     expect(
-      screen.getByRole("link", { name: "shop-page-link" }).firstChild,
+      screen.getByRole("link", { name: "Go to Shop page" }).firstChild,
     ).toHaveStyle({
       color: "var(--color-light)",
     });
     expect(
-      screen.getByRole("link", { name: "cart-page-link" }).firstChild,
+      screen.getByRole("link", { name: "Go to Cart page" }).firstChild,
     ).not.toHaveStyle({
       color: "var(--color-light)",
     });
@@ -51,7 +51,7 @@ describe("Navigator component", () => {
     );
 
     expect(
-      within(screen.getByRole("link", { name: "cart-page-link" })).queryByText(
+      within(screen.getByRole("link", { name: "Go to Cart page" })).queryByText(
         mockCartCount.toString(),
       ),
     ).toBeInTheDocument();
@@ -65,13 +65,13 @@ describe("Navigator component", () => {
     );
 
     expect(
-      screen.getByRole("link", { name: "home-page-link" }),
+      screen.getByRole("link", { name: "Go to Home page" }),
     ).toHaveAttribute("href", "/");
     expect(
-      screen.getByRole("link", { name: "shop-page-link" }),
+      screen.getByRole("link", { name: "Go to Shop page" }),
     ).toHaveAttribute("href", "/shop");
     expect(
-      screen.getByRole("link", { name: "cart-page-link" }),
+      screen.getByRole("link", { name: "Go to Cart page" }),
     ).toHaveAttribute("href", "/cart");
   });
 });

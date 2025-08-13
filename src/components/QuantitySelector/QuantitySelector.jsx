@@ -30,24 +30,18 @@ const QuantitySelector = ({ quantity, setQuantity, decrement, increment }) => {
   useEffect(resetValue, [quantity]);
 
   return (
-    <Selector aria-label="cart-quantity-selector">
-      <DecrementButton
-        onClick={decrement}
-        aria-label="quantity-decrement-button"
-      >
+    <Selector role="region" aria-label="Edit cart quantity">
+      <DecrementButton onClick={decrement} aria-label="Decrement cart quantity">
         <Minus />
       </DecrementButton>
       <CurrentQuantity
         type="text"
-        aria-label="custom-quantity-input"
+        aria-label="Enter custom cart quantity"
         value={value}
         onChange={handleValueChange}
         onBlur={resetValue}
       />
-      <IncrementButton
-        onClick={increment}
-        aria-label="quantity-increment-button"
-      >
+      <IncrementButton onClick={increment} aria-label="Increment cart quantity">
         <Plus />
       </IncrementButton>
     </Selector>

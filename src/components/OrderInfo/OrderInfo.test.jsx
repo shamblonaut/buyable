@@ -11,6 +11,30 @@ const mockTaxPercent = 12;
 
 const setCart = vi.fn();
 
+vi.mock("./OrderInfo.styles", async (importOriginal) => {
+  const actual = await importOriginal();
+
+  const { SubtotalField, TaxField, TotalPriceField } = actual;
+  return {
+    ...actual,
+    SubtotalField: ({ children, ...props }) => (
+      <SubtotalField data-testid="subtotal-field" {...props}>
+        {children}
+      </SubtotalField>
+    ),
+    TaxField: ({ children, ...props }) => (
+      <TaxField data-testid="tax-field" {...props}>
+        {children}
+      </TaxField>
+    ),
+    TotalPriceField: ({ children, ...props }) => (
+      <TotalPriceField data-testid="total-price-field" {...props}>
+        {children}
+      </TotalPriceField>
+    ),
+  };
+});
+
 describe("OrderInfo component", () => {
   beforeEach(() => {
     vi.clearAllMocks();
@@ -44,7 +68,7 @@ describe("OrderInfo component", () => {
     );
 
     expect(
-      within(screen.getByLabelText("subtotal-field")).getByText("$3743.03"),
+      within(screen.getByTestId("subtotal-field")).getByText("$3743.03"),
     ).toBeInTheDocument();
   });
 
@@ -61,7 +85,7 @@ describe("OrderInfo component", () => {
     );
 
     expect(
-      within(screen.getByLabelText("tax-field")).getByText("$449.16"),
+      within(screen.getByTestId("tax-field")).getByText("$449.16"),
     ).toBeInTheDocument();
   });
 
@@ -78,7 +102,7 @@ describe("OrderInfo component", () => {
     );
 
     expect(
-      within(screen.getByLabelText("total-price-field")).getByText("$4192.19"),
+      within(screen.getByTestId("total-price-field")).getByText("$4192.19"),
     ).toBeInTheDocument();
   });
 

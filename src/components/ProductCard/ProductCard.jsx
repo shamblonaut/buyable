@@ -13,11 +13,7 @@ import {
 const ProductCard = ({ product, cart, setCart }) => {
   return (
     <Card>
-      <ProductLink
-        to={`/product/${product.id}`}
-        aria-label="product-link"
-        title={product.title}
-      >
+      <ProductLink to={`/product/${product.id}`} title={product.title}>
         <ImageContainer>
           <img src={product.image} alt={product.title} />
         </ImageContainer>

@@ -58,13 +58,10 @@ const Carousel = ({ productsData, itemCount }) => {
         </Info>
       ) : (
         <>
-          <ItemList $activeIndex={activeIndex} aria-label="carousel-image-list">
+          <ItemList $activeIndex={activeIndex}>
             {products.map((product) => (
               <Item key={product.id}>
-                <ProductLink
-                  to={`/product/${product.id}`}
-                  aria-label="product-link"
-                >
+                <ProductLink to={`/product/${product.id}`}>
                   <ImageContainer>
                     <CarouselImage src={product.image} alt={product.title} />
                   </ImageContainer>
@@ -77,7 +74,7 @@ const Carousel = ({ productsData, itemCount }) => {
           </ItemList>
           <CarouselControl>
             <CarouselArrow
-              aria-label="previous-slide-button"
+              aria-label="Go to previous slide"
               onClick={activatePreviousSlide}
             >
               <ChevronLeft />
@@ -87,13 +84,12 @@ const Carousel = ({ productsData, itemCount }) => {
                 <CarouselDot
                   $active={activeIndex === index}
                   key={item.id}
-                  aria-label="carousel-navigation-button"
                   onClick={() => setActiveIndex(index)}
                 ></CarouselDot>
               ))}
             </CarouselNavigator>
             <CarouselArrow
-              aria-label="next-slide-button"
+              aria-label="Go to next slide"
               onClick={activateNextSlide}
             >
               <ChevronRight />

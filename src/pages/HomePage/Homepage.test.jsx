@@ -58,7 +58,7 @@ describe("Home Page", () => {
     );
 
     expect(
-      screen.getByRole("link", { name: "shop-page-link" }),
+      screen.getByRole("link", { name: "Go to Shop page" }),
     ).toHaveAttribute("href", "/shop");
   });
 });

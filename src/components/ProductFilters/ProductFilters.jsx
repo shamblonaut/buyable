@@ -93,7 +93,7 @@ const ProductFilters = ({ products, setFilteredProducts }) => {
         <SearchIcon />
         <Input
           type="text"
-          aria-label="product-search-input"
+          aria-label="Search for product"
           placeholder="Search Product"
           value={searchQuery}
           onChange={handleSearchInput}
@@ -104,7 +104,7 @@ const ProductFilters = ({ products, setFilteredProducts }) => {
           <ControlLabel htmlFor="category-selector">Category: </ControlLabel>
           <Dropdown
             id="category-selector"
-            aria-label="category-selector"
+            aria-label="Select product category"
             value={category}
             onChange={handleCategoryChange}
           >
@@ -120,7 +120,7 @@ const ProductFilters = ({ products, setFilteredProducts }) => {
           <ControlLabel htmlFor="sort-selector">Sort By: </ControlLabel>
           <Dropdown
             id="sort-selector"
-            aria-label="sort-selector"
+            aria-label="Select sorting method"
             value={sortBy}
             onChange={handleSortByChange}
           >

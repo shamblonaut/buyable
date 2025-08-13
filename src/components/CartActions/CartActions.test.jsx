@@ -40,13 +40,13 @@ describe("CartActions component", () => {
     );
 
     expect(
-      within(screen.getByRole("button", { name: "cart-add-button" })).getByText(
+      within(screen.getByRole("button", { name: "Add to cart" })).getByText(
         "add to cart",
         { exact: false },
       ),
     ).toBeInTheDocument();
     expect(
-      screen.queryByRole("button", { name: "cart-remove-button" }),
+      screen.queryByRole("button", { name: "Remove from cart" }),
     ).not.toBeInTheDocument();
   });
 
@@ -60,12 +60,14 @@ describe("CartActions component", () => {
     );
 
     expect(
-      screen.getByRole("button", { name: "cart-remove-button" }),
+      screen.getByRole("button", { name: "Remove from cart" }),
     ).toBeInTheDocument();
     expect(
-      screen.queryByRole("button", { name: "cart-add-button" }),
+      screen.queryByRole("button", { name: "Add to cart" }),
     ).not.toBeInTheDocument();
-    expect(screen.getByLabelText("cart-quantity-selector")).toBeInTheDocument();
+    expect(
+      screen.getByRole("region", { name: "Edit cart quantity" }),
+    ).toBeInTheDocument();
   });
 
   it("shows no. of items of current product in quantity selector", () => {
@@ -78,9 +80,9 @@ describe("CartActions component", () => {
     );
 
     expect(
-      within(screen.getByLabelText("cart-quantity-selector")).getByRole(
-        "textbox",
-      ),
+      within(
+        screen.getByRole("region", { name: "Edit cart quantity" }),
+      ).getByRole("textbox"),
     ).toHaveValue(mockCart[mockProduct.id].toString());
   });
 
@@ -105,7 +107,7 @@ describe("CartActions component", () => {
       <CartActions product={mockProduct} cart={cart} setCart={setCart} />,
     );
 
-    await user.click(screen.getByRole("button", { name: "cart-add-button" }));
+    await user.click(screen.getByRole("button", { name: "Add to cart" }));
 
     expect(setCart).toHaveBeenCalled();
     expect(cart).toMatchObject({ 7: 1 });
@@ -115,9 +117,9 @@ describe("CartActions component", () => {
     );
 
     expect(
-      within(screen.getByLabelText("cart-quantity-selector")).getByRole(
-        "textbox",
-      ),
+      within(
+        screen.getByRole("region", { name: "Edit cart quantity" }),
+      ).getByRole("textbox"),
     ).toHaveValue("1");
   });
 
@@ -142,9 +144,7 @@ describe("CartActions component", () => {
       <CartActions product={mockProduct} cart={cart} setCart={setCart} />,
     );
 
-    await user.click(
-      screen.getByRole("button", { name: "cart-remove-button" }),
-    );
+    await user.click(screen.getByRole("button", { name: "Remove from cart" }));
 
     expect(setCart).toHaveBeenCalled();
     expect(cart).toMatchObject({});
@@ -154,7 +154,7 @@ describe("CartActions component", () => {
     );
 
     expect(
-      screen.getByRole("button", { name: "cart-add-button" }),
+      screen.getByRole("button", { name: "Add to cart" }),
     ).toBeInTheDocument();
   });
 
@@ -179,9 +179,7 @@ describe("CartActions component", () => {
       <CartActions product={mockProduct} cart={cart} setCart={setCart} />,
     );
 
-    await user.click(
-      screen.getByRole("button", { name: "cart-remove-button" }),
-    );
+    await user.click(screen.getByRole("button", { name: "Remove from cart" }));
 
     expect(setCart).toHaveBeenCalled();
     expect(cart).toMatchObject({});
@@ -191,7 +189,7 @@ describe("CartActions component", () => {
     );
 
     expect(
-      screen.getByRole("button", { name: "cart-add-button" }),
+      screen.getByRole("button", { name: "Add to cart" }),
     ).toBeInTheDocument();
   });
 
@@ -215,7 +213,7 @@ describe("CartActions component", () => {
     render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
 
     await user.click(
-      screen.getByRole("button", { name: "quantity-decrement-button" }),
+      screen.getByRole("button", { name: "Decrement cart quantity" }),
     );
 
     expect(setCart).toHaveBeenCalled();
@@ -242,7 +240,7 @@ describe("CartActions component", () => {
     render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
 
     await user.click(
-      screen.getByRole("button", { name: "quantity-decrement-button" }),
+      screen.getByRole("button", { name: "Decrement cart quantity" }),
     );
 
     expect(setCart).toHaveBeenCalled();
@@ -269,7 +267,7 @@ describe("CartActions component", () => {
     render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
 
     await user.click(
-      screen.getByRole("button", { name: "quantity-increment-button" }),
+      screen.getByRole("button", { name: "Increment cart quantity" }),
     );
 
     expect(setCart).toHaveBeenCalled();
@@ -296,10 +294,10 @@ describe("CartActions component", () => {
     render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
 
     await user.clear(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     );
     await user.type(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
       "256",
     );
 
@@ -327,10 +325,10 @@ describe("CartActions component", () => {
     render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
 
     await user.clear(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     );
     await user.type(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
       "0",
     );
 

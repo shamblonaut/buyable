@@ -53,7 +53,7 @@ describe("QuantitySelector component", () => {
     );
 
     await user.click(
-      screen.getByRole("button", { name: "quantity-decrement-button" }),
+      screen.getByRole("button", { name: "Decrement cart quantity" }),
     );
 
     expect(decrement).toHaveBeenCalled();
@@ -86,7 +86,7 @@ describe("QuantitySelector component", () => {
     );
 
     await user.click(
-      screen.getByRole("button", { name: "quantity-increment-button" }),
+      screen.getByRole("button", { name: "Increment cart quantity" }),
     );
 
     expect(increment).toHaveBeenCalled();
@@ -113,13 +113,13 @@ describe("QuantitySelector component", () => {
     );
 
     await user.clear(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     );
 
     expect(setQuantity).not.toHaveBeenCalled();
 
     await user.type(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
       "16",
     );
 
@@ -127,10 +127,10 @@ describe("QuantitySelector component", () => {
     vi.clearAllMocks();
 
     await user.clear(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     );
     await user.type(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
       "asdf",
     );
 
@@ -150,15 +150,15 @@ describe("QuantitySelector component", () => {
     );
 
     await user.clear(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     );
     await user.type(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
       "16",
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue("16");
 
     rerender(
@@ -171,7 +171,7 @@ describe("QuantitySelector component", () => {
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue("7");
   });
 
@@ -199,11 +199,11 @@ describe("QuantitySelector component", () => {
 
     // Empty value
     await user.clear(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue("");
 
     await user.tab();
@@ -217,20 +217,20 @@ describe("QuantitySelector component", () => {
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue(mockQuantity.toString());
 
     // Alphabetic characters
     await user.clear(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     );
     await user.type(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
       "asdf",
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue("asdf");
 
     await user.tab();
@@ -244,20 +244,20 @@ describe("QuantitySelector component", () => {
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue(mockQuantity.toString());
 
     // Negative number
     await user.clear(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     );
     await user.type(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
       "-9",
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue("-9");
 
     await user.tab();
@@ -271,20 +271,20 @@ describe("QuantitySelector component", () => {
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue(mockQuantity.toString());
 
     // Valid number
     await user.clear(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     );
     await user.type(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
       "7",
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue("7");
 
     await user.tab();
@@ -298,7 +298,7 @@ describe("QuantitySelector component", () => {
     );
 
     expect(
-      screen.getByRole("textbox", { name: "custom-quantity-input" }),
+      screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
     ).toHaveValue("7");
     expect(setQuantity).toHaveBeenCalledWith(7);
   });

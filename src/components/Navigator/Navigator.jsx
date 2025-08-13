@@ -9,21 +9,21 @@ const Navigator = ({ appPosition, cartCount }) => (
     <Tabs>
       <PageLink
         to="/"
-        aria-label="home-page-link"
+        aria-label="Go to Home page"
         $active={appPosition === AppPosition.HOME}
       >
         <Home />
       </PageLink>
       <PageLink
         to="/shop"
-        aria-label="shop-page-link"
+        aria-label="Go to Shop page"
         $active={appPosition === AppPosition.SHOP}
       >
         <ShoppingBag />
       </PageLink>
       <PageLink
         to="/cart"
-        aria-label="cart-page-link"
+        aria-label="Go to Cart page"
         $active={appPosition === AppPosition.CART}
       >
         <ShoppingCart />

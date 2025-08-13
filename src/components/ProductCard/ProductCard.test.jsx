@@ -14,6 +14,20 @@ const mockProduct = {
 const mockCart = { 1: 16 };
 const mockSetCart = vi.fn();
 
+vi.mock("./ProductCard.styles", async (importOriginal) => {
+  const actual = await importOriginal();
+
+  const { ProductLink } = actual;
+  return {
+    ...actual,
+    ProductLink: ({ children, ...props }) => (
+      <ProductLink data-testid="product-link" {...props}>
+        {children}
+      </ProductLink>
+    ),
+  };
+});
+
 describe("ProductCard component", () => {
   it("renders correctly", () => {
     const { container } = render(
@@ -40,7 +54,7 @@ describe("ProductCard component", () => {
       </BrowserRouter>,
     );
 
-    expect(screen.getByRole("link", { name: "product-link" })).toHaveAttribute(
+    expect(screen.getByTestId("product-link")).toHaveAttribute(
       "href",
       `/product/${mockProduct.id}`,
     );

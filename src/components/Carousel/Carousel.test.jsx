@@ -19,6 +19,25 @@ const mockProductList = [
   { id: 10, title: "Product 10", image: "http://example.com/image-10.jpg" },
 ];
 
+vi.mock("./Carousel.styles", async (importOriginal) => {
+  const actual = await importOriginal();
+
+  const { ItemList, CarouselDot } = actual;
+  return {
+    ...actual,
+    ItemList: ({ children, ...props }) => (
+      <ItemList data-testid="carousel-list" {...props}>
+        {children}
+      </ItemList>
+    ),
+    CarouselDot: ({ children, ...props }) => (
+      <CarouselDot data-testid="carousel-dot" {...props}>
+        {children}
+      </CarouselDot>
+    ),
+  };
+});
+
 describe("Carousel component", () => {
   beforeEach(() => {
     vi.useFakeTimers();
@@ -165,10 +184,9 @@ describe("Carousel component", () => {
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getAllByRole("button", { name: "carousel-navigation-button" })
-        .length,
-    ).toBe(mockData.data.length);
+    expect(screen.getAllByTestId("carousel-dot").length).toBe(
+      mockData.data.length,
+    );
   });
 
   it("shows corresponding product when navigation dot is clicked", async () => {
@@ -185,23 +203,15 @@ describe("Carousel component", () => {
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
     await act(async () => {
-      user.click(
-        screen.getAllByRole("button", {
-          name: "carousel-navigation-button",
-        })[3],
-      );
+      user.click(screen.getAllByTestId("carousel-dot")[3]);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-300%)`,
     });
   });
@@ -219,9 +229,7 @@ describe("Carousel component", () => {
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
@@ -229,9 +237,7 @@ describe("Carousel component", () => {
       vi.advanceTimersByTime(5000);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-100%)`,
     });
 
@@ -251,18 +257,16 @@ describe("Carousel component", () => {
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({ transform: `translateX(0%)` });
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
+      transform: `translateX(0%)`,
+    });
 
     for (let i = 1; i < mockProductList.length; i++) {
       act(() => {
         vi.advanceTimersByTime(5000 * i);
       });
 
-      expect(
-        screen.getByRole("list", { name: "carousel-image-list" }),
-      ).toHaveStyle({
+      expect(screen.getByTestId("carousel-list")).toHaveStyle({
         transform: `translateX(-${100 * i}%)`,
       });
     }
@@ -271,9 +275,7 @@ describe("Carousel component", () => {
       vi.advanceTimersByTime(5000);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
@@ -294,9 +296,7 @@ describe("Carousel component", () => {
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
@@ -305,16 +305,10 @@ describe("Carousel component", () => {
     });
 
     await act(async () => {
-      user.click(
-        screen.getAllByRole("button", {
-          name: "carousel-navigation-button",
-        })[3],
-      );
+      user.click(screen.getAllByTestId("carousel-dot")[3]);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-300%)`,
     });
 
@@ -322,9 +316,7 @@ describe("Carousel component", () => {
       vi.advanceTimersByTime(2000);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-300%)`,
     });
 
@@ -332,9 +324,7 @@ describe("Carousel component", () => {
       vi.advanceTimersByTime(3000);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-400%)`,
     });
 
@@ -355,37 +345,31 @@ describe("Carousel component", () => {
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
     await act(async () => {
       user.click(
         screen.getByRole("button", {
-          name: "next-slide-button",
+          name: "Go to next slide",
         }),
       );
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-100%)`,
     });
 
     await act(async () => {
       user.click(
         screen.getByRole("button", {
-          name: "previous-slide-button",
+          name: "Go to previous slide",
         }),
       );
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
@@ -406,37 +390,31 @@ describe("Carousel component", () => {
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
     await act(async () => {
       user.click(
         screen.getByRole("button", {
-          name: "previous-slide-button",
+          name: "Go to previous slide",
         }),
       );
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-900%)`,
     });
 
     await act(async () => {
       user.click(
         screen.getByRole("button", {
-          name: "next-slide-button",
+          name: "Go to next slide",
         }),
       );
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
@@ -457,9 +435,7 @@ describe("Carousel component", () => {
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
@@ -470,14 +446,12 @@ describe("Carousel component", () => {
     await act(async () => {
       user.click(
         screen.getByRole("button", {
-          name: "previous-slide-button",
+          name: "Go to previous slide",
         }),
       );
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-900%)`,
     });
 
@@ -485,9 +459,7 @@ describe("Carousel component", () => {
       vi.advanceTimersByTime(2000);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-900%)`,
     });
 
@@ -495,9 +467,7 @@ describe("Carousel component", () => {
       vi.advanceTimersByTime(3000);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
@@ -518,9 +488,7 @@ describe("Carousel component", () => {
       </BrowserRouter>,
     );
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(0%)`,
     });
 
@@ -531,14 +499,12 @@ describe("Carousel component", () => {
     await act(async () => {
       user.click(
         screen.getByRole("button", {
-          name: "next-slide-button",
+          name: "Go to next slide",
         }),
       );
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-100%)`,
     });
 
@@ -546,9 +512,7 @@ describe("Carousel component", () => {
       vi.advanceTimersByTime(2000);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-100%)`,
     });
 
@@ -556,9 +520,7 @@ describe("Carousel component", () => {
       vi.advanceTimersByTime(3000);
     });
 
-    expect(
-      screen.getByRole("list", { name: "carousel-image-list" }),
-    ).toHaveStyle({
+    expect(screen.getByTestId("carousel-list")).toHaveStyle({
       transform: `translateX(-200%)`,
     });
 

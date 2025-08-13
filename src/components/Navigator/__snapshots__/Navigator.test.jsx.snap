@@ -9,7 +9,7 @@ exports[`Navigator component > renders correctly 1`] = `
       class="sc-hvigdm hVLfAZ"
     >
       <a
-        aria-label="home-page-link"
+        aria-label="Go to Home page"
         class="sc-fhHczv kRcGpD"
         data-discover="true"
         href="/"
@@ -36,7 +36,7 @@ exports[`Navigator component > renders correctly 1`] = `
         </svg>
       </a>
       <a
-        aria-label="shop-page-link"
+        aria-label="Go to Shop page"
         class="sc-fhHczv jNLQtO"
         data-discover="true"
         href="/shop"
@@ -66,7 +66,7 @@ exports[`Navigator component > renders correctly 1`] = `
         </svg>
       </a>
       <a
-        aria-label="cart-page-link"
+        aria-label="Go to Cart page"
         class="sc-fhHczv jNLQtO"
         data-discover="true"
         href="/cart"

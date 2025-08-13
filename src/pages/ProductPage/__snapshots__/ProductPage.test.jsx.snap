@@ -303,11 +303,12 @@ exports[`Product Page > renders correctly 1`] = `
           class="sc-etsjJW eKirvu"
         >
           <div
-            aria-label="cart-quantity-selector"
+            aria-label="Edit cart quantity"
             class="sc-kUouGy kcFQSo"
+            role="region"
           >
             <button
-              aria-label="quantity-decrement-button"
+              aria-label="Decrement cart quantity"
               class="sc-bjMIFn sc-dClGHI gycoPx jTKwYk"
             >
               <svg
@@ -329,13 +330,13 @@ exports[`Product Page > renders correctly 1`] = `
               </svg>
             </button>
             <input
-              aria-label="custom-quantity-input"
+              aria-label="Enter custom cart quantity"
               class="sc-bAehkN kpqawf"
               type="text"
               value="2"
             />
             <button
-              aria-label="quantity-increment-button"
+              aria-label="Increment cart quantity"
               class="sc-bjMIFn sc-fhfEft gycoPx ejGQKl"
             >
               <svg
@@ -361,7 +362,7 @@ exports[`Product Page > renders correctly 1`] = `
             </button>
           </div>
           <button
-            aria-label="cart-remove-button"
+            aria-label="Remove from cart"
             class="sc-fYmhhH sc-DZJJV bDLkig gLaRVb"
           >
             <svg

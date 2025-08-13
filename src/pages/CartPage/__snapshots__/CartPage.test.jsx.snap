@@ -19,7 +19,6 @@ exports[`Cart Page > renders correctly 1`] = `
         Order Summary
       </p>
       <span
-        aria-label="subtotal-field"
         class="sc-jxOwhs hqKnvm"
       >
         <label>
@@ -31,7 +30,6 @@ exports[`Cart Page > renders correctly 1`] = `
         </p>
       </span>
       <span
-        aria-label="tax-field"
         class="sc-jxOwhs hqKnvm"
       >
         <label>
@@ -43,7 +41,6 @@ exports[`Cart Page > renders correctly 1`] = `
         </p>
       </span>
       <span
-        aria-label="total-price-field"
         class="sc-jxOwhs hqKnvm"
       >
         <label>
