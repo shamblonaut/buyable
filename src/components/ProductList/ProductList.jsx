@@ -6,7 +6,7 @@ import { ProductFilters, ProductCard } from "@/components";
 import { Info } from "@/styles";
 import { Container, List } from "./ProductList.styles";
 
-const ProductList = ({ products, cart, setCart, filterable = true }) => {
+const ProductList = ({ products, filterable = true }) => {
   const [searchParams] = useSearchParams();
   const [filteredProducts, setFilteredProducts] = useState(products);
 
@@ -29,7 +29,7 @@ const ProductList = ({ products, cart, setCart, filterable = true }) => {
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <li key={product.id}>
-              <ProductCard product={product} cart={cart} setCart={setCart} />
+              <ProductCard product={product} />
             </li>
           ))
         ) : (
@@ -54,8 +54,6 @@ ProductList.propTypes = {
       }).isRequired,
     }).isRequired,
   ),
-  cart: PropTypes.objectOf(PropTypes.number).isRequired,
-  setCart: PropTypes.func.isRequired,
   filterable: PropTypes.bool,
 };
 

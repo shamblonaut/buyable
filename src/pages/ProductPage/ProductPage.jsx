@@ -26,7 +26,7 @@ const ProductPage = () => {
     loading,
   } = useFetch(`https://fakestoreapi.com/products/${id}`);
 
-  const { cart, setCart, appPosition } = useOutletContext();
+  const { appPosition } = useOutletContext();
 
   return (
     <Page>
@@ -61,7 +61,7 @@ const ProductPage = () => {
               <Description>{product.description}</Description>
             </Details>
             <CartActionContainer>
-              <CartActions product={product} cart={cart} setCart={setCart} />
+              <CartActions product={product} />
             </CartActionContainer>
           </Content>
         </>

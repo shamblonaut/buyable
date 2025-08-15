@@ -21,20 +21,6 @@ vi.mock("@/hooks", () => ({
   useLocalStorage: vi.fn(),
 }));
 
-vi.mock("@/components", () => ({
-  Header: () => <header data-testid="header">BUYABLE</header>,
-  Navigator: ({ appPosition, cartCount }) => (
-    <nav data-testid="navigator">
-      <a>Home{appPosition === AppPosition.HOME && <> [active]</>}</a>
-      <a>Shop{appPosition === AppPosition.SHOP && <> [active]</>}</a>
-      <a>
-        Cart: {cartCount} items
-        {appPosition === AppPosition.CART && <> [active]</>}
-      </a>
-    </nav>
-  ),
-}));
-
 describe("App", () => {
   beforeEach(() => {
     vi.clearAllMocks();
@@ -66,7 +52,11 @@ describe("App", () => {
       </BrowserRouter>,
     );
 
-    expect(screen.getByText("Home [active]")).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: "Go to Home page" }).firstChild,
+    ).toHaveStyle({
+      color: "var(--color-light)",
+    });
   });
 
   it("passes correct amount for number of items in cart", () => {
@@ -78,6 +68,6 @@ describe("App", () => {
       </BrowserRouter>,
     );
 
-    expect(screen.getByText("Cart: 20 items")).toBeInTheDocument();
+    expect(screen.getByText("20")).toBeInTheDocument();
   });
 });

@@ -101,11 +101,10 @@ exports[`Navigator component > renders correctly 1`] = `
         <div
           class="sc-ggWZvA iRPAEk"
         >
-          16
+          55
         </div>
       </a>
     </div>
   </nav>
-  ,
 </div>
 `;

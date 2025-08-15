@@ -10,7 +10,7 @@ import {
   ProductPrice,
 } from "./ProductCard.styles";
 
-const ProductCard = ({ product, cart, setCart }) => {
+const ProductCard = ({ product }) => {
   return (
     <Card>
       <ProductLink to={`/product/${product.id}`} title={product.title}>
@@ -22,7 +22,7 @@ const ProductCard = ({ product, cart, setCart }) => {
           <ProductPrice>${product.price}</ProductPrice>
         </ProductDetails>
       </ProductLink>
-      <CartActions product={product} cart={cart} setCart={setCart} />
+      <CartActions product={product} />
     </Card>
   );
 };
@@ -34,8 +34,6 @@ ProductCard.propTypes = {
     price: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
   }).isRequired,
-  cart: PropTypes.objectOf(PropTypes.number).isRequired,
-  setCart: PropTypes.func.isRequired,
 };
 
 export default ProductCard;

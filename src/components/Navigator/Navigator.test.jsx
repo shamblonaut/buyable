@@ -3,16 +3,20 @@ import { render, screen, within } from "@testing-library/react";
 
 import { BrowserRouter } from "react-router-dom";
 
+import { CartContext } from "@/contexts";
 import { AppPosition } from "@/utils/constants";
-import Navigator from "./Navigator";
 
-const mockCartCount = 16;
+import { mockCart } from "@tests/data";
+
+import Navigator from "./Navigator";
 
 describe("Navigator component", () => {
   it("renders correctly", () => {
     const { container } = render(
       <BrowserRouter>
-        <Navigator appPosition={AppPosition.HOME} cartCount={mockCartCount} />,
+        <CartContext.Provider value={{ cart: mockCart }}>
+          <Navigator appPosition={AppPosition.HOME} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -22,7 +26,9 @@ describe("Navigator component", () => {
   it("highlights currently active page", () => {
     render(
       <BrowserRouter>
-        <Navigator appPosition={AppPosition.SHOP} cartCount={mockCartCount} />
+        <CartContext.Provider value={{ cart: mockCart }}>
+          <Navigator appPosition={AppPosition.SHOP} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -46,13 +52,15 @@ describe("Navigator component", () => {
   it("shows current no. of items in cart within cart page link", () => {
     render(
       <BrowserRouter>
-        <Navigator appPosition={AppPosition.SHOP} cartCount={mockCartCount} />
+        <CartContext.Provider value={{ cart: mockCart }}>
+          <Navigator appPosition={AppPosition.SHOP} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
     expect(
       within(screen.getByRole("link", { name: "Go to Cart page" })).queryByText(
-        mockCartCount.toString(),
+        "55",
       ),
     ).toBeInTheDocument();
   });
@@ -60,7 +68,9 @@ describe("Navigator component", () => {
   it("links to respective pages correctly", () => {
     render(
       <BrowserRouter>
-        <Navigator appPosition={AppPosition.HOME} cartCount={mockCartCount} />
+        <CartContext.Provider value={{ cart: mockCart }}>
+          <Navigator appPosition={AppPosition.HOME} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 

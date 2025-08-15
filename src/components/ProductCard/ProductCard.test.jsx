@@ -4,6 +4,7 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 
 import ProductCard from "./ProductCard";
+import { CartContext } from "@/contexts";
 
 const mockProduct = {
   id: 1,
@@ -32,11 +33,9 @@ describe("ProductCard component", () => {
   it("renders correctly", () => {
     const { container } = render(
       <BrowserRouter>
-        <ProductCard
-          product={mockProduct}
-          cart={mockCart}
-          setCart={mockSetCart}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+          <ProductCard product={mockProduct} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -46,11 +45,9 @@ describe("ProductCard component", () => {
   it("links to product page of given product", () => {
     render(
       <BrowserRouter>
-        <ProductCard
-          product={mockProduct}
-          cart={mockCart}
-          setCart={mockSetCart}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+          <ProductCard product={mockProduct} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 

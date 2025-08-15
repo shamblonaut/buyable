@@ -1,13 +1,17 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 import { AppPosition } from "@/utils/constants";
+
+import { CartContext } from "@/contexts";
 
 import { OrderInfo, ProductList } from "@/components";
 import { Page, Heading, Info } from "@/styles";
 
 const CartPage = () => {
-  const { productsData, cart, setCart, setAppPosition } = useOutletContext();
+  const { cart } = useContext(CartContext);
+
+  const { productsData, setAppPosition } = useOutletContext();
 
   useEffect(() => setAppPosition(AppPosition.CART), [setAppPosition]);
 
@@ -36,18 +40,8 @@ const CartPage = () => {
         </Info>
       ) : Object.keys(cart).length > 0 ? (
         <>
-          <OrderInfo
-            products={products}
-            cart={cart}
-            setCart={setCart}
-            taxPercent={12}
-          />
-          <ProductList
-            products={getCartProductList()}
-            cart={cart}
-            setCart={setCart}
-            filterable={false}
-          />
+          <OrderInfo products={products} taxPercent={12} />
+          <ProductList products={getCartProductList()} filterable={false} />
         </>
       ) : (
         <Info>Your cart is empty</Info>

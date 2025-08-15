@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import { ShoppingBag } from "lucide-react";
 import PropTypes from "prop-types";
+
+import { CartContext } from "@/contexts";
 
 import {
   Container,
@@ -10,7 +13,9 @@ import {
   CheckoutLink,
 } from "./OrderInfo.styles";
 
-const OrderInfo = ({ products, cart, setCart, taxPercent }) => {
+const OrderInfo = ({ products, taxPercent }) => {
+  const { cart, setCart } = useContext(CartContext);
+
   const subtotal = products.reduce(
     (sum, product) =>
       cart[product.id] ? sum + product.price * cart[product.id] : sum,
@@ -52,8 +57,6 @@ OrderInfo.propTypes = {
       price: PropTypes.number.isRequired,
     }),
   ).isRequired,
-  cart: PropTypes.objectOf(PropTypes.number).isRequired,
-  setCart: PropTypes.func.isRequired,
   taxPercent: PropTypes.number.isRequired,
 };
 

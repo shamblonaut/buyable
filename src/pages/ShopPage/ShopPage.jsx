@@ -8,7 +8,7 @@ import { Page } from "@/styles";
 import { Info } from "./ShopPage.styles";
 
 const ShopPage = () => {
-  const { productsData, cart, setCart, setAppPosition } = useOutletContext();
+  const { productsData, setAppPosition } = useOutletContext();
 
   useEffect(() => setAppPosition(AppPosition.SHOP), [setAppPosition]);
 
@@ -28,13 +28,7 @@ const ShopPage = () => {
           )}
         </Info>
       ) : (
-        productsData.data && (
-          <ProductList
-            products={productsData.data}
-            cart={cart}
-            setCart={setCart}
-          />
-        )
+        productsData.data && <ProductList products={productsData.data} />
       )}
     </Page>
   );

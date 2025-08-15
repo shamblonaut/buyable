@@ -3,6 +3,7 @@ import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import CartActions from "./CartActions";
+import { CartContext } from "@/contexts";
 
 const mockCart = { 7: 13 };
 const mockProduct = { id: 7 };
@@ -16,7 +17,9 @@ describe("CartActions component", () => {
 
   it("renders correctly when cart is empty", () => {
     const { container } = render(
-      <CartActions product={mockProduct} cart={{}} setCart={mockSetCart} />,
+      <CartContext.Provider value={{ cart: {}, setCart: mockSetCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     expect(container).toMatchSnapshot();
@@ -24,11 +27,9 @@ describe("CartActions component", () => {
 
   it("renders correctly when cart is not empty", () => {
     const { container } = render(
-      <CartActions
-        product={mockProduct}
-        cart={mockCart}
-        setCart={mockSetCart}
-      />,
+      <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     expect(container).toMatchSnapshot();
@@ -36,7 +37,9 @@ describe("CartActions component", () => {
 
   it("shows add to cart button when cart is empty", () => {
     render(
-      <CartActions product={mockProduct} cart={{}} setCart={mockSetCart} />,
+      <CartContext.Provider value={{ cart: {}, setCart: mockSetCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     expect(
@@ -52,11 +55,9 @@ describe("CartActions component", () => {
 
   it("shows remove from cart button and quantity selector when cart is not empty", () => {
     render(
-      <CartActions
-        product={mockProduct}
-        cart={mockCart}
-        setCart={mockSetCart}
-      />,
+      <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     expect(
@@ -72,11 +73,9 @@ describe("CartActions component", () => {
 
   it("shows no. of items of current product in quantity selector", () => {
     render(
-      <CartActions
-        product={mockProduct}
-        cart={mockCart}
-        setCart={mockSetCart}
-      />,
+      <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     expect(
@@ -104,7 +103,9 @@ describe("CartActions component", () => {
     );
 
     const { rerender } = render(
-      <CartActions product={mockProduct} cart={cart} setCart={setCart} />,
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     await user.click(screen.getByRole("button", { name: "Add to cart" }));
@@ -113,7 +114,9 @@ describe("CartActions component", () => {
     expect(cart).toMatchObject({ 7: 1 });
 
     rerender(
-      <CartActions product={mockProduct} cart={cart} setCart={setCart} />,
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     expect(
@@ -141,7 +144,9 @@ describe("CartActions component", () => {
     );
 
     const { rerender } = render(
-      <CartActions product={mockProduct} cart={cart} setCart={setCart} />,
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     await user.click(screen.getByRole("button", { name: "Remove from cart" }));
@@ -150,7 +155,9 @@ describe("CartActions component", () => {
     expect(cart).toMatchObject({});
 
     rerender(
-      <CartActions product={mockProduct} cart={cart} setCart={setCart} />,
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     expect(
@@ -176,7 +183,9 @@ describe("CartActions component", () => {
     );
 
     const { rerender } = render(
-      <CartActions product={mockProduct} cart={cart} setCart={setCart} />,
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     await user.click(screen.getByRole("button", { name: "Remove from cart" }));
@@ -185,7 +194,9 @@ describe("CartActions component", () => {
     expect(cart).toMatchObject({});
 
     rerender(
-      <CartActions product={mockProduct} cart={cart} setCart={setCart} />,
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
     );
 
     expect(
@@ -210,7 +221,11 @@ describe("CartActions component", () => {
       "setCart",
     );
 
-    render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
+    render(
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
+    );
 
     await user.click(
       screen.getByRole("button", { name: "Decrement cart quantity" }),
@@ -237,7 +252,11 @@ describe("CartActions component", () => {
       "setCart",
     );
 
-    render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
+    render(
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
+    );
 
     await user.click(
       screen.getByRole("button", { name: "Decrement cart quantity" }),
@@ -264,7 +283,11 @@ describe("CartActions component", () => {
       "setCart",
     );
 
-    render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
+    render(
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
+    );
 
     await user.click(
       screen.getByRole("button", { name: "Increment cart quantity" }),
@@ -291,7 +314,11 @@ describe("CartActions component", () => {
       "setCart",
     );
 
-    render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
+    render(
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
+    );
 
     await user.clear(
       screen.getByRole("textbox", { name: "Enter custom cart quantity" }),
@@ -322,7 +349,11 @@ describe("CartActions component", () => {
       "setCart",
     );
 
-    render(<CartActions product={mockProduct} cart={cart} setCart={setCart} />);
+    render(
+      <CartContext.Provider value={{ cart, setCart }}>
+        <CartActions product={mockProduct} />
+      </CartContext.Provider>,
+    );
 
     await user.clear(
       screen.getByRole("textbox", { name: "Enter custom cart quantity" }),

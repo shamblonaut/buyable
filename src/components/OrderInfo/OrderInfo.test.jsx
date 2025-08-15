@@ -3,6 +3,8 @@ import { render, screen, within } from "@testing-library/react";
 
 import { BrowserRouter } from "react-router-dom";
 
+import { CartContext } from "@/contexts";
+
 import { mockProductList, mockCart } from "@tests/data";
 
 import OrderInfo from "./OrderInfo";
@@ -43,12 +45,9 @@ describe("OrderInfo component", () => {
   it("renders correctly", () => {
     const { container } = render(
       <BrowserRouter>
-        <OrderInfo
-          products={mockProductList}
-          cart={mockCart}
-          setCart={setCart}
-          taxPercent={mockTaxPercent}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+          <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -58,12 +57,9 @@ describe("OrderInfo component", () => {
   it("calculates subtotal properly", () => {
     render(
       <BrowserRouter>
-        <OrderInfo
-          products={mockProductList}
-          cart={mockCart}
-          setCart={setCart}
-          taxPercent={mockTaxPercent}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+          <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -75,12 +71,9 @@ describe("OrderInfo component", () => {
   it("calculates tax properly", () => {
     render(
       <BrowserRouter>
-        <OrderInfo
-          products={mockProductList}
-          cart={mockCart}
-          setCart={setCart}
-          taxPercent={mockTaxPercent}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+          <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -92,12 +85,9 @@ describe("OrderInfo component", () => {
   it("calculates total price properly", () => {
     render(
       <BrowserRouter>
-        <OrderInfo
-          products={mockProductList}
-          cart={mockCart}
-          setCart={setCart}
-          taxPercent={mockTaxPercent}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+          <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -109,12 +99,9 @@ describe("OrderInfo component", () => {
   it("has a link to disclaimer page", () => {
     render(
       <BrowserRouter>
-        <OrderInfo
-          products={mockProductList}
-          cart={mockCart}
-          setCart={setCart}
-          taxPercent={mockTaxPercent}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+          <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 

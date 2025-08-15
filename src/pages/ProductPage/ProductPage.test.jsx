@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 
+import { CartContext } from "@/contexts";
 import { AppPosition } from "@/utils/constants";
 
 import { mockProductList, mockCart } from "@tests/data";
@@ -9,13 +10,6 @@ import OutletWrapper from "@tests/components/OutletWrapper";
 import ProductPage from "./ProductPage";
 
 const mockOutletContext = {
-  cart: mockCart,
-  setCart: vi.spyOn(
-    {
-      setCart: vi.fn(),
-    },
-    "setCart",
-  ),
   appPosition: AppPosition.SHOP,
 };
 const mockProduct = mockProductList[2];
@@ -47,7 +41,9 @@ describe("Product Page", () => {
   it("renders correctly", () => {
     const { container } = render(
       <OutletWrapper context={mockOutletContext}>
-        <ProductPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ProductPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -57,7 +53,9 @@ describe("Product Page", () => {
   it("links to correct back page", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <ProductPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ProductPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -73,7 +71,9 @@ describe("Product Page", () => {
 
     render(
       <OutletWrapper context={mockOutletContext}>
-        <ProductPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ProductPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -91,7 +91,9 @@ describe("Product Page", () => {
 
     render(
       <OutletWrapper context={mockOutletContext}>
-        <ProductPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ProductPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -106,7 +108,9 @@ describe("Product Page", () => {
   it("uses correct product for cart actions", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <ProductPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ProductPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 

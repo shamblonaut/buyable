@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import { AppPosition } from "@/utils/constants";
 
+import { CartContext } from "@/contexts";
 import { useFetch, useLocalStorage } from "@/hooks";
 
 import { Header, Navigator } from "@/components";
@@ -14,26 +15,19 @@ const App = () => {
 
   const [appPosition, setAppPosition] = useState(AppPosition.HOME);
 
-  const cartCount = Object.values(cart).reduce(
-    (sum, current) => sum + current,
-    0,
-  );
-
   return (
-    <>
+    <CartContext.Provider value={{ cart, setCart }}>
       <RootStyle />
       <Header />
       <Outlet
         context={{
           productsData,
-          cart,
-          setCart,
           appPosition,
           setAppPosition,
         }}
       />
-      <Navigator appPosition={appPosition} cartCount={cartCount} />
-    </>
+      <Navigator appPosition={appPosition} />
+    </CartContext.Provider>
   );
 };
 

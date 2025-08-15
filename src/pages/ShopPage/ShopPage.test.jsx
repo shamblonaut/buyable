@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 
+import { CartContext } from "@/contexts";
 import { AppPosition } from "@/utils/constants";
 
 import { mockProductList, mockCart } from "@tests/data";
@@ -14,13 +15,6 @@ const mockOutletContext = {
     error: null,
     loading: false,
   },
-  cart: mockCart,
-  setCart: vi.spyOn(
-    {
-      setCart: vi.fn(),
-    },
-    "setCart",
-  ),
   setAppPosition: vi.spyOn(
     {
       setAppPosition: vi.fn(),
@@ -53,7 +47,9 @@ describe("Shop Page", () => {
   it("renders correctly", () => {
     const { container } = render(
       <OutletWrapper context={mockOutletContext}>
-        <ShopPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ShopPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -63,7 +59,9 @@ describe("Shop Page", () => {
   it("sets the app position correctly on load", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <ShopPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ShopPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -84,7 +82,9 @@ describe("Shop Page", () => {
           },
         }}
       >
-        <ShopPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ShopPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -105,7 +105,9 @@ describe("Shop Page", () => {
           },
         }}
       >
-        <ShopPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ShopPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -120,7 +122,9 @@ describe("Shop Page", () => {
   it("shows the correct products in product list", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <ShopPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <ShopPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 

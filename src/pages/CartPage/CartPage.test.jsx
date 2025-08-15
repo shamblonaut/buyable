@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 
+import { CartContext } from "@/contexts";
 import { AppPosition } from "@/utils/constants";
 
 import { mockProductList, mockCart } from "@tests/data";
@@ -14,13 +15,6 @@ const mockOutletContext = {
     error: null,
     loading: false,
   },
-  cart: mockCart,
-  setCart: vi.spyOn(
-    {
-      setCart: vi.fn(),
-    },
-    "setCart",
-  ),
   setAppPosition: vi.spyOn(
     {
       setAppPosition: vi.fn(),
@@ -53,7 +47,9 @@ describe("Cart Page", () => {
   it("renders correctly", () => {
     const { container } = render(
       <OutletWrapper context={mockOutletContext}>
-        <CartPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <CartPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -63,7 +59,9 @@ describe("Cart Page", () => {
   it("sets the app position correctly on load", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <CartPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -84,7 +82,9 @@ describe("Cart Page", () => {
           },
         }}
       >
-        <CartPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <CartPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -105,7 +105,9 @@ describe("Cart Page", () => {
           },
         }}
       >
-        <CartPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <CartPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -119,13 +121,10 @@ describe("Cart Page", () => {
 
   it("shows message when cart is empty", () => {
     render(
-      <OutletWrapper
-        context={{
-          ...mockOutletContext,
-          cart: {},
-        }}
-      >
-        <CartPage />
+      <OutletWrapper context={mockOutletContext}>
+        <CartContext.Provider value={{ cart: {}, setCart: vi.fn() }}>
+          <CartPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
@@ -137,17 +136,17 @@ describe("Cart Page", () => {
   it("shows only the products present in cart in the product list", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartPage />
+        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+          <CartPage />
+        </CartContext.Provider>
       </OutletWrapper>,
     );
 
     expect(screen.getAllByTestId("product").length).toBe(
-      Object.keys(mockOutletContext.cart).length,
+      Object.keys(mockCart).length,
     );
     screen.getAllByTestId("product").forEach((productItem, index) => {
-      expect(productItem.textContent).toBe(
-        Object.keys(mockOutletContext.cart)[index],
-      );
+      expect(productItem.textContent).toBe(Object.keys(mockCart)[index]);
     });
   });
 });

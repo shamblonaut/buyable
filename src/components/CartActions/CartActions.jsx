@@ -1,10 +1,15 @@
+import { useContext } from "react";
 import { Trash2, ShoppingCart } from "lucide-react";
 import PropTypes from "prop-types";
+
+import { CartContext } from "@/contexts";
 
 import { QuantitySelector } from "@/components";
 import { Container, AddButton, RemoveButton } from "./CartActions.styles";
 
-const CartActions = ({ product, cart, setCart }) => {
+const CartActions = ({ product }) => {
+  const { cart, setCart } = useContext(CartContext);
+
   const addToCart = () => {
     setCart((cart) => {
       const newCart = { ...cart };
@@ -82,8 +87,6 @@ CartActions.propTypes = {
   product: PropTypes.shape({
     id: PropTypes.number.isRequired,
   }).isRequired,
-  cart: PropTypes.objectOf(PropTypes.number).isRequired,
-  setCart: PropTypes.func.isRequired,
 };
 
 export default CartActions;

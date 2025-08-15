@@ -3,6 +3,8 @@ import { render, screen, within } from "@testing-library/react";
 
 import { BrowserRouter } from "react-router-dom";
 
+import { CartContext } from "@/contexts";
+
 import { mockProductList } from "@tests/data";
 
 import ProductList from "./ProductList";
@@ -38,11 +40,9 @@ describe("ProductList component", () => {
   it("renders correctly", () => {
     const { container } = render(
       <BrowserRouter>
-        <ProductList
-          products={mockProductList}
-          cart={mockCart}
-          setCart={mockSetCart}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+          <ProductList products={mockProductList} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -52,11 +52,9 @@ describe("ProductList component", () => {
   it("does not show product filters when it is disabled", () => {
     const { rerender } = render(
       <BrowserRouter>
-        <ProductList
-          products={mockProductList}
-          cart={mockCart}
-          setCart={mockSetCart}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+          <ProductList products={mockProductList} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -64,12 +62,9 @@ describe("ProductList component", () => {
 
     rerender(
       <BrowserRouter>
-        <ProductList
-          products={mockProductList}
-          cart={mockCart}
-          setCart={mockSetCart}
-          filterable={false}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+          <ProductList products={mockProductList} filterable={false} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -81,7 +76,9 @@ describe("ProductList component", () => {
   it("shows message if no products are found", () => {
     render(
       <BrowserRouter>
-        <ProductList products={[]} cart={mockCart} setCart={mockSetCart} />
+        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+          <ProductList products={[]} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -100,11 +97,9 @@ describe("ProductList component", () => {
 
     render(
       <BrowserRouter>
-        <ProductList
-          products={mockProductList}
-          cart={mockCart}
-          setCart={mockSetCart}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+          <ProductList products={mockProductList} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -118,11 +113,9 @@ describe("ProductList component", () => {
   it("shows all products in a list if not filtered", () => {
     render(
       <BrowserRouter>
-        <ProductList
-          products={mockProductList}
-          cart={mockCart}
-          setCart={mockSetCart}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+          <ProductList products={mockProductList} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
@@ -141,11 +134,9 @@ describe("ProductList component", () => {
 
     render(
       <BrowserRouter>
-        <ProductList
-          products={mockProductList}
-          cart={mockCart}
-          setCart={mockSetCart}
-        />
+        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+          <ProductList products={mockProductList} />
+        </CartContext.Provider>
       </BrowserRouter>,
     );
 
