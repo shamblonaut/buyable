@@ -40,8 +40,8 @@ export const CartIndicator = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  min-width: 20px;
-  min-height: 20px;
+  width: 20px;
+  height: 20px;
   transform: translate(65%, -50%);
   background-color: var(--color-accent);
   border-radius: 50%;
@@ -49,11 +49,12 @@ export const CartIndicator = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   padding: 0 4px;
   aspect-ratio: 1;
 
-  font-size: 0.75rem;
+  font-size: ${(props) => `${14 - 2 * props.$chars}px`};
   font-weight: 700;
   color: var(--color-light);
 `;

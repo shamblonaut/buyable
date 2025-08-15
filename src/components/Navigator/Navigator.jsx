@@ -14,6 +14,7 @@ const Navigator = ({ appPosition }) => {
     (sum, current) => sum + current,
     0,
   );
+  const cartCountText = cartCount < 100 ? cartCount.toString() : "99+";
 
   return (
     <Bar>
@@ -39,7 +40,9 @@ const Navigator = ({ appPosition }) => {
         >
           <ShoppingCart />
           {cartCount > 0 && (
-            <CartIndicator>{cartCount < 100 ? cartCount : "99+"}</CartIndicator>
+            <CartIndicator $chars={cartCountText.length}>
+              {cartCountText}
+            </CartIndicator>
           )}
         </PageLink>
       </Tabs>
