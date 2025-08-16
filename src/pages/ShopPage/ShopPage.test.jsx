@@ -47,7 +47,9 @@ describe("Shop Page", () => {
   it("renders correctly", () => {
     const { container } = render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ShopPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -59,7 +61,9 @@ describe("Shop Page", () => {
   it("sets the app position correctly on load", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ShopPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -82,7 +86,9 @@ describe("Shop Page", () => {
           },
         }}
       >
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ShopPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -105,7 +111,9 @@ describe("Shop Page", () => {
           },
         }}
       >
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ShopPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -122,7 +130,9 @@ describe("Shop Page", () => {
   it("shows the correct products in product list", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ShopPage />
         </CartContext.Provider>
       </OutletWrapper>,

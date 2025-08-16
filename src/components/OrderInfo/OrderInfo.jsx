@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { ShoppingBag } from "lucide-react";
 import PropTypes from "prop-types";
 
+import { CartAction } from "@/utils/constants";
+
 import { CartContext } from "@/contexts";
 
 import {
@@ -14,7 +16,7 @@ import {
 } from "./OrderInfo.styles";
 
 const OrderInfo = ({ products, taxPercent }) => {
-  const { cart, setCart } = useContext(CartContext);
+  const { cart, dispatchCartAction } = useContext(CartContext);
 
   const subtotal = products.reduce(
     (sum, product) =>
@@ -25,7 +27,7 @@ const OrderInfo = ({ products, taxPercent }) => {
   const total = subtotal + tax;
 
   const clearCart = () => {
-    setCart({});
+    dispatchCartAction({ type: CartAction.CLEARED });
   };
 
   return (

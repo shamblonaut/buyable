@@ -11,7 +11,7 @@ import OrderInfo from "./OrderInfo";
 
 const mockTaxPercent = 12;
 
-const setCart = vi.fn();
+const dispatchCartAction = vi.fn();
 
 vi.mock("./OrderInfo.styles", async (importOriginal) => {
   const actual = await importOriginal();
@@ -45,7 +45,7 @@ describe("OrderInfo component", () => {
   it("renders correctly", () => {
     const { container } = render(
       <BrowserRouter>
-        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+        <CartContext.Provider value={{ cart: mockCart, dispatchCartAction }}>
           <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
         </CartContext.Provider>
       </BrowserRouter>,
@@ -57,7 +57,7 @@ describe("OrderInfo component", () => {
   it("calculates subtotal properly", () => {
     render(
       <BrowserRouter>
-        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+        <CartContext.Provider value={{ cart: mockCart, dispatchCartAction }}>
           <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
         </CartContext.Provider>
       </BrowserRouter>,
@@ -71,7 +71,7 @@ describe("OrderInfo component", () => {
   it("calculates tax properly", () => {
     render(
       <BrowserRouter>
-        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+        <CartContext.Provider value={{ cart: mockCart, dispatchCartAction }}>
           <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
         </CartContext.Provider>
       </BrowserRouter>,
@@ -85,7 +85,7 @@ describe("OrderInfo component", () => {
   it("calculates total price properly", () => {
     render(
       <BrowserRouter>
-        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+        <CartContext.Provider value={{ cart: mockCart, dispatchCartAction }}>
           <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
         </CartContext.Provider>
       </BrowserRouter>,
@@ -99,7 +99,7 @@ describe("OrderInfo component", () => {
   it("has a link to disclaimer page", () => {
     render(
       <BrowserRouter>
-        <CartContext.Provider value={{ cart: mockCart, setCart }}>
+        <CartContext.Provider value={{ cart: mockCart, dispatchCartAction }}>
           <OrderInfo products={mockProductList} taxPercent={mockTaxPercent} />
         </CartContext.Provider>
       </BrowserRouter>,

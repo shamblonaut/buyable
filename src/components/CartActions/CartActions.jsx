@@ -2,61 +2,54 @@ import { useContext } from "react";
 import { Trash2, ShoppingCart } from "lucide-react";
 import PropTypes from "prop-types";
 
+import { CartAction } from "@/utils/constants/Cart";
+
 import { CartContext } from "@/contexts";
 
 import { QuantitySelector } from "@/components";
 import { Container, AddButton, RemoveButton } from "./CartActions.styles";
 
 const CartActions = ({ product }) => {
-  const { cart, setCart } = useContext(CartContext);
+  const { cart, dispatchCartAction } = useContext(CartContext);
 
-  const addToCart = () => {
-    setCart((cart) => {
-      const newCart = { ...cart };
-      newCart[product.id] = 1;
-      return newCart;
+  const handleAdd = () => {
+    dispatchCartAction({
+      type: CartAction.ADDED,
+      payload: { productId: product.id },
     });
   };
-
-  const removeFromCart = () => {
-    setCart((cart) => {
-      const newCart = { ...cart };
-      delete newCart[product.id];
-      return newCart;
+  const handleRemove = () => {
+    dispatchCartAction({
+      type: CartAction.REMOVED,
+      payload: { productId: product.id },
     });
   };
-
-  const incrementCartQuantity = () => {
-    setCart((cart) => {
-      const newCart = { ...cart };
-      newCart[product.id] += 1;
-      return newCart;
+  const handleIncrement = () => {
+    dispatchCartAction({
+      type: CartAction.INCREMENTED,
+      payload: { productId: product.id },
     });
   };
-
-  const decrementCartQuantity = () => {
-    setCart((cart) => {
-      const newCart = { ...cart };
-      newCart[product.id] -= 1;
-
-      if (newCart[product.id] === 0) {
-        delete newCart[product.id];
-      }
-
-      return newCart;
-    });
-  };
-
-  const setQuantity = (newQuantity) => {
-    if (newQuantity <= 0) {
-      removeFromCart();
+  const handleDecrement = () => {
+    if (cart[product.id] === 1) {
+      handleRemove();
       return;
     }
 
-    setCart((cart) => {
-      const newCart = { ...cart };
-      newCart[product.id] = newQuantity;
-      return newCart;
+    dispatchCartAction({
+      type: CartAction.DECREMENTED,
+      payload: { productId: product.id },
+    });
+  };
+  const handleSetQuantity = (newQuantity) => {
+    if (newQuantity <= 0) {
+      handleRemove();
+      return;
+    }
+
+    dispatchCartAction({
+      type: CartAction.EDITED,
+      payload: { productId: product.id, newQuantity },
     });
   };
 
@@ -66,16 +59,16 @@ const CartActions = ({ product }) => {
         <>
           <QuantitySelector
             quantity={cart[product.id]}
-            setQuantity={setQuantity}
-            increment={incrementCartQuantity}
-            decrement={decrementCartQuantity}
+            setQuantity={handleSetQuantity}
+            increment={handleIncrement}
+            decrement={handleDecrement}
           />
-          <RemoveButton onClick={removeFromCart} aria-label="Remove from cart">
+          <RemoveButton onClick={handleRemove} aria-label="Remove from cart">
             <Trash2 />
           </RemoveButton>
         </>
       ) : (
-        <AddButton onClick={addToCart} aria-label="Add to cart">
+        <AddButton onClick={handleAdd} aria-label="Add to cart">
           <ShoppingCart /> Add to cart
         </AddButton>
       )}

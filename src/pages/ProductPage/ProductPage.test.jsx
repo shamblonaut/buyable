@@ -41,7 +41,9 @@ describe("Product Page", () => {
   it("renders correctly", () => {
     const { container } = render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ProductPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -53,7 +55,9 @@ describe("Product Page", () => {
   it("links to correct back page", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ProductPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -71,7 +75,9 @@ describe("Product Page", () => {
 
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ProductPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -91,7 +97,9 @@ describe("Product Page", () => {
 
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ProductPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -108,7 +116,9 @@ describe("Product Page", () => {
   it("uses correct product for cart actions", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <ProductPage />
         </CartContext.Provider>
       </OutletWrapper>,

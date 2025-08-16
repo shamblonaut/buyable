@@ -47,7 +47,9 @@ describe("Cart Page", () => {
   it("renders correctly", () => {
     const { container } = render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <CartPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -59,7 +61,9 @@ describe("Cart Page", () => {
   it("sets the app position correctly on load", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <CartPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -82,7 +86,9 @@ describe("Cart Page", () => {
           },
         }}
       >
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <CartPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -105,7 +111,9 @@ describe("Cart Page", () => {
           },
         }}
       >
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <CartPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -122,7 +130,7 @@ describe("Cart Page", () => {
   it("shows message when cart is empty", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: {}, setCart: vi.fn() }}>
+        <CartContext.Provider value={{ cart: {}, dispatchCartAction: vi.fn() }}>
           <CartPage />
         </CartContext.Provider>
       </OutletWrapper>,
@@ -136,7 +144,9 @@ describe("Cart Page", () => {
   it("shows only the products present in cart in the product list", () => {
     render(
       <OutletWrapper context={mockOutletContext}>
-        <CartContext.Provider value={{ cart: mockCart, setCart: vi.fn() }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: vi.fn() }}
+        >
           <CartPage />
         </CartContext.Provider>
       </OutletWrapper>,

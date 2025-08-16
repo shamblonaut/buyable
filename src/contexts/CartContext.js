@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 const CartContext = createContext({
   cart: {},
-  setCart: () => {},
+  dispatchCartAction: () => {},
 });
 
 export default CartContext;

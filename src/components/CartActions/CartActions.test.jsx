@@ -2,13 +2,17 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import CartActions from "./CartActions";
+import { CartAction } from "@/utils/constants/Cart";
+
 import { CartContext } from "@/contexts";
+import { cartReducer } from "@/reducers";
+
+import CartActions from "./CartActions";
 
 const mockCart = { 7: 13 };
 const mockProduct = { id: 7 };
 
-const mockSetCart = vi.fn();
+const mockDispatchCartAction = vi.fn();
 
 describe("CartActions component", () => {
   beforeEach(() => {
@@ -17,7 +21,9 @@ describe("CartActions component", () => {
 
   it("renders correctly when cart is empty", () => {
     const { container } = render(
-      <CartContext.Provider value={{ cart: {}, setCart: mockSetCart }}>
+      <CartContext.Provider
+        value={{ cart: {}, dispatchCartAction: mockDispatchCartAction }}
+      >
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -27,7 +33,9 @@ describe("CartActions component", () => {
 
   it("renders correctly when cart is not empty", () => {
     const { container } = render(
-      <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+      <CartContext.Provider
+        value={{ cart: mockCart, dispatchCartAction: mockDispatchCartAction }}
+      >
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -37,7 +45,9 @@ describe("CartActions component", () => {
 
   it("shows add to cart button when cart is empty", () => {
     render(
-      <CartContext.Provider value={{ cart: {}, setCart: mockSetCart }}>
+      <CartContext.Provider
+        value={{ cart: {}, dispatchCartAction: mockDispatchCartAction }}
+      >
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -55,7 +65,9 @@ describe("CartActions component", () => {
 
   it("shows remove from cart button and quantity selector when cart is not empty", () => {
     render(
-      <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+      <CartContext.Provider
+        value={{ cart: mockCart, dispatchCartAction: mockDispatchCartAction }}
+      >
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -73,7 +85,9 @@ describe("CartActions component", () => {
 
   it("shows no. of items of current product in quantity selector", () => {
     render(
-      <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+      <CartContext.Provider
+        value={{ cart: mockCart, dispatchCartAction: mockDispatchCartAction }}
+      >
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -89,32 +103,31 @@ describe("CartActions component", () => {
     const user = userEvent.setup();
 
     let cart = {};
-    let setCart = vi.spyOn(
+    let dispatchCartAction = vi.spyOn(
       {
-        setCart: (newCart) => {
-          if (typeof newCart === "function") {
-            cart = newCart(cart);
-          } else {
-            cart = newCart;
-          }
+        dispatchCartAction: (action) => {
+          cart = cartReducer(cart, action);
         },
       },
-      "setCart",
+      "dispatchCartAction",
     );
 
     const { rerender } = render(
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, dispatchCartAction }}>
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
 
     await user.click(screen.getByRole("button", { name: "Add to cart" }));
 
-    expect(setCart).toHaveBeenCalled();
+    expect(dispatchCartAction).toHaveBeenCalledWith({
+      type: CartAction.ADDED,
+      payload: { productId: 7 },
+    });
     expect(cart).toMatchObject({ 7: 1 });
 
     rerender(
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, dispatchCartAction }}>
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -130,71 +143,31 @@ describe("CartActions component", () => {
     const user = userEvent.setup();
 
     let cart = { ...mockCart };
-    let setCart = vi.spyOn(
+    let dispatchCartAction = vi.spyOn(
       {
-        setCart: (newCart) => {
-          if (typeof newCart === "function") {
-            cart = newCart(cart);
-          } else {
-            cart = newCart;
-          }
+        dispatchCartAction: (action) => {
+          cart = cartReducer(cart, action);
         },
       },
-      "setCart",
+      "dispatchCartAction",
     );
 
     const { rerender } = render(
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, dispatchCartAction }}>
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
 
     await user.click(screen.getByRole("button", { name: "Remove from cart" }));
 
-    expect(setCart).toHaveBeenCalled();
+    expect(dispatchCartAction).toHaveBeenCalledWith({
+      type: CartAction.REMOVED,
+      payload: { productId: 7 },
+    });
     expect(cart).toMatchObject({});
 
     rerender(
-      <CartContext.Provider value={{ cart, setCart }}>
-        <CartActions product={mockProduct} />
-      </CartContext.Provider>,
-    );
-
-    expect(
-      screen.getByRole("button", { name: "Add to cart" }),
-    ).toBeInTheDocument();
-  });
-
-  it("removes item from the cart when remove from cart is clicked", async () => {
-    const user = userEvent.setup();
-
-    let cart = { ...mockCart };
-    let setCart = vi.spyOn(
-      {
-        setCart: (newCart) => {
-          if (typeof newCart === "function") {
-            cart = newCart(cart);
-          } else {
-            cart = newCart;
-          }
-        },
-      },
-      "setCart",
-    );
-
-    const { rerender } = render(
-      <CartContext.Provider value={{ cart, setCart }}>
-        <CartActions product={mockProduct} />
-      </CartContext.Provider>,
-    );
-
-    await user.click(screen.getByRole("button", { name: "Remove from cart" }));
-
-    expect(setCart).toHaveBeenCalled();
-    expect(cart).toMatchObject({});
-
-    rerender(
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, dispatchCartAction }}>
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -208,21 +181,17 @@ describe("CartActions component", () => {
     const user = userEvent.setup();
 
     let cart = { 7: 2 };
-    let setCart = vi.spyOn(
+    let dispatchCartAction = vi.spyOn(
       {
-        setCart: (newCart) => {
-          if (typeof newCart === "function") {
-            cart = newCart(cart);
-          } else {
-            cart = newCart;
-          }
+        dispatchCartAction: (action) => {
+          cart = cartReducer(cart, action);
         },
       },
-      "setCart",
+      "dispatchCartAction",
     );
 
     render(
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, dispatchCartAction }}>
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -231,7 +200,10 @@ describe("CartActions component", () => {
       screen.getByRole("button", { name: "Decrement cart quantity" }),
     );
 
-    expect(setCart).toHaveBeenCalled();
+    expect(dispatchCartAction).toHaveBeenCalledWith({
+      type: CartAction.DECREMENTED,
+      payload: { productId: 7 },
+    });
     expect(cart).toMatchObject({ 7: 1 });
   });
 
@@ -239,21 +211,17 @@ describe("CartActions component", () => {
     const user = userEvent.setup();
 
     let cart = { 7: 1 };
-    let setCart = vi.spyOn(
+    let dispatchCartAction = vi.spyOn(
       {
-        setCart: (newCart) => {
-          if (typeof newCart === "function") {
-            cart = newCart(cart);
-          } else {
-            cart = newCart;
-          }
+        dispatchCartAction: (action) => {
+          cart = cartReducer(cart, action);
         },
       },
-      "setCart",
+      "dispatchCartAction",
     );
 
     render(
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, dispatchCartAction }}>
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -262,7 +230,10 @@ describe("CartActions component", () => {
       screen.getByRole("button", { name: "Decrement cart quantity" }),
     );
 
-    expect(setCart).toHaveBeenCalled();
+    expect(dispatchCartAction).toHaveBeenCalledWith({
+      type: CartAction.REMOVED,
+      payload: { productId: 7 },
+    });
     expect(cart).toMatchObject({});
   });
 
@@ -270,21 +241,17 @@ describe("CartActions component", () => {
     const user = userEvent.setup();
 
     let cart = { 7: 2 };
-    let setCart = vi.spyOn(
+    let dispatchCartAction = vi.spyOn(
       {
-        setCart: (newCart) => {
-          if (typeof newCart === "function") {
-            cart = newCart(cart);
-          } else {
-            cart = newCart;
-          }
+        dispatchCartAction: (action) => {
+          cart = cartReducer(cart, action);
         },
       },
-      "setCart",
+      "dispatchCartAction",
     );
 
     render(
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, dispatchCartAction }}>
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -293,7 +260,10 @@ describe("CartActions component", () => {
       screen.getByRole("button", { name: "Increment cart quantity" }),
     );
 
-    expect(setCart).toHaveBeenCalled();
+    expect(dispatchCartAction).toHaveBeenCalledWith({
+      type: CartAction.INCREMENTED,
+      payload: { productId: 7 },
+    });
     expect(cart).toMatchObject({ 7: 3 });
   });
 
@@ -301,21 +271,17 @@ describe("CartActions component", () => {
     const user = userEvent.setup();
 
     let cart = { ...mockCart };
-    let setCart = vi.spyOn(
+    let dispatchCartAction = vi.spyOn(
       {
-        setCart: (newCart) => {
-          if (typeof newCart === "function") {
-            cart = newCart(cart);
-          } else {
-            cart = newCart;
-          }
+        dispatchCartAction: (action) => {
+          cart = cartReducer(cart, action);
         },
       },
-      "setCart",
+      "dispatchCartAction",
     );
 
     render(
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, dispatchCartAction }}>
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -328,7 +294,10 @@ describe("CartActions component", () => {
       "256",
     );
 
-    expect(setCart).toHaveBeenCalled();
+    expect(dispatchCartAction).toHaveBeenCalledWith({
+      type: CartAction.EDITED,
+      payload: { productId: 7, newQuantity: 256 },
+    });
     expect(cart).toMatchObject({ 7: 256 });
   });
 
@@ -336,21 +305,17 @@ describe("CartActions component", () => {
     const user = userEvent.setup();
 
     let cart = { ...mockCart };
-    let setCart = vi.spyOn(
+    let dispatchCartAction = vi.spyOn(
       {
-        setCart: (newCart) => {
-          if (typeof newCart === "function") {
-            cart = newCart(cart);
-          } else {
-            cart = newCart;
-          }
+        dispatchCartAction: (action) => {
+          cart = cartReducer(cart, action);
         },
       },
-      "setCart",
+      "dispatchCartAction",
     );
 
     render(
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, dispatchCartAction }}>
         <CartActions product={mockProduct} />
       </CartContext.Provider>,
     );
@@ -363,7 +328,10 @@ describe("CartActions component", () => {
       "0",
     );
 
-    expect(setCart).toHaveBeenCalled();
+    expect(dispatchCartAction).toHaveBeenCalledWith({
+      type: CartAction.REMOVED,
+      payload: { productId: 7 },
+    });
     expect(cart).toMatchObject({});
   });
 });

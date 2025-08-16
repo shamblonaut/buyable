@@ -1,3 +1,4 @@
 import { AppPosition } from "./App";
+import { CartAction } from "./Cart";
 
-export { AppPosition };
+export { AppPosition, CartAction };

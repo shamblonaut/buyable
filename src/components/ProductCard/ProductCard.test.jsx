@@ -13,7 +13,7 @@ const mockProduct = {
   image: "http://example.com/mock-image.jpg",
 };
 const mockCart = { 1: 16 };
-const mockSetCart = vi.fn();
+const mockDispatchCartAction = vi.fn();
 
 vi.mock("./ProductCard.styles", async (importOriginal) => {
   const actual = await importOriginal();
@@ -33,7 +33,9 @@ describe("ProductCard component", () => {
   it("renders correctly", () => {
     const { container } = render(
       <BrowserRouter>
-        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: mockDispatchCartAction }}
+        >
           <ProductCard product={mockProduct} />
         </CartContext.Provider>
       </BrowserRouter>,
@@ -45,7 +47,9 @@ describe("ProductCard component", () => {
   it("links to product page of given product", () => {
     render(
       <BrowserRouter>
-        <CartContext.Provider value={{ cart: mockCart, setCart: mockSetCart }}>
+        <CartContext.Provider
+          value={{ cart: mockCart, dispatchCartAction: mockDispatchCartAction }}
+        >
           <ProductCard product={mockProduct} />
         </CartContext.Provider>
       </BrowserRouter>,
