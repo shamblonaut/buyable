@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { getRatingArray, toTitleCase } from "../helpers";
+import { getRatingArray, toTitleCase } from "@/utils/helpers";
 
 describe("getRatingArray function", () => {
   it("gives an error if rating value is higher than 5.0", () => {
